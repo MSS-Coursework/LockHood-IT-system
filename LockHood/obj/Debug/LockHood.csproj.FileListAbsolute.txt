@@ -1,0 +1,12 @@
+D:\projects\LockHood\LockHood\LockHood\bin\Debug\LockHood.exe.config
+D:\projects\LockHood\LockHood\LockHood\bin\Debug\LockHood.exe
+D:\projects\LockHood\LockHood\LockHood\bin\Debug\LockHood.pdb
+D:\projects\LockHood\LockHood\LockHood\obj\Debug\LockHood.csproj.AssemblyReference.cache
+D:\projects\LockHood\LockHood\LockHood\obj\Debug\LockHood.Properties.Resources.resources
+D:\projects\LockHood\LockHood\LockHood\obj\Debug\LockHood.csproj.GenerateResource.cache
+D:\projects\LockHood\LockHood\LockHood\obj\Debug\LockHood.csproj.CoreCompileInputs.cache
+D:\projects\LockHood\LockHood\LockHood\obj\Debug\LockHood.exe
+D:\projects\LockHood\LockHood\LockHood\obj\Debug\LockHood.pdb
+D:\projects\LockHood\LockHood\LockHood\obj\Debug\LockHood.Manager_dashboard.resources
+D:\projects\LockHood\LockHood\LockHood\obj\Debug\LockHood.Task_Manager.resources
+D:\projects\LockHood\LockHood\LockHood\obj\Debug\LockHood.Add_Task.resources
