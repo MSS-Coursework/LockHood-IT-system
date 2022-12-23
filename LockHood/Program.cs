@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace LockHood
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
@@ -16,7 +16,7 @@ namespace LockHood
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Task_Manager());
+            Application.Run(new frmSplash());
         }
     }
 }
