@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E5FDF779-AA49-4901-A46F-D4FF56EF5ABC}</ProjectGuid>
+    <ProjectGuid>{E237AACE-C02B-4649-BF03-B35F1F104070}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>LockHood</RootNamespace>
     <AssemblyName>LockHood</AssemblyName>
@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -47,31 +65,125 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_Task.cs">
+    <Compile Include="frmHeadDash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_Task.Designer.cs">
-      <DependentUpon>Add_Task.cs</DependentUpon>
+    <Compile Include="frmHeadDash.Designer.cs">
+      <DependentUpon>frmHeadDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manager_dashboard.cs">
+    <Compile Include="frmHeadHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manager_dashboard.Designer.cs">
-      <DependentUpon>Manager_dashboard.cs</DependentUpon>
+    <Compile Include="frmHeadHome.Designer.cs">
+      <DependentUpon>frmHeadHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHeadInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHeadInventory.Designer.cs">
+      <DependentUpon>frmHeadInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHeadRequests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHeadRequests.Designer.cs">
+      <DependentUpon>frmHeadRequests.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManagerDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManagerDash.Designer.cs">
+      <DependentUpon>frmManagerDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManHome.Designer.cs">
+      <DependentUpon>frmManHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManReports.Designer.cs">
+      <DependentUpon>frmManReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuperDash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuperDash.Designer.cs">
+      <DependentUpon>frmSuperDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupHome.Designer.cs">
+      <DependentUpon>frmSupHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSupInventory.Designer.cs">
+      <DependentUpon>frmSupInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWarehouse.Designer.cs">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Task_Manager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Task_Manager.Designer.cs">
-      <DependentUpon>Task_Manager.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Add_Task.resx">
-      <DependentUpon>Add_Task.cs</DependentUpon>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="frmHeadDash.resx">
+      <DependentUpon>frmHeadDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manager_dashboard.resx">
-      <DependentUpon>Manager_dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="frmHeadHome.resx">
+      <DependentUpon>frmHeadHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHeadInventory.resx">
+      <DependentUpon>frmHeadInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHeadRequests.resx">
+      <DependentUpon>frmHeadRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManagerDash.resx">
+      <DependentUpon>frmManagerDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManHome.resx">
+      <DependentUpon>frmManHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManReports.resx">
+      <DependentUpon>frmManReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuperDash.resx">
+      <DependentUpon>frmSuperDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupHome.resx">
+      <DependentUpon>frmSupHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupInventory.resx">
+      <DependentUpon>frmSupInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWarehouse.resx">
+      <DependentUpon>frmWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,9 +194,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Task_Manager.resx">
-      <DependentUpon>Task_Manager.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -97,6 +207,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
