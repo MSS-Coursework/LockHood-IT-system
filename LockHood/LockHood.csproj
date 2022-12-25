@@ -126,6 +126,12 @@
     <Compile Include="frmManReports.Designer.cs">
       <DependentUpon>frmManReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManTask.Designer.cs">
+      <DependentUpon>frmManTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManReports.resx">
       <DependentUpon>frmManReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManTask.resx">
+      <DependentUpon>frmManTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
