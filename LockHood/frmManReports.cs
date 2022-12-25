@@ -16,5 +16,11 @@ namespace LockHood
         {
             InitializeComponent();
         }
+
+        private void frmManReports_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

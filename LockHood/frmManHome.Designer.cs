@@ -45,9 +45,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHead = new System.Windows.Forms.Panel();
+            this.btn_X = new System.Windows.Forms.Button();
             this.lblHeading = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_X = new System.Windows.Forms.Button();
             this.pnlBody.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -121,6 +121,7 @@
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnEmployee
             // 
@@ -270,6 +271,22 @@
             this.pnlHead.Size = new System.Drawing.Size(1300, 75);
             this.pnlHead.TabIndex = 3;
             // 
+            // btn_X
+            // 
+            this.btn_X.BackColor = System.Drawing.Color.Brown;
+            this.btn_X.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_X.FlatAppearance.BorderSize = 0;
+            this.btn_X.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_X.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_X.ForeColor = System.Drawing.Color.White;
+            this.btn_X.Location = new System.Drawing.Point(1265, 0);
+            this.btn_X.Name = "btn_X";
+            this.btn_X.Size = new System.Drawing.Size(35, 35);
+            this.btn_X.TabIndex = 2;
+            this.btn_X.Text = "X";
+            this.btn_X.UseVisualStyleBackColor = false;
+            this.btn_X.Click += new System.EventHandler(this.btn_X_Click);
+            // 
             // lblHeading
             // 
             this.lblHeading.AutoSize = true;
@@ -290,22 +307,6 @@
             this.label1.Size = new System.Drawing.Size(216, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "LockHood Pvt Ltd";
-            // 
-            // btn_X
-            // 
-            this.btn_X.BackColor = System.Drawing.Color.Brown;
-            this.btn_X.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_X.FlatAppearance.BorderSize = 0;
-            this.btn_X.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_X.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_X.ForeColor = System.Drawing.Color.White;
-            this.btn_X.Location = new System.Drawing.Point(1265, 0);
-            this.btn_X.Name = "btn_X";
-            this.btn_X.Size = new System.Drawing.Size(35, 35);
-            this.btn_X.TabIndex = 2;
-            this.btn_X.Text = "X";
-            this.btn_X.UseVisualStyleBackColor = false;
-            this.btn_X.Click += new System.EventHandler(this.btn_X_Click);
             // 
             // frmManHome
             // 
