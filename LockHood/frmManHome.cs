@@ -13,7 +13,7 @@ namespace LockHood
 {
     public partial class frmManHome : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N7LQHOM;Initial Catalog=LockHood;Integrated Security=True");
+        databaseClass objdb = new databaseClass();
 
         public frmManHome()
         {
@@ -27,12 +27,7 @@ namespace LockHood
             btnDash.BackColor = Color.White;
             btnDash.ForeColor = Color.CornflowerBlue;
 
-            // Check the connection status & close/Open
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
-            con.Open();
+            objdb.createConn();
 
             //// Fill the Username Textbox
             //DataTable dt = new DataTable();
