@@ -16,7 +16,7 @@ namespace LockHood
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmManTask());
+            Application.Run(new frmSplash());
         }
     }
 }

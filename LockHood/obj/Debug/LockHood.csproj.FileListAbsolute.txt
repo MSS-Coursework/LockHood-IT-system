@@ -159,3 +159,4 @@ E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.CoreCompileIn
 E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.CopyComplete
 E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.exe
 E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.pdb
+E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManTask.resources

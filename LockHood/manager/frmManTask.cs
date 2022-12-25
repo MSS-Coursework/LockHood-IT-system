@@ -14,7 +14,7 @@ namespace LockHood
 {
     public partial class frmManTask : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-J7S8GDR;Initial Catalog=LockHood;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(local);Initial Catalog=LockHood;Integrated Security=True");
         public frmManTask()
         {
             InitializeComponent();
@@ -289,5 +289,7 @@ namespace LockHood
         {
             Refresh();
         }
+
+
     }
 }

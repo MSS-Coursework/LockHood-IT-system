@@ -66,70 +66,70 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="databaseClass.cs" />
-    <Compile Include="frmHeadDash.cs">
+    <Compile Include="head\frmHeadDash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHeadDash.Designer.cs">
+    <Compile Include="head\frmHeadDash.Designer.cs">
       <DependentUpon>frmHeadDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHeadHome.cs">
+    <Compile Include="head\frmHeadHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHeadHome.Designer.cs">
+    <Compile Include="head\frmHeadHome.Designer.cs">
       <DependentUpon>frmHeadHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHeadInventory.cs">
+    <Compile Include="head\frmHeadInventory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHeadInventory.Designer.cs">
+    <Compile Include="head\frmHeadInventory.Designer.cs">
       <DependentUpon>frmHeadInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHeadRequests.cs">
+    <Compile Include="head\frmHeadRequests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHeadRequests.Designer.cs">
+    <Compile Include="head\frmHeadRequests.Designer.cs">
       <DependentUpon>frmHeadRequests.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManAccHead.cs">
+    <Compile Include="manager\frmManAccHead.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManAccHead.Designer.cs">
+    <Compile Include="manager\frmManAccHead.Designer.cs">
       <DependentUpon>frmManAccHead.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManAccSup.cs">
+    <Compile Include="manager\frmManAccSup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManAccSup.Designer.cs">
+    <Compile Include="manager\frmManAccSup.Designer.cs">
       <DependentUpon>frmManAccSup.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManagerDash.cs">
+    <Compile Include="manager\frmManagerDash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManagerDash.Designer.cs">
+    <Compile Include="manager\frmManagerDash.Designer.cs">
       <DependentUpon>frmManagerDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManEmployee.cs">
+    <Compile Include="manager\frmManEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManEmployee.Designer.cs">
+    <Compile Include="manager\frmManEmployee.Designer.cs">
       <DependentUpon>frmManEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManHome.cs">
+    <Compile Include="manager\frmManHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManHome.Designer.cs">
+    <Compile Include="manager\frmManHome.Designer.cs">
       <DependentUpon>frmManHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManReports.cs">
+    <Compile Include="manager\frmManReports.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManReports.Designer.cs">
+    <Compile Include="manager\frmManReports.Designer.cs">
       <DependentUpon>frmManReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmManTask.cs">
+    <Compile Include="manager\frmManTask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmManTask.Designer.cs">
+    <Compile Include="manager\frmManTask.Designer.cs">
       <DependentUpon>frmManTask.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplash.cs">
@@ -138,22 +138,22 @@
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSuperDash.cs">
+    <Compile Include="supervisor\frmSuperDash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSuperDash.Designer.cs">
+    <Compile Include="supervisor\frmSuperDash.Designer.cs">
       <DependentUpon>frmSuperDash.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSupHome.cs">
+    <Compile Include="supervisor\frmSupHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSupHome.Designer.cs">
+    <Compile Include="supervisor\frmSupHome.Designer.cs">
       <DependentUpon>frmSupHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSupInventory.cs">
+    <Compile Include="supervisor\frmSupInventory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSupInventory.Designer.cs">
+    <Compile Include="supervisor\frmSupInventory.Designer.cs">
       <DependentUpon>frmSupInventory.cs</DependentUpon>
     </Compile>
     <Compile Include="frmWarehouse.cs">
@@ -171,49 +171,49 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="frmHeadDash.resx">
+    <EmbeddedResource Include="head\frmHeadDash.resx">
       <DependentUpon>frmHeadDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHeadHome.resx">
+    <EmbeddedResource Include="head\frmHeadHome.resx">
       <DependentUpon>frmHeadHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHeadInventory.resx">
+    <EmbeddedResource Include="head\frmHeadInventory.resx">
       <DependentUpon>frmHeadInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHeadRequests.resx">
+    <EmbeddedResource Include="head\frmHeadRequests.resx">
       <DependentUpon>frmHeadRequests.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManAccHead.resx">
+    <EmbeddedResource Include="manager\frmManAccHead.resx">
       <DependentUpon>frmManAccHead.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManAccSup.resx">
+    <EmbeddedResource Include="manager\frmManAccSup.resx">
       <DependentUpon>frmManAccSup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManagerDash.resx">
+    <EmbeddedResource Include="manager\frmManagerDash.resx">
       <DependentUpon>frmManagerDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManEmployee.resx">
+    <EmbeddedResource Include="manager\frmManEmployee.resx">
       <DependentUpon>frmManEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManHome.resx">
+    <EmbeddedResource Include="manager\frmManHome.resx">
       <DependentUpon>frmManHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManReports.resx">
+    <EmbeddedResource Include="manager\frmManReports.resx">
       <DependentUpon>frmManReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmManTask.resx">
+    <EmbeddedResource Include="manager\frmManTask.resx">
       <DependentUpon>frmManTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSuperDash.resx">
+    <EmbeddedResource Include="supervisor\frmSuperDash.resx">
       <DependentUpon>frmSuperDash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupHome.resx">
+    <EmbeddedResource Include="supervisor\frmSupHome.resx">
       <DependentUpon>frmSupHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSupInventory.resx">
+    <EmbeddedResource Include="supervisor\frmSupInventory.resx">
       <DependentUpon>frmSupInventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWarehouse.resx">
@@ -260,5 +260,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
