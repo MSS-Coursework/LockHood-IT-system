@@ -34,12 +34,12 @@ namespace LockHood
             }
             con.Open();
 
-            // Fill the Username Textbox
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select Factory from manager", con);
-            da.Fill(dt);
+            //// Fill the Username Textbox
+            //DataTable dt = new DataTable();
+            //SqlDataAdapter da = new SqlDataAdapter("select Factory from manager", con);
+            //da.Fill(dt);
 
-            lblDepart.Text = dt.Rows[0][0].ToString();
+            //lblDepart.Text = dt.Rows[0][0].ToString();
         }
         public void loadadhomeform(object Form)
         {
@@ -121,7 +121,7 @@ namespace LockHood
             btnHeads.BackColor = Color.White;
             btnHeads.ForeColor = Color.CornflowerBlue;
 
-            //loadadhomeform(new frmManagerDash());
+            loadadhomeform(new frmManAccHead());
             lblHeading.Text = " Department Heads";
         }
 
@@ -145,7 +145,7 @@ namespace LockHood
             btnSupervisors.BackColor = Color.White;
             btnSupervisors.ForeColor = Color.CornflowerBlue;
 
-            //loadadhomeform(new frmManagerDash());
+            loadadhomeform(new frmManAccSup());
             lblHeading.Text = "Supervisors";
         }
 
@@ -169,7 +169,7 @@ namespace LockHood
             btnEmployee.BackColor = Color.White;
             btnEmployee.ForeColor = Color.CornflowerBlue;
 
-            //loadadhomeform(new frmManagerDash());
+            loadadhomeform(new frmManEmployee());
             lblHeading.Text = "Employees";
         }
 
@@ -193,11 +193,16 @@ namespace LockHood
             btnReports.BackColor = Color.White;
             btnReports.ForeColor = Color.CornflowerBlue;
 
-            //loadadhomeform(new frmManagerDash());
+            loadadhomeform(new frmManReports());
             lblHeading.Text = "Generate Reports";
         }
 
         private void btn_X_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

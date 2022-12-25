@@ -90,11 +90,29 @@
     <Compile Include="frmHeadRequests.Designer.cs">
       <DependentUpon>frmHeadRequests.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmManAccHead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManAccHead.Designer.cs">
+      <DependentUpon>frmManAccHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManAccSup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManAccSup.Designer.cs">
+      <DependentUpon>frmManAccSup.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmManagerDash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmManagerDash.Designer.cs">
       <DependentUpon>frmManagerDash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManEmployee.Designer.cs">
+      <DependentUpon>frmManEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="frmManHome.cs">
       <SubType>Form</SubType>
@@ -165,8 +183,17 @@
     <EmbeddedResource Include="frmHeadRequests.resx">
       <DependentUpon>frmHeadRequests.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmManAccHead.resx">
+      <DependentUpon>frmManAccHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManAccSup.resx">
+      <DependentUpon>frmManAccSup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmManagerDash.resx">
       <DependentUpon>frmManagerDash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManEmployee.resx">
+      <DependentUpon>frmManEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmManHome.resx">
       <DependentUpon>frmManHome.cs</DependentUpon>

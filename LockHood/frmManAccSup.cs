@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace LockHood
 {
-    public partial class frmManReports : Form
+    public partial class frmManAccSup : Form
     {
-        public frmManReports()
+        public frmManAccSup()
         {
             InitializeComponent();
-        }
-
-        private void frmManReports_Load(object sender, EventArgs e)
-        {
-
-            this.reportViewer1.RefreshReport();
         }
     }
 }
