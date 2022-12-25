@@ -13,7 +13,7 @@ namespace LockHood
 {
     public partial class frmHeadHome : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N7LQHOM;Initial Catalog=LockHood;Integrated Security=True");
+        databaseClass objdb = new databaseClass();
 
         public frmHeadHome()
         {
@@ -25,18 +25,9 @@ namespace LockHood
             loadadhomeform(new frmHeadDash());
 
             // Check the connection status & close/Open
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
-            con.Open();
+            objdb.createConn();
 
-            // Fill the Username Textbox
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select Department from Head", con);
-            da.Fill(dt);
-
-            lblDepart.Text = dt.Rows[0][0].ToString();
+            
         }
 
         public void loadadhomeform(object Form)

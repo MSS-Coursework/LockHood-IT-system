@@ -13,7 +13,8 @@ namespace LockHood
 {
     public partial class login : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-N7LQHOM;Initial Catalog=LockHood;Integrated Security=True");
+        databaseClass objdb = new databaseClass();
+        
         public static String email = "";
 
         public login()
@@ -23,11 +24,7 @@ namespace LockHood
 
         private void login_Load(object sender, EventArgs e)
         {
-            if (con.State == ConnectionState.Open)
-            {
-                con.Close();
-            }
-            con.Open();
+            objdb.createConn();
 
             lblError.Text = "";
             lblEmailError.Text = "";
@@ -62,39 +59,53 @@ namespace LockHood
 
             else
             {
+                //sql query saved in a string
+                string query = "SELECT * FROM login WHERE Email ='" + mail + "' AND Password='" + pass + "'";
 
-                SqlCommand Com = new SqlCommand("select * from login where Email='" + mail + "' and Password ='" + pass + "'", con);
-                SqlDataReader DR1 = Com.ExecuteReader();
-                if (DR1.Read())
+                //use sqlreader to check if user is valid and save it in variable
+                var reader = objdb.readDatathroughReader(query);
+                if (reader.HasRows)
                 {
-                    usertype = DR1.GetValue(3).ToString();
+                    if (reader.Read())
+                    {
+                        usertype = reader.GetValue(3).ToString();
 
-                    if (usertype == "head")
-                    {
-                        email = txtPass.Text;
-                        frmHeadHome headHome = new frmHeadHome();
-                        headHome.Show();
+                        if (usertype == "head")
+                        {
+                            email = txtPass.Text;
+                            frmHeadHome headHome = new frmHeadHome();
+                            headHome.Show();
+                        }
+                        else if (usertype == "supervisor")
+                        {
+                            email = txtPass.Text;
+                            frmSupHome superHome = new frmSupHome();
+                            superHome.Show();
+                        }
+                        else
+                        {
+                            email = txtPass.Text;
+                            frmManHome manHome = new frmManHome();
+                            manHome.Show();
+                        }
                     }
-                    else if (usertype == "supervisor")
-                    {
-                        email = txtPass.Text;
-                        frmSupHome superHome = new frmSupHome();
-                        superHome.Show();
-                    }
-                    else
-                    {
-                        email = txtPass.Text;
-                        frmManHome manHome = new frmManHome();
-                        manHome.Show();
-                    }
+                    //MessageBox.Show("Admin Loggin Successfull");
+                    reader.Close();
+                    objdb.closeConn();
+                
+
+
                 }
-
                 else
                 {
+                    reader.Close();
+                    objdb.closeConn();
                     lblError.Text = "Invalid Username or Password !";
                     txtPass.Text = "";
                     txtEmail.Text = "";
                 }
+
+               
             }
 
 
