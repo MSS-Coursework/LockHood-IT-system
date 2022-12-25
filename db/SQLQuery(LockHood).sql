@@ -1,128 +1,119 @@
-CREATE TABLE Ceo (
+CREATE TABLE ceo (
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-email VARCHAR(50) NOT NULL,
-contact int NOT NULL,
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Email VARCHAR(50) NOT NULL,
+Contact int NOT NULL,
 );
 
-CREATE TABLE external_contractor(
+CREATE TABLE contractor(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-email VARCHAR(50) NOT NULL,
-contact int NOT NULL,
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Email VARCHAR(50) NOT NULL,
+Contact int NOT NULL,
 );
 
 CREATE TABLE inventory(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-material_name varchar(50) NOT NULL,
-quantity int NOT NULL,
+ID INT primary key NOT NULL IDENTITY(1,1),
+Material varchar(50) NOT NULL,
+Quantity int NOT NULL,
 
 );
 
 CREATE TABLE login(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-email varchar(50),
-password varchar(50),
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Email varchar(50),
+Password varchar(50),
+UserType varchar(50),
 );
 
-CREATE TABLE general_manager(
+CREATE TABLE manager(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-email varchar(50),
-contact int NOT NULL,
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Email varchar(50),
+Contact int NOT NULL,
 );
 
 CREATE TABLE department(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-manager_id INT FOREIGN KEY REFERENCES general_manager(id)
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Manager_ID INT FOREIGN KEY REFERENCES manager(ID)
 );
 
 CREATE TABLE supervisor(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-email varchar(50),
-department_id INT FOREIGN KEY REFERENCES department(id)
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Email varchar(50),
+Department_ID INT FOREIGN KEY REFERENCES department(ID)
 );
 
-CREATE TABLE department_head(
+CREATE TABLE head(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-email varchar(50),
-department_id INT FOREIGN KEY REFERENCES department(id)
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Email varchar(50),
+Department_ID INT FOREIGN KEY REFERENCES department(ID)
 );
 
 CREATE TABLE workshop(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-supervisor_id INT FOREIGN KEY REFERENCES supervisor(id),
-department_id INT FOREIGN KEY REFERENCES department(id)
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Supervisor_ID INT FOREIGN KEY REFERENCES supervisor(ID),
+Department_ID INT FOREIGN KEY REFERENCES department(ID)
 );
 
 CREATE TABLE materials(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-quantity INT NOT NULL,
-workshop_id INT FOREIGN KEY REFERENCES workshop(id)
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Quantity INT NOT NULL,
+Workshop_ID INT FOREIGN KEY REFERENCES workshop(ID)
 
 );
 
 CREATE TABLE employee(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-role varchar(50) NOT NULL,
-workshop_id INT FOREIGN KEY REFERENCES workshop(id)
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Role varchar(50) NOT NULL,
+Workshop_ID INT FOREIGN KEY REFERENCES workshop(ID)
 );
 
 CREATE TABLE task(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-status varchar(50) NOT NULL,
-date date NOT NULL,
-head_id INT FOREIGN KEY REFERENCES department_head(id),
-workshop_id INT FOREIGN KEY REFERENCES workshop(id),
-department_id INT FOREIGN KEY REFERENCES department(id)
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Status varchar(50) NOT NULL,
+Date date NOT NULL,
+Head_ID INT FOREIGN KEY REFERENCES head(ID),
+Workshop_ID INT FOREIGN KEY REFERENCES workshop(ID),
+Department_ID INT FOREIGN KEY REFERENCES department(ID)
 );
 
 CREATE TABLE sub_task(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-name varchar(50) NOT NULL,
-status varchar(50) NOT NULL,
-date date NOT NULL,
-head_id INT FOREIGN KEY REFERENCES department_head(id),
-workshop_id INT FOREIGN KEY REFERENCES workshop(id),
-department_id INT FOREIGN KEY REFERENCES department(id),
-employee INT FOREIGN KEY REFERENCES employee(id)
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Name varchar(50) NOT NULL,
+Status varchar(50) NOT NULL,
+Date date NOT NULL,
+Head_ID INT FOREIGN KEY REFERENCES head(ID),
+Workshop_ID INT FOREIGN KEY REFERENCES workshop(ID),
+Department_ID INT FOREIGN KEY REFERENCES department(ID),
+Employee_ID INT FOREIGN KEY REFERENCES employee(ID)
 );
 
 CREATE TABLE requests(
 
-id INT primary key NOT NULL IDENTITY(1,1),
-quantity INT NOT NULL,
-material_name varchar(50) NOT NULL,
-inventory_id INT FOREIGN KEY REFERENCES inventory(id),
-workshop_id INT FOREIGN KEY REFERENCES workshop(id)
-
+ID INT primary key NOT NULL IDENTITY(1,1),
+Quantity INT NOT NULL,
+Material varchar(50) NOT NULL,
+Inventory_ID INT FOREIGN KEY REFERENCES inventory(ID),
+Workshop_ID INT FOREIGN KEY REFERENCES workshop(ID)
 );
