@@ -11,7 +11,7 @@ namespace LockHood
 {
     class databaseClass
     {
-        private static SqlConnection connection = new SqlConnection();
+        public static SqlConnection connection = new SqlConnection();
         private static SqlCommand command = new SqlCommand();
         private static SqlDataAdapter adapter = new SqlDataAdapter();
 
