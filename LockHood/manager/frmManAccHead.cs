@@ -17,7 +17,8 @@ namespace LockHood
     public partial class frmManAccHead : Form
     {
         databaseClass objdb = new databaseClass();
-        string q = "select head.ID, head.Name as Name, head.Email as Email, department.Name as Department FROM head INNER JOIN department ON head.Department_ID = department.ID";
+        string q = "SELECT head.ID, head.Name as Name, head.Email as Email, department.Name as Department FROM head INNER JOIN department ON head.Department_ID = department.ID";
+
 
         public frmManAccHead()
         {
@@ -34,10 +35,14 @@ namespace LockHood
 
         private void frmManAccHead_Load(object sender, EventArgs e)
         {
+
             // Empty Error Labels
             lblErrorMail.Text = "";
             lblErrorName.Text = "";
             lblErrorDepart.Text = "";
+
+            lblUpdsucces.Text = "";
+            lblSucces.Text = "";
 
             objdb.createConn();
             objdb.showData(q, dgv_head);          
@@ -222,6 +227,7 @@ namespace LockHood
             foreach (DataRow dr in dt.Rows)
             {
                 cmbDepartment.Items.Add(dr["Name"].ToString());
+                cmbupdateDep.Items.Add(dr["Name"].ToString());
             }
         }
 

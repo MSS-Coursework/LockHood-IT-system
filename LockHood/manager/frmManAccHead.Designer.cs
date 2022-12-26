@@ -28,11 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_head = new System.Windows.Forms.DataGridView();
+            this.headid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namefield = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.update_btn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.delete_btn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lblErrorName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -44,6 +52,8 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.updatePanel = new System.Windows.Forms.Panel();
+            this.lblUpdsucces = new System.Windows.Forms.Label();
+            this.cmbupdateDep = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnupdateCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -53,14 +63,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.updateName_txtbox = new System.Windows.Forms.TextBox();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
-            this.cmbupdateDep = new System.Windows.Forms.ComboBox();
-            this.headid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namefield = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.update_btn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.delete_btn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.lblUpdsucces = new System.Windows.Forms.Label();
             this.lblSucces = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_head)).BeginInit();
             this.updatePanel.SuspendLayout();
@@ -72,6 +74,15 @@
             this.dgv_head.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_head.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.dgv_head.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_head.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_head.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_head.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.headid,
@@ -80,23 +91,108 @@
             this.Department,
             this.update_btn,
             this.delete_btn});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_head.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_head.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.dgv_head.Location = new System.Drawing.Point(53, 110);
             this.dgv_head.Name = "dgv_head";
             this.dgv_head.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_head.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgv_head.RowHeadersWidth = 51;
+            this.dgv_head.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_head.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_head.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgv_head.RowTemplate.Height = 35;
+            this.dgv_head.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_head.Size = new System.Drawing.Size(942, 452);
             this.dgv_head.TabIndex = 2;
             this.dgv_head.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_head_CellClick);
+            // 
+            // headid
+            // 
+            this.headid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.headid.DataPropertyName = "ID";
+            this.headid.HeaderText = "ID";
+            this.headid.MinimumWidth = 6;
+            this.headid.Name = "headid";
+            this.headid.ReadOnly = true;
+            // 
+            // namefield
+            // 
+            this.namefield.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.namefield.DataPropertyName = "Name";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.namefield.DefaultCellStyle = dataGridViewCellStyle2;
+            this.namefield.HeaderText = "Name";
+            this.namefield.MinimumWidth = 6;
+            this.namefield.Name = "namefield";
+            this.namefield.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // Department
+            // 
+            this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Department.DataPropertyName = "Department";
+            this.Department.HeaderText = "Department";
+            this.Department.MinimumWidth = 6;
+            this.Department.Name = "Department";
+            this.Department.ReadOnly = true;
+            // 
+            // update_btn
+            // 
+            this.update_btn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.update_btn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.update_btn.HeaderText = "Update";
+            this.update_btn.MinimumWidth = 6;
+            this.update_btn.Name = "update_btn";
+            this.update_btn.ReadOnly = true;
+            this.update_btn.Text = "UPDATE";
+            this.update_btn.ToolTipText = "Update";
+            this.update_btn.UseColumnTextForButtonValue = true;
+            this.update_btn.Width = 120;
+            // 
+            // delete_btn
+            // 
+            this.delete_btn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.delete_btn.DefaultCellStyle = dataGridViewCellStyle4;
+            this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delete_btn.HeaderText = "Delete";
+            this.delete_btn.MinimumWidth = 6;
+            this.delete_btn.Name = "delete_btn";
+            this.delete_btn.ReadOnly = true;
+            this.delete_btn.Text = "DELETE";
+            this.delete_btn.ToolTipText = "Delete";
+            this.delete_btn.UseColumnTextForButtonValue = true;
+            this.delete_btn.Width = 120;
             // 
             // lblErrorName
             // 
@@ -213,6 +309,7 @@
             // 
             // updatePanel
             // 
+            this.updatePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.updatePanel.Controls.Add(this.lblUpdsucces);
             this.updatePanel.Controls.Add(this.cmbupdateDep);
             this.updatePanel.Controls.Add(this.label8);
@@ -229,6 +326,27 @@
             this.updatePanel.Size = new System.Drawing.Size(280, 339);
             this.updatePanel.TabIndex = 56;
             this.updatePanel.Visible = false;
+            // 
+            // lblUpdsucces
+            // 
+            this.lblUpdsucces.AutoSize = true;
+            this.lblUpdsucces.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdsucces.ForeColor = System.Drawing.Color.Blue;
+            this.lblUpdsucces.Location = new System.Drawing.Point(12, 9);
+            this.lblUpdsucces.Name = "lblUpdsucces";
+            this.lblUpdsucces.Size = new System.Drawing.Size(46, 13);
+            this.lblUpdsucces.TabIndex = 64;
+            this.lblUpdsucces.Text = "Success";
+            // 
+            // cmbupdateDep
+            // 
+            this.cmbupdateDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.cmbupdateDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbupdateDep.FormattingEnabled = true;
+            this.cmbupdateDep.Location = new System.Drawing.Point(32, 219);
+            this.cmbupdateDep.Name = "cmbupdateDep";
+            this.cmbupdateDep.Size = new System.Drawing.Size(216, 21);
+            this.cmbupdateDep.TabIndex = 58;
             // 
             // label8
             // 
@@ -327,115 +445,21 @@
             this.cmbDepartment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.cmbDepartment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(594, 63);
+            this.cmbDepartment.Location = new System.Drawing.Point(594, 66);
             this.cmbDepartment.Name = "cmbDepartment";
             this.cmbDepartment.Size = new System.Drawing.Size(217, 21);
             this.cmbDepartment.TabIndex = 57;
-            // 
-            // cmbupdateDep
-            // 
-            this.cmbupdateDep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.cmbupdateDep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbupdateDep.FormattingEnabled = true;
-            this.cmbupdateDep.Location = new System.Drawing.Point(32, 219);
-            this.cmbupdateDep.Name = "cmbupdateDep";
-            this.cmbupdateDep.Size = new System.Drawing.Size(216, 21);
-            this.cmbupdateDep.TabIndex = 58;
-            // 
-            // headid
-            // 
-            this.headid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.headid.DataPropertyName = "ID";
-            this.headid.HeaderText = "ID";
-            this.headid.MinimumWidth = 6;
-            this.headid.Name = "headid";
-            this.headid.ReadOnly = true;
-            // 
-            // namefield
-            // 
-            this.namefield.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.namefield.DataPropertyName = "Name";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.namefield.DefaultCellStyle = dataGridViewCellStyle5;
-            this.namefield.HeaderText = "Name";
-            this.namefield.MinimumWidth = 6;
-            this.namefield.Name = "namefield";
-            this.namefield.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 6;
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // Department
-            // 
-            this.Department.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Department.DataPropertyName = "Department";
-            this.Department.HeaderText = "Department";
-            this.Department.MinimumWidth = 6;
-            this.Department.Name = "Department";
-            this.Department.ReadOnly = true;
-            // 
-            // update_btn
-            // 
-            this.update_btn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            this.update_btn.DefaultCellStyle = dataGridViewCellStyle6;
-            this.update_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update_btn.HeaderText = "Update";
-            this.update_btn.MinimumWidth = 6;
-            this.update_btn.Name = "update_btn";
-            this.update_btn.ReadOnly = true;
-            this.update_btn.Text = "UPDATE";
-            this.update_btn.ToolTipText = "Update";
-            this.update_btn.UseColumnTextForButtonValue = true;
-            // 
-            // delete_btn
-            // 
-            this.delete_btn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.delete_btn.DefaultCellStyle = dataGridViewCellStyle7;
-            this.delete_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete_btn.HeaderText = "Delete";
-            this.delete_btn.MinimumWidth = 6;
-            this.delete_btn.Name = "delete_btn";
-            this.delete_btn.ReadOnly = true;
-            this.delete_btn.Text = "DELETE";
-            this.delete_btn.ToolTipText = "Delete";
-            this.delete_btn.UseColumnTextForButtonValue = true;
-            // 
-            // lblUpdsucces
-            // 
-            this.lblUpdsucces.AutoSize = true;
-            this.lblUpdsucces.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdsucces.ForeColor = System.Drawing.Color.Blue;
-            this.lblUpdsucces.Location = new System.Drawing.Point(12, 9);
-            this.lblUpdsucces.Name = "lblUpdsucces";
-            this.lblUpdsucces.Size = new System.Drawing.Size(86, 13);
-            this.lblUpdsucces.TabIndex = 64;
-            this.lblUpdsucces.Text = "Error Username";
             // 
             // lblSucces
             // 
             this.lblSucces.AutoSize = true;
             this.lblSucces.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSucces.ForeColor = System.Drawing.Color.Blue;
+            this.lblSucces.ForeColor = System.Drawing.Color.SeaGreen;
             this.lblSucces.Location = new System.Drawing.Point(48, 9);
             this.lblSucces.Name = "lblSucces";
-            this.lblSucces.Size = new System.Drawing.Size(120, 21);
+            this.lblSucces.Size = new System.Drawing.Size(64, 21);
             this.lblSucces.TabIndex = 65;
-            this.lblSucces.Text = "Error Username";
+            this.lblSucces.Text = "Success";
             // 
             // frmManAccHead
             // 
@@ -493,13 +517,13 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.ComboBox cmbupdateDep;
+        private System.Windows.Forms.Label lblUpdsucces;
+        private System.Windows.Forms.Label lblSucces;
         private System.Windows.Forms.DataGridViewTextBoxColumn headid;
         private System.Windows.Forms.DataGridViewTextBoxColumn namefield;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn Department;
         private System.Windows.Forms.DataGridViewButtonColumn update_btn;
         private System.Windows.Forms.DataGridViewButtonColumn delete_btn;
-        private System.Windows.Forms.Label lblUpdsucces;
-        private System.Windows.Forms.Label lblSucces;
     }
 }
