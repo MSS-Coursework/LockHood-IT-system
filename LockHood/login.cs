@@ -75,18 +75,24 @@ namespace LockHood
                             email = txtPass.Text;
                             frmHeadHome headHome = new frmHeadHome();
                             headHome.Show();
+
+                            this.Hide();
                         }
                         else if (usertype == "supervisor")
                         {
                             email = txtPass.Text;
                             frmSupHome superHome = new frmSupHome();
                             superHome.Show();
+
+                            this.Hide();
                         }
                         else
                         {
                             email = txtPass.Text;
                             frmManHome manHome = new frmManHome();
                             manHome.Show();
+
+                            this.Hide();
                         }
                     }
                     //MessageBox.Show("Admin Loggin Successfull");

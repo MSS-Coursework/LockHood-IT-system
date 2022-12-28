@@ -162,10 +162,16 @@
     <Compile Include="supervisor\frmSupInventory.Designer.cs">
       <DependentUpon>frmSupInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWarehouse.cs">
+    <Compile Include="supervisor\frmSupTask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWarehouse.Designer.cs">
+    <Compile Include="supervisor\frmSupTask.Designer.cs">
+      <DependentUpon>frmSupTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="head\frmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="head\frmWarehouse.Designer.cs">
       <DependentUpon>frmWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
@@ -225,7 +231,10 @@
     <EmbeddedResource Include="supervisor\frmSupInventory.resx">
       <DependentUpon>frmSupInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWarehouse.resx">
+    <EmbeddedResource Include="supervisor\frmSupTask.resx">
+      <DependentUpon>frmSupTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="head\frmWarehouse.resx">
       <DependentUpon>frmWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
