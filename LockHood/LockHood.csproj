@@ -90,6 +90,12 @@
     <Compile Include="head\frmHeadRequests.Designer.cs">
       <DependentUpon>frmHeadRequests.cs</DependentUpon>
     </Compile>
+    <Compile Include="head\frmHeadSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="head\frmHeadSub.Designer.cs">
+      <DependentUpon>frmHeadSub.cs</DependentUpon>
+    </Compile>
     <Compile Include="manager\frmManAccHead.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="head\frmHeadRequests.resx">
       <DependentUpon>frmHeadRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="head\frmHeadSub.resx">
+      <DependentUpon>frmHeadSub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manager\frmManAccHead.resx">
       <DependentUpon>frmManAccHead.cs</DependentUpon>
