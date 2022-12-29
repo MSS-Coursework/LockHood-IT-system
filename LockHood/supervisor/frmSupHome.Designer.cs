@@ -32,10 +32,9 @@
             this.pnlBody = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnReports = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnInventory = new System.Windows.Forms.Button();
-            this.btnWarehouse = new System.Windows.Forms.Button();
             this.btnRequest = new System.Windows.Forms.Button();
             this.btnTasks = new System.Windows.Forms.Button();
             this.btnDash = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlHead = new System.Windows.Forms.Panel();
+            this.btn_X = new System.Windows.Forms.Button();
             this.lblHeading = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlBody.SuspendLayout();
@@ -75,10 +75,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.btnReports);
+            this.panel1.Controls.Add(this.btnReport);
+            this.panel1.Controls.Add(this.btnEmployee);
             this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.btnInventory);
-            this.panel1.Controls.Add(this.btnWarehouse);
             this.panel1.Controls.Add(this.btnRequest);
             this.panel1.Controls.Add(this.btnTasks);
             this.panel1.Controls.Add(this.btnDash);
@@ -90,21 +89,37 @@
             this.panel1.Size = new System.Drawing.Size(225, 625);
             this.panel1.TabIndex = 4;
             // 
-            // btnReports
+            // btnReport
             // 
-            this.btnReports.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnReports.FlatAppearance.BorderSize = 0;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.White;
-            this.btnReports.Location = new System.Drawing.Point(0, 444);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(225, 50);
-            this.btnReports.TabIndex = 8;
-            this.btnReports.Text = "Report";
-            this.btnReports.UseVisualStyleBackColor = false;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            this.btnReport.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Location = new System.Drawing.Point(0, 394);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(225, 50);
+            this.btnReport.TabIndex = 9;
+            this.btnReport.Text = "Report";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Location = new System.Drawing.Point(0, 344);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(225, 50);
+            this.btnEmployee.TabIndex = 8;
+            this.btnEmployee.Text = "Employee";
+            this.btnEmployee.UseVisualStyleBackColor = false;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
             // btnLogout
             // 
@@ -120,38 +135,7 @@
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
-            // 
-            // btnInventory
-            // 
-            this.btnInventory.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInventory.FlatAppearance.BorderSize = 0;
-            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventory.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInventory.ForeColor = System.Drawing.Color.White;
-            this.btnInventory.Location = new System.Drawing.Point(0, 394);
-            this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(225, 50);
-            this.btnInventory.TabIndex = 6;
-            this.btnInventory.Text = "Inventory";
-            this.btnInventory.UseVisualStyleBackColor = false;
-            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
-            // 
-            // btnWarehouse
-            // 
-            this.btnWarehouse.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnWarehouse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnWarehouse.FlatAppearance.BorderSize = 0;
-            this.btnWarehouse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWarehouse.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWarehouse.ForeColor = System.Drawing.Color.White;
-            this.btnWarehouse.Location = new System.Drawing.Point(0, 344);
-            this.btnWarehouse.Name = "btnWarehouse";
-            this.btnWarehouse.Size = new System.Drawing.Size(225, 50);
-            this.btnWarehouse.TabIndex = 5;
-            this.btnWarehouse.Text = "WareHouse";
-            this.btnWarehouse.UseVisualStyleBackColor = false;
-            this.btnWarehouse.Click += new System.EventHandler(this.btnWarehouse_Click);
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnRequest
             // 
@@ -227,11 +211,11 @@
             this.lblDepart.AutoSize = true;
             this.lblDepart.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepart.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDepart.Location = new System.Drawing.Point(15, 158);
+            this.lblDepart.Location = new System.Drawing.Point(56, 158);
             this.lblDepart.Name = "lblDepart";
-            this.lblDepart.Size = new System.Drawing.Size(198, 17);
+            this.lblDepart.Size = new System.Drawing.Size(105, 17);
             this.lblDepart.TabIndex = 3;
-            this.lblDepart.Text = "blablablablablablablablablabla";
+            this.lblDepart.Text = "Lock Machining";
             // 
             // label3
             // 
@@ -257,6 +241,7 @@
             // pnlHead
             // 
             this.pnlHead.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlHead.Controls.Add(this.btn_X);
             this.pnlHead.Controls.Add(this.lblHeading);
             this.pnlHead.Controls.Add(this.label1);
             this.pnlHead.Dock = System.Windows.Forms.DockStyle.Top;
@@ -264,6 +249,22 @@
             this.pnlHead.Name = "pnlHead";
             this.pnlHead.Size = new System.Drawing.Size(1300, 75);
             this.pnlHead.TabIndex = 3;
+            // 
+            // btn_X
+            // 
+            this.btn_X.BackColor = System.Drawing.Color.Brown;
+            this.btn_X.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_X.FlatAppearance.BorderSize = 0;
+            this.btn_X.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_X.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_X.ForeColor = System.Drawing.Color.White;
+            this.btn_X.Location = new System.Drawing.Point(1265, 0);
+            this.btn_X.Name = "btn_X";
+            this.btn_X.Size = new System.Drawing.Size(35, 35);
+            this.btn_X.TabIndex = 3;
+            this.btn_X.Text = "X";
+            this.btn_X.UseVisualStyleBackColor = false;
+            this.btn_X.Click += new System.EventHandler(this.btn_X_Click);
             // 
             // lblHeading
             // 
@@ -315,10 +316,8 @@
         private System.Windows.Forms.Panel pnlBody;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnEmployee;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnInventory;
-        private System.Windows.Forms.Button btnWarehouse;
         private System.Windows.Forms.Button btnRequest;
         private System.Windows.Forms.Button btnTasks;
         private System.Windows.Forms.Button btnDash;
@@ -330,5 +329,7 @@
         private System.Windows.Forms.Panel pnlHead;
         private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_X;
+        private System.Windows.Forms.Button btnReport;
     }
 }

@@ -47,6 +47,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlBody = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_X = new System.Windows.Forms.Button();
             this.pnlHead.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,6 +58,7 @@
             // pnlHead
             // 
             this.pnlHead.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlHead.Controls.Add(this.btn_X);
             this.pnlHead.Controls.Add(this.lblHeading);
             this.pnlHead.Controls.Add(this.label1);
             this.pnlHead.Dock = System.Windows.Forms.DockStyle.Top;
@@ -242,11 +244,11 @@
             this.lblDepart.AutoSize = true;
             this.lblDepart.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDepart.ForeColor = System.Drawing.Color.DimGray;
-            this.lblDepart.Location = new System.Drawing.Point(15, 158);
+            this.lblDepart.Location = new System.Drawing.Point(71, 158);
             this.lblDepart.Name = "lblDepart";
-            this.lblDepart.Size = new System.Drawing.Size(198, 17);
+            this.lblDepart.Size = new System.Drawing.Size(82, 17);
             this.lblDepart.TabIndex = 3;
-            this.lblDepart.Text = "blablablablablablablablablabla";
+            this.lblDepart.Text = "Engineering";
             // 
             // label3
             // 
@@ -286,6 +288,22 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1075, 25);
             this.panel4.TabIndex = 0;
+            // 
+            // btn_X
+            // 
+            this.btn_X.BackColor = System.Drawing.Color.Brown;
+            this.btn_X.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_X.FlatAppearance.BorderSize = 0;
+            this.btn_X.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_X.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_X.ForeColor = System.Drawing.Color.White;
+            this.btn_X.Location = new System.Drawing.Point(1265, 0);
+            this.btn_X.Name = "btn_X";
+            this.btn_X.Size = new System.Drawing.Size(35, 35);
+            this.btn_X.TabIndex = 4;
+            this.btn_X.Text = "X";
+            this.btn_X.UseVisualStyleBackColor = false;
+            this.btn_X.Click += new System.EventHandler(this.btn_X_Click);
             // 
             // frmHeadHome
             // 
@@ -331,5 +349,6 @@
         private System.Windows.Forms.Label lblDepart;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btn_X;
     }
 }

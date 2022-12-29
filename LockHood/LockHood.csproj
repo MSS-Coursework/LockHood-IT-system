@@ -90,6 +90,12 @@
     <Compile Include="head\frmHeadRequests.Designer.cs">
       <DependentUpon>frmHeadRequests.cs</DependentUpon>
     </Compile>
+    <Compile Include="head\frmHeadSub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="head\frmHeadSub.Designer.cs">
+      <DependentUpon>frmHeadSub.cs</DependentUpon>
+    </Compile>
     <Compile Include="manager\frmManAccHead.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,10 +162,16 @@
     <Compile Include="supervisor\frmSupInventory.Designer.cs">
       <DependentUpon>frmSupInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmWarehouse.cs">
+    <Compile Include="supervisor\frmSupTask.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWarehouse.Designer.cs">
+    <Compile Include="supervisor\frmSupTask.Designer.cs">
+      <DependentUpon>frmSupTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="head\frmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="head\frmWarehouse.Designer.cs">
       <DependentUpon>frmWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
@@ -182,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="head\frmHeadRequests.resx">
       <DependentUpon>frmHeadRequests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="head\frmHeadSub.resx">
+      <DependentUpon>frmHeadSub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manager\frmManAccHead.resx">
       <DependentUpon>frmManAccHead.cs</DependentUpon>
@@ -216,7 +231,10 @@
     <EmbeddedResource Include="supervisor\frmSupInventory.resx">
       <DependentUpon>frmSupInventory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWarehouse.resx">
+    <EmbeddedResource Include="supervisor\frmSupTask.resx">
+      <DependentUpon>frmSupTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="head\frmWarehouse.resx">
       <DependentUpon>frmWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">

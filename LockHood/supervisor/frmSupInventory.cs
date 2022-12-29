@@ -16,7 +16,7 @@ namespace LockHood
         public frmSupInventory()
         {
             InitializeComponent();
-            cmbInventory.ItemHeight = 50;
+
         }
 
         private void frmSupInventory_Load(object sender, EventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LockHood.supervisor;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,11 @@ namespace LockHood
         {
             loadadhomeform(new frmHeadDash());
 
+            //Current color
+            btnDash.BackColor = Color.White;
+            btnDash.ForeColor = Color.CornflowerBlue;
+            
+
             // Check the connection status & close/Open
             if (con.State == ConnectionState.Open)
             {
@@ -31,12 +37,12 @@ namespace LockHood
             }
             con.Open();
 
-            // Fill the Username Textbox
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter("select Department from Head", con);
-            da.Fill(dt);
+            //// Fill the Username Textbox
+            //DataTable dt = new DataTable();
+            //SqlDataAdapter da = new SqlDataAdapter("select Department from Head", con);
+            //da.Fill(dt);
 
-            lblDepart.Text = dt.Rows[0][0].ToString();
+            //lblDepart.Text = dt.Rows[0][0].ToString();
         }
         public void loadadhomeform(object Form)
         {
@@ -54,17 +60,13 @@ namespace LockHood
         {
             //btn Font Color
             btnTasks.ForeColor = Color.White;
-            btnRequest.ForeColor = Color.White;
-            btnWarehouse.ForeColor = Color.White;
-            btnInventory.ForeColor = Color.White;
-            btnReports.ForeColor = Color.White;
+            btnRequest.ForeColor = Color.White;                 
+            btnEmployee.ForeColor = Color.White;
 
             //btn Back Color
             btnTasks.BackColor = Color.CornflowerBlue;
             btnRequest.BackColor = Color.CornflowerBlue;
-            btnWarehouse.BackColor = Color.CornflowerBlue;
-            btnInventory.BackColor = Color.CornflowerBlue;
-            btnReports.BackColor = Color.CornflowerBlue;
+            btnEmployee.BackColor = Color.CornflowerBlue;
 
             //Current color
             btnDash.BackColor = Color.White;
@@ -78,23 +80,19 @@ namespace LockHood
         {
             //btn Font Color
             btnDash.ForeColor = Color.White;
-            btnRequest.ForeColor = Color.White;
-            btnWarehouse.ForeColor = Color.White;
-            btnInventory.ForeColor = Color.White;
-            btnReports.ForeColor = Color.White;
+            btnRequest.ForeColor = Color.White;                   
+            btnEmployee.ForeColor = Color.White;
 
             //btn Back Color
             btnDash.BackColor = Color.CornflowerBlue;
             btnRequest.BackColor = Color.CornflowerBlue;
-            btnWarehouse.BackColor = Color.CornflowerBlue;
-            btnInventory.BackColor = Color.CornflowerBlue;
-            btnReports.BackColor = Color.CornflowerBlue;
+            btnEmployee.BackColor = Color.CornflowerBlue;
 
             //Current color
             btnTasks.BackColor = Color.White;
             btnTasks.ForeColor = Color.CornflowerBlue;
 
-            //loadadhomeform(new frmSuperDash());
+            loadadhomeform(new frmSupTask());
             lblHeading.Text = "Tasks";
         }
 
@@ -102,93 +100,71 @@ namespace LockHood
         {
             //btn Font Color
             btnDash.ForeColor = Color.White;
-            btnTasks.ForeColor = Color.White;
-            btnWarehouse.ForeColor = Color.White;
-            btnInventory.ForeColor = Color.White;
-            btnReports.ForeColor = Color.White;
+            btnTasks.ForeColor = Color.White;               
+            btnEmployee.ForeColor = Color.White;
 
             //btn Back Color
             btnDash.BackColor = Color.CornflowerBlue;
             btnTasks.BackColor = Color.CornflowerBlue;
-            btnWarehouse.BackColor = Color.CornflowerBlue;
-            btnInventory.BackColor = Color.CornflowerBlue;
-            btnReports.BackColor = Color.CornflowerBlue;
+            btnEmployee.BackColor = Color.CornflowerBlue;
 
             //Current color
             btnRequest.BackColor = Color.White;
             btnRequest.ForeColor = Color.CornflowerBlue;
 
-            //loadadhomeform(new frmSuperDash());
+            loadadhomeform(new frmSupInventory());
             lblHeading.Text = "Requests";
         }
 
-        private void btnWarehouse_Click(object sender, EventArgs e)
+
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            //btn Font Color
-            btnDash.ForeColor = Color.White;
-            btnTasks.ForeColor = Color.White;
-            btnRequest.ForeColor = Color.White;
-            btnInventory.ForeColor = Color.White;
-            btnReports.ForeColor = Color.White;
-
-            //btn Back Color
-            btnDash.BackColor = Color.CornflowerBlue;
-            btnTasks.BackColor = Color.CornflowerBlue;
-            btnRequest.BackColor = Color.CornflowerBlue;
-            btnInventory.BackColor = Color.CornflowerBlue;
-            btnReports.BackColor = Color.CornflowerBlue;
-
-            //Current color
-            btnWarehouse.BackColor = Color.White;
-            btnWarehouse.ForeColor = Color.CornflowerBlue;
-
-            //loadadhomeform(new frmSuperDash());
-            lblHeading.Text = "Warehouse";
+            this.Hide();
+            login log = new login();
+            log.Show();
         }
 
-        private void btnInventory_Click(object sender, EventArgs e)
+        private void btn_X_Click(object sender, EventArgs e)
         {
-            //btn Font Color
-            btnDash.ForeColor = Color.White;
-            btnTasks.ForeColor = Color.White;
-            btnRequest.ForeColor = Color.White;
-            btnWarehouse.ForeColor = Color.White;
-            btnReports.ForeColor = Color.White;
-
-            //btn Back Color
-            btnDash.BackColor = Color.CornflowerBlue;
-            btnTasks.BackColor = Color.CornflowerBlue;
-            btnRequest.BackColor = Color.CornflowerBlue;
-            btnWarehouse.BackColor = Color.CornflowerBlue;
-            btnReports.BackColor = Color.CornflowerBlue;
-
-            //Current color
-            btnInventory.BackColor = Color.White;
-            btnInventory.ForeColor = Color.CornflowerBlue;
-
-            //loadadhomeform(new frmSuperDash());
-            lblHeading.Text = "Inventory";
+            Application.Exit();
         }
 
-        private void btnReports_Click(object sender, EventArgs e)
+        private void btnReport_Click(object sender, EventArgs e)
         {
             //btn Font Color
             btnDash.ForeColor = Color.White;
             btnTasks.ForeColor = Color.White;
             btnRequest.ForeColor = Color.White;
-            btnWarehouse.ForeColor = Color.White;
-            btnInventory.ForeColor = Color.White;
 
             //btn Back Color
             btnDash.BackColor = Color.CornflowerBlue;
             btnTasks.BackColor = Color.CornflowerBlue;
             btnRequest.BackColor = Color.CornflowerBlue;
-            btnWarehouse.BackColor = Color.CornflowerBlue;
-            btnInventory.BackColor = Color.CornflowerBlue;
 
             //Current color
-            btnReports.BackColor = Color.White;
-            btnReports.ForeColor = Color.CornflowerBlue;
+            btnReport.BackColor = Color.White;
+            btnReport.ForeColor = Color.CornflowerBlue;
+
+            //loadadhomeform(new frmSuperDash());
+            lblHeading.Text = "Report Generation";
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            //btn Font Color
+            btnDash.ForeColor = Color.White;
+            btnTasks.ForeColor = Color.White;
+            btnRequest.ForeColor = Color.White;
+
+            //btn Back Color
+            btnDash.BackColor = Color.CornflowerBlue;
+            btnTasks.BackColor = Color.CornflowerBlue;
+            btnRequest.BackColor = Color.CornflowerBlue;
+
+            //Current color
+            btnEmployee.BackColor = Color.White;
+            btnEmployee.ForeColor = Color.CornflowerBlue;
 
             //loadadhomeform(new frmSuperDash());
             lblHeading.Text = "Report Generation";

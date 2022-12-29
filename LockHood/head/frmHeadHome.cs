@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LockHood.head;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -82,9 +83,11 @@ namespace LockHood
             btnReports.BackColor = Color.CornflowerBlue;
             btnDash.BackColor = Color.CornflowerBlue;
 
+            //Current color
             btnRequest.BackColor = Color.White;
             btnRequest.ForeColor = Color.CornflowerBlue;
 
+            loadadhomeform(new frmHeadRequests());
             lblHeading.Text = "Inventory Requests";
         }
 
@@ -104,6 +107,7 @@ namespace LockHood
             btnReports.BackColor = Color.CornflowerBlue;
             btnDash.BackColor = Color.CornflowerBlue;
 
+            //Current color
             btnWarehouse.BackColor = Color.White;
             btnWarehouse.ForeColor = Color.CornflowerBlue;
 
@@ -136,9 +140,11 @@ namespace LockHood
             btnReports.BackColor = Color.CornflowerBlue;
             btnDash.BackColor = Color.CornflowerBlue;
 
+            //Current color
             btnTasks.BackColor = Color.White;
             btnTasks.ForeColor = Color.CornflowerBlue;
 
+            loadadhomeform(new frmHeadSub());
             lblHeading.Text = "Tasks";
         }
 
@@ -158,6 +164,7 @@ namespace LockHood
             btnReports.BackColor = Color.CornflowerBlue;
             btnDash.BackColor = Color.CornflowerBlue;
 
+            //Current color
             btnInventory.BackColor = Color.White;
             btnInventory.ForeColor = Color.CornflowerBlue;
 
@@ -181,10 +188,16 @@ namespace LockHood
             btnInventory.BackColor = Color.CornflowerBlue;
             btnDash.BackColor = Color.CornflowerBlue;
 
+            //Current color
             btnReports.BackColor = Color.White;
             btnReports.ForeColor = Color.CornflowerBlue;
 
             lblHeading.Text = "Generate Reports";
+        }
+
+        private void btn_X_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

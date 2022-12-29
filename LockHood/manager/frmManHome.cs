@@ -92,7 +92,7 @@ namespace LockHood
             btnTasks.BackColor = Color.White;
             btnTasks.ForeColor = Color.CornflowerBlue;
 
-            //loadadhomeform(new frmManagerDash());
+            loadadhomeform(new frmManTask());
             lblHeading.Text = "Tasks";
         }
 
