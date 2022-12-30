@@ -160,26 +160,8 @@ E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.CopyComplete
 E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.exe
 E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.pdb
 E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManTask.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadDash.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadHome.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadInventory.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadRequests.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManAccHead.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManAccSup.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManagerDash.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManEmployee.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManHome.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManReports.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManTask.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSplash.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSuperDash.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSupHome.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSupInventory.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmWarehouse.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.login.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.Properties.Resources.resources
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.GenerateResource.cache
-C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.CoreCompileInputs.cache
+E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.head.frmHeadSub.resources
+E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.supervisor.frmSupTask.resources
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\bin\Debug\SqlServerTypes\x86\msvcr120.dll
@@ -241,8 +223,29 @@ C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\bin\Debug\pt\Microso
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.AssemblyReference.cache
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadDash.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadHome.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadInventory.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadRequests.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.head.frmHeadSub.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManAccHead.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManAccSup.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManagerDash.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManEmployee.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManHome.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManReports.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmManTask.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSplash.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSuperDash.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSupHome.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSupInventory.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.supervisor.frmSupTask.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmWarehouse.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.login.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.Properties.Resources.resources
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.GenerateResource.cache
+C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.CoreCompileInputs.cache
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.CopyComplete
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.exe
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.pdb
-E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.head.frmHeadSub.resources
-E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.supervisor.frmSupTask.resources
