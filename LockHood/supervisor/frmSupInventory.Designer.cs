@@ -44,7 +44,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtUpdQuan = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.cmbUpdMate = new System.Windows.Forms.ComboBox();
             this.lblUpdsucces = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnupdateCancel = new System.Windows.Forms.Button();
@@ -58,9 +57,10 @@
             this.cmbMate = new System.Windows.Forms.ComboBox();
             this.btnRequest = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblErrorName = new System.Windows.Forms.Label();
+            this.lbl_errquantity = new System.Windows.Forms.Label();
+            this.lbl_errMat = new System.Windows.Forms.Label();
             this.lblSucces = new System.Windows.Forms.Label();
+            this.Txt_matupdate = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Req)).BeginInit();
             this.updatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Mate)).BeginInit();
@@ -68,6 +68,7 @@
             // 
             // dgv_Req
             // 
+            this.dgv_Req.AllowUserToAddRows = false;
             this.dgv_Req.AllowUserToDeleteRows = false;
             this.dgv_Req.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_Req.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
@@ -89,21 +90,26 @@
             this.Update,
             this.Delete});
             this.dgv_Req.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.dgv_Req.Location = new System.Drawing.Point(63, 123);
+            this.dgv_Req.Location = new System.Drawing.Point(84, 151);
+            this.dgv_Req.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Req.Name = "dgv_Req";
             this.dgv_Req.ReadOnly = true;
             this.dgv_Req.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_Req.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgv_Req.RowTemplate.Height = 35;
             this.dgv_Req.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Req.Size = new System.Drawing.Size(605, 433);
+            this.dgv_Req.Size = new System.Drawing.Size(807, 533);
             this.dgv_Req.TabIndex = 100;
+            this.dgv_Req.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Req_CellClick);
             // 
             // ID
             // 
+            this.ID.DataPropertyName = "ID";
             this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.Width = 125;
             // 
             // Materials
             // 
@@ -120,8 +126,10 @@
             // 
             this.Quantity.DataPropertyName = "Quantity";
             this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
             this.Quantity.Name = "Quantity";
             this.Quantity.ReadOnly = true;
+            this.Quantity.Width = 125;
             // 
             // Update
             // 
@@ -133,6 +141,7 @@
             this.Update.DefaultCellStyle = dataGridViewCellStyle3;
             this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Update.HeaderText = "Update";
+            this.Update.MinimumWidth = 6;
             this.Update.Name = "Update";
             this.Update.ReadOnly = true;
             this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -151,6 +160,7 @@
             this.Delete.DefaultCellStyle = dataGridViewCellStyle4;
             this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 6;
             this.Delete.Name = "Delete";
             this.Delete.ReadOnly = true;
             this.Delete.Text = "DELETE";
@@ -160,18 +170,18 @@
             // updatePanel
             // 
             this.updatePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.updatePanel.Controls.Add(this.Txt_matupdate);
             this.updatePanel.Controls.Add(this.label7);
             this.updatePanel.Controls.Add(this.txtUpdQuan);
             this.updatePanel.Controls.Add(this.label13);
-            this.updatePanel.Controls.Add(this.cmbUpdMate);
             this.updatePanel.Controls.Add(this.lblUpdsucces);
             this.updatePanel.Controls.Add(this.label3);
             this.updatePanel.Controls.Add(this.btnupdateCancel);
             this.updatePanel.Controls.Add(this.btnUpdate);
-            this.updatePanel.Location = new System.Drawing.Point(182, 197);
-            this.updatePanel.Margin = new System.Windows.Forms.Padding(2);
+            this.updatePanel.Location = new System.Drawing.Point(243, 242);
+            this.updatePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.updatePanel.Name = "updatePanel";
-            this.updatePanel.Size = new System.Drawing.Size(280, 318);
+            this.updatePanel.Size = new System.Drawing.Size(372, 390);
             this.updatePanel.TabIndex = 104;
             this.updatePanel.Visible = false;
             // 
@@ -179,10 +189,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label7.Location = new System.Drawing.Point(30, 151);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(40, 186);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 13);
+            this.label7.Size = new System.Drawing.Size(61, 17);
             this.label7.TabIndex = 121;
             this.label7.Text = "Quantity";
             // 
@@ -191,43 +201,33 @@
             this.txtUpdQuan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtUpdQuan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUpdQuan.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUpdQuan.Location = new System.Drawing.Point(33, 167);
-            this.txtUpdQuan.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtUpdQuan.Location = new System.Drawing.Point(42, 207);
+            this.txtUpdQuan.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtUpdQuan.Multiline = true;
             this.txtUpdQuan.Name = "txtUpdQuan";
-            this.txtUpdQuan.Size = new System.Drawing.Size(216, 27);
+            this.txtUpdQuan.Size = new System.Drawing.Size(288, 33);
             this.txtUpdQuan.TabIndex = 119;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label13.Location = new System.Drawing.Point(29, 90);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(39, 111);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 13);
+            this.label13.Size = new System.Drawing.Size(58, 17);
             this.label13.TabIndex = 118;
             this.label13.Text = "Material";
-            // 
-            // cmbUpdMate
-            // 
-            this.cmbUpdMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.cmbUpdMate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbUpdMate.FormattingEnabled = true;
-            this.cmbUpdMate.Location = new System.Drawing.Point(33, 106);
-            this.cmbUpdMate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmbUpdMate.Name = "cmbUpdMate";
-            this.cmbUpdMate.Size = new System.Drawing.Size(216, 21);
-            this.cmbUpdMate.TabIndex = 116;
             // 
             // lblUpdsucces
             // 
             this.lblUpdsucces.AutoSize = true;
             this.lblUpdsucces.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdsucces.ForeColor = System.Drawing.Color.Blue;
-            this.lblUpdsucces.Location = new System.Drawing.Point(12, 9);
+            this.lblUpdsucces.Location = new System.Drawing.Point(16, 11);
+            this.lblUpdsucces.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUpdsucces.Name = "lblUpdsucces";
-            this.lblUpdsucces.Size = new System.Drawing.Size(46, 13);
+            this.lblUpdsucces.Size = new System.Drawing.Size(55, 19);
             this.lblUpdsucces.TabIndex = 64;
             this.lblUpdsucces.Text = "Success";
             // 
@@ -236,9 +236,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label3.Location = new System.Drawing.Point(28, 38);
+            this.label3.Location = new System.Drawing.Point(37, 47);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 27);
+            this.label3.Size = new System.Drawing.Size(122, 34);
             this.label3.TabIndex = 63;
             this.label3.Text = "Update";
             // 
@@ -248,12 +249,14 @@
             this.btnupdateCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnupdateCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnupdateCancel.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnupdateCancel.Location = new System.Drawing.Point(160, 230);
+            this.btnupdateCancel.Location = new System.Drawing.Point(213, 283);
+            this.btnupdateCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnupdateCancel.Name = "btnupdateCancel";
-            this.btnupdateCancel.Size = new System.Drawing.Size(88, 35);
+            this.btnupdateCancel.Size = new System.Drawing.Size(117, 43);
             this.btnupdateCancel.TabIndex = 57;
             this.btnupdateCancel.Text = "CANCEL";
             this.btnupdateCancel.UseVisualStyleBackColor = false;
+            this.btnupdateCancel.Click += new System.EventHandler(this.btnupdateCancel_Click);
             // 
             // btnUpdate
             // 
@@ -262,15 +265,18 @@
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(32, 230);
+            this.btnUpdate.Location = new System.Drawing.Point(43, 283);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(88, 35);
+            this.btnUpdate.Size = new System.Drawing.Size(117, 43);
             this.btnUpdate.TabIndex = 62;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dgv_Mate
             // 
+            this.dgv_Mate.AllowUserToAddRows = false;
             this.dgv_Mate.AllowUserToDeleteRows = false;
             this.dgv_Mate.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_Mate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
@@ -289,14 +295,15 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
             this.dgv_Mate.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.dgv_Mate.Location = new System.Drawing.Point(698, 123);
+            this.dgv_Mate.Location = new System.Drawing.Point(931, 151);
+            this.dgv_Mate.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Mate.Name = "dgv_Mate";
             this.dgv_Mate.ReadOnly = true;
             this.dgv_Mate.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgv_Mate.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgv_Mate.RowTemplate.Height = 35;
             this.dgv_Mate.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Mate.Size = new System.Drawing.Size(326, 433);
+            this.dgv_Mate.Size = new System.Drawing.Size(435, 533);
             this.dgv_Mate.TabIndex = 105;
             // 
             // dataGridViewTextBoxColumn1
@@ -315,6 +322,7 @@
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Quantity";
             this.dataGridViewTextBoxColumn2.HeaderText = "Quantity";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
@@ -322,10 +330,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label1.Location = new System.Drawing.Point(310, 61);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(413, 75);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 127;
             this.label1.Text = "Quantity";
             // 
@@ -334,21 +342,21 @@
             this.txtQuant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtQuant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtQuant.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuant.Location = new System.Drawing.Point(313, 77);
-            this.txtQuant.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtQuant.Location = new System.Drawing.Point(417, 95);
+            this.txtQuant.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtQuant.Multiline = true;
             this.txtQuant.Name = "txtQuant";
-            this.txtQuant.Size = new System.Drawing.Size(216, 27);
+            this.txtQuant.Size = new System.Drawing.Size(288, 33);
             this.txtQuant.TabIndex = 126;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label2.Location = new System.Drawing.Point(60, 67);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(80, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 125;
             this.label2.Text = "Material";
             // 
@@ -357,10 +365,10 @@
             this.cmbMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.cmbMate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMate.FormattingEnabled = true;
-            this.cmbMate.Location = new System.Drawing.Point(64, 83);
-            this.cmbMate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbMate.Location = new System.Drawing.Point(85, 102);
+            this.cmbMate.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.cmbMate.Name = "cmbMate";
-            this.cmbMate.Size = new System.Drawing.Size(216, 21);
+            this.cmbMate.Size = new System.Drawing.Size(287, 24);
             this.cmbMate.TabIndex = 124;
             // 
             // btnRequest
@@ -370,66 +378,86 @@
             this.btnRequest.FlatAppearance.BorderSize = 0;
             this.btnRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRequest.ForeColor = System.Drawing.Color.White;
-            this.btnRequest.Location = new System.Drawing.Point(580, 75);
+            this.btnRequest.Location = new System.Drawing.Point(773, 92);
+            this.btnRequest.Margin = new System.Windows.Forms.Padding(4);
             this.btnRequest.Name = "btnRequest";
-            this.btnRequest.Size = new System.Drawing.Size(88, 35);
+            this.btnRequest.Size = new System.Drawing.Size(117, 43);
             this.btnRequest.TabIndex = 123;
             this.btnRequest.Text = "REQUEST";
             this.btnRequest.UseVisualStyleBackColor = false;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label4.Location = new System.Drawing.Point(713, 87);
+            this.label4.Location = new System.Drawing.Point(951, 107);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(292, 24);
+            this.label4.Size = new System.Drawing.Size(360, 30);
             this.label4.TabIndex = 122;
             this.label4.Text = "Materials Inside Workshop";
             // 
-            // label10
+            // lbl_errquantity
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Nirmala UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(311, 107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 12);
-            this.label10.TabIndex = 142;
-            this.label10.Text = "Error Username";
+            this.lbl_errquantity.AutoSize = true;
+            this.lbl_errquantity.Font = new System.Drawing.Font("Nirmala UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_errquantity.ForeColor = System.Drawing.Color.Red;
+            this.lbl_errquantity.Location = new System.Drawing.Point(415, 132);
+            this.lbl_errquantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_errquantity.Name = "lbl_errquantity";
+            this.lbl_errquantity.Size = new System.Drawing.Size(88, 15);
+            this.lbl_errquantity.TabIndex = 142;
+            this.lbl_errquantity.Text = "Error Username";
             // 
-            // lblErrorName
+            // lbl_errMat
             // 
-            this.lblErrorName.AutoSize = true;
-            this.lblErrorName.Font = new System.Drawing.Font("Nirmala UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorName.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorName.Location = new System.Drawing.Point(62, 107);
-            this.lblErrorName.Name = "lblErrorName";
-            this.lblErrorName.Size = new System.Drawing.Size(67, 12);
-            this.lblErrorName.TabIndex = 141;
-            this.lblErrorName.Text = "Error Username";
+            this.lbl_errMat.AutoSize = true;
+            this.lbl_errMat.Font = new System.Drawing.Font("Nirmala UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_errMat.ForeColor = System.Drawing.Color.Red;
+            this.lbl_errMat.Location = new System.Drawing.Point(83, 132);
+            this.lbl_errMat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_errMat.Name = "lbl_errMat";
+            this.lbl_errMat.Size = new System.Drawing.Size(88, 15);
+            this.lbl_errMat.TabIndex = 141;
+            this.lbl_errMat.Text = "Error Username";
             // 
             // lblSucces
             // 
             this.lblSucces.AutoSize = true;
             this.lblSucces.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSucces.ForeColor = System.Drawing.Color.SeaGreen;
-            this.lblSucces.Location = new System.Drawing.Point(60, 22);
+            this.lblSucces.Location = new System.Drawing.Point(80, 27);
+            this.lblSucces.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSucces.Name = "lblSucces";
-            this.lblSucces.Size = new System.Drawing.Size(64, 21);
+            this.lblSucces.Size = new System.Drawing.Size(78, 28);
             this.lblSucces.TabIndex = 143;
             this.lblSucces.Text = "Success";
             // 
+            // Txt_matupdate
+            // 
+            this.Txt_matupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.Txt_matupdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Txt_matupdate.Enabled = false;
+            this.Txt_matupdate.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txt_matupdate.Location = new System.Drawing.Point(43, 132);
+            this.Txt_matupdate.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.Txt_matupdate.Multiline = true;
+            this.Txt_matupdate.Name = "Txt_matupdate";
+            this.Txt_matupdate.ReadOnly = true;
+            this.Txt_matupdate.Size = new System.Drawing.Size(288, 33);
+            this.Txt_matupdate.TabIndex = 122;
+            // 
             // frmSupInventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1075, 600);
+            this.ClientSize = new System.Drawing.Size(1433, 738);
             this.Controls.Add(this.lblSucces);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.lblErrorName);
+            this.Controls.Add(this.lbl_errquantity);
+            this.Controls.Add(this.lbl_errMat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_Mate);
@@ -440,6 +468,7 @@
             this.Controls.Add(this.cmbMate);
             this.Controls.Add(this.btnRequest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSupInventory";
             this.Text = "frmSupInventory";
             this.Load += new System.EventHandler(this.frmSupInventory_Load);
@@ -454,16 +483,10 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dgv_Req;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Materials;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewButtonColumn Update;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.Panel updatePanel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtUpdQuan;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cmbUpdMate;
         private System.Windows.Forms.Label lblUpdsucces;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnupdateCancel;
@@ -477,8 +500,14 @@
         private System.Windows.Forms.ComboBox cmbMate;
         private System.Windows.Forms.Button btnRequest;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblErrorName;
+        private System.Windows.Forms.Label lbl_errquantity;
+        private System.Windows.Forms.Label lbl_errMat;
         private System.Windows.Forms.Label lblSucces;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Materials;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewButtonColumn Update;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.TextBox Txt_matupdate;
     }
 }

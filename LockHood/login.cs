@@ -72,7 +72,7 @@ namespace LockHood
 
                         if (usertype == "head")
                         {
-                            email = txtPass.Text;
+                            email = txtEmail.Text;
                             frmHeadHome headHome = new frmHeadHome();
                             headHome.Show();
 
@@ -80,7 +80,7 @@ namespace LockHood
                         }
                         else if (usertype == "supervisor")
                         {
-                            email = txtPass.Text;
+                            email = txtEmail.Text;
                             frmSupHome superHome = new frmSupHome();
                             superHome.Show();
 
@@ -88,7 +88,7 @@ namespace LockHood
                         }
                         else
                         {
-                            email = txtPass.Text;
+                            email = txtEmail.Text;
                             frmManHome manHome = new frmManHome();
                             manHome.Show();
 
