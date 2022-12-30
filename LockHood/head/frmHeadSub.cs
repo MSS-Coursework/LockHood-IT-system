@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace LockHood.head
 {
     public partial class frmHeadSub : Form
     {
+        databaseClass objdb = new databaseClass();
+        string q = "SELECT task.ID, task.Name as Task, task.Status as Status, task.Date, workshop.Name as Workshop FROM task INNER JOIN workshop ON task.Workshop_ID = workshop.ID";
+        string q2= "SELECT sub_task.Task_ID as TaskID, sub_task.Name as SubTask, sub_task.Date, workshop.Name as Workshop, employee.Name as Employee, sub_task.Status as Status FROM ((sub_task INNER JOIN workshop ON sub_task.Workshop_ID = workshop.ID))  INNER JOIN employee ON employee.ID = sub_task.Employee_ID";
+
         public frmHeadSub()
         {
             InitializeComponent();
@@ -19,7 +25,149 @@ namespace LockHood.head
 
         private void frmHeadSub_Load(object sender, EventArgs e)
         {
+            objdb.createConn();
+            objdb.showData(q2, dgv_sub);
+            objdb.showData(q, dgv_task);
+            fillcombo();
+            emptyText();
+        }
+
+        private void fillcombo()
+        {
+            // Fill Items to workshop combobox
+            string query = "SELECT Name FROM workshop";
+            DataTable dt = new DataTable();
+
+            objdb.readDatathroughAdapter(query, dt);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                cmbSortWork.Items.Add(dr["Name"].ToString());
+            }
+
+        
+            // Fill Items to task combobox
+
+            string query3 = "SELECT Name FROM task";
+            DataTable dt3 = new DataTable();
+
+            objdb.readDatathroughAdapter(query3, dt3);
+
+            foreach (DataRow dr in dt3.Rows)
+            {
+                cmbTask.Items.Add(dr["Name"].ToString());
+                cmbUpdTask.Items.Add(dr["Name"].ToString());
+
+            }
+        }
+
+        private void emptyText()
+        {
+            txtSub.Text = "";
+            txtUpdSub.Text = "";
+        }
+
+        private void cmbSortWork_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string workShop = cmbSortWork.SelectedItem.ToString();
+
+            string q = "SELECT task.ID, task.Name as Name, task.Status, task.Date, workshop.Name FROM task INNER JOIN workshop ON task.Workshop_ID = workshop.ID where workshop.Name='" + workShop + "'";
+            string q2 = "SELECT sub_task.ID, sub_task.Name, sub_task.Date, workshop.Name, employee.Name, sub_task.Status FROM ((sub_task INNER JOIN workshop ON sub_task.workshop_ID = workshop.Name))  INNER JOIN employee ON employee.ID = sub_task.Employee_ID where workshop.Name='" + workShop + "'";
+
+
+            objdb.createConn();
+            objdb.showData(q2, dgv_sub);
+            objdb.showData(q, dgv_task);
 
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            addSubTask();
+        }
+
+        private void addSubTask()
+        {
+            String subTask = txtSub.Text;
+            DateTime date = dtpDate.Value;
+            String employee = cmbEmp.Text;
+            string dateString = date.ToString("dd-MM-yyyy");
+
+            string taskName = cmbTask.Text;
+
+            int task_id = FindId(taskName, "ID", "task");
+            int dep_id = FindId(taskName, "Department_ID", "task");
+            int work_id = FindId(taskName, "Workshop_ID", "task");
+            int emp_id = FindId(employee, "ID", "employee");
+
+
+            try
+            {
+                objdb.createConn();
+
+                string query1 = "insert into sub_task (Name, Status, Date, Task_ID, Workshop_ID, Department_ID, Employee_ID) values ('" + subTask + "', 'Pending', '" + date + "', '" + task_id + "', '" + work_id + "', '" + dep_id + "', '" + emp_id + "')";
+                SqlCommand dbCommand1 = new SqlCommand(query1);
+
+                objdb.executeQuery(dbCommand1);
+
+                objdb.showData(q2, dgv_sub);
+                objdb.showData(q, dgv_task);
+
+                objdb.closeConn();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cmbTask_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fillEmpCombo();
+
+        }
+
+        private void fillEmpCombo()
+        {
+            cmbEmp.Items.Clear();
+            string taskName = cmbTask.Text;
+
+            int work_id = FindId(taskName, "Workshop_ID", "task");
+
+            // Fill Items to workshop combobox
+            string query = "SELECT Name FROM employee where Workshop_ID = '"+ work_id + "'";
+            DataTable dt = new DataTable();
+
+            objdb.readDatathroughAdapter(query, dt);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                cmbEmp.Items.Add(dr["Name"].ToString());
+            }
+        }
+
+
+        public int FindId(String name, String col, String table)
+        {
+            objdb.createConn();
+            int id;
+            string query = "SELECT " + col + " from " + table + " WHERE Name  =@name";
+
+
+            SqlCommand dbCommand = new SqlCommand(query);
+            dbCommand.Parameters.AddWithValue("@name", name);
+
+            objdb.executeQuery(dbCommand);
+
+            SqlDataReader dr = dbCommand.ExecuteReader();
+
+            dr.Read();
+            id = Convert.ToInt32(dr[0]);
+
+            objdb.closeConn();
+            return id;
+        }
+
     }
 }

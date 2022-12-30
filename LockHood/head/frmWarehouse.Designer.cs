@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ComboBox cmbAddReqMate;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,56 +39,47 @@
             this.txtQuant = new System.Windows.Forms.TextBox();
             this.updatePanel = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtUpdMat = new System.Windows.Forms.TextBox();
             this.txtUpdQuan = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.cmbUpdMate = new System.Windows.Forms.ComboBox();
             this.lblUpdsucces = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnupdateCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_Req = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Materials = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.cmbMate = new System.Windows.Forms.ComboBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.pnlReqUpdate = new System.Windows.Forms.Panel();
+            this.txtAddMate = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAddReqQuan = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbRqSucess = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnUpdReqCancel = new System.Windows.Forms.Button();
             this.btnSend = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvIntReq = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbWorkshop = new System.Windows.Forms.ComboBox();
             this.lblErrorName = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblErrQuan = new System.Windows.Forms.Label();
             this.lblSucces = new System.Windows.Forms.Label();
-            cmbAddReqMate = new System.Windows.Forms.ComboBox();
+            this.txtMaterial = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.RID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rmaterials = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.updatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Req)).BeginInit();
             this.pnlReqUpdate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntReq)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmbAddReqMate
-            // 
-            cmbAddReqMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            cmbAddReqMate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cmbAddReqMate.FormattingEnabled = true;
-            cmbAddReqMate.Location = new System.Drawing.Point(33, 106);
-            cmbAddReqMate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            cmbAddReqMate.Name = "cmbAddReqMate";
-            cmbAddReqMate.Size = new System.Drawing.Size(216, 21);
-            cmbAddReqMate.TabIndex = 116;
             // 
             // label1
             // 
@@ -118,14 +108,14 @@
             // 
             this.updatePanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.updatePanel.Controls.Add(this.label7);
+            this.updatePanel.Controls.Add(this.txtUpdMat);
             this.updatePanel.Controls.Add(this.txtUpdQuan);
             this.updatePanel.Controls.Add(this.label13);
-            this.updatePanel.Controls.Add(this.cmbUpdMate);
             this.updatePanel.Controls.Add(this.lblUpdsucces);
             this.updatePanel.Controls.Add(this.label3);
             this.updatePanel.Controls.Add(this.btnupdateCancel);
             this.updatePanel.Controls.Add(this.btnUpdate);
-            this.updatePanel.Location = new System.Drawing.Point(155, 191);
+            this.updatePanel.Location = new System.Drawing.Point(177, 186);
             this.updatePanel.Margin = new System.Windows.Forms.Padding(2);
             this.updatePanel.Name = "updatePanel";
             this.updatePanel.Size = new System.Drawing.Size(280, 318);
@@ -142,6 +132,18 @@
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 121;
             this.label7.Text = "Quantity";
+            // 
+            // txtUpdMat
+            // 
+            this.txtUpdMat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtUpdMat.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUpdMat.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpdMat.Location = new System.Drawing.Point(32, 107);
+            this.txtUpdMat.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtUpdMat.Multiline = true;
+            this.txtUpdMat.Name = "txtUpdMat";
+            this.txtUpdMat.Size = new System.Drawing.Size(216, 27);
+            this.txtUpdMat.TabIndex = 119;
             // 
             // txtUpdQuan
             // 
@@ -165,17 +167,6 @@
             this.label13.Size = new System.Drawing.Size(44, 13);
             this.label13.TabIndex = 118;
             this.label13.Text = "Material";
-            // 
-            // cmbUpdMate
-            // 
-            this.cmbUpdMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.cmbUpdMate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbUpdMate.FormattingEnabled = true;
-            this.cmbUpdMate.Location = new System.Drawing.Point(33, 106);
-            this.cmbUpdMate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmbUpdMate.Name = "cmbUpdMate";
-            this.cmbUpdMate.Size = new System.Drawing.Size(216, 21);
-            this.cmbUpdMate.TabIndex = 116;
             // 
             // lblUpdsucces
             // 
@@ -211,6 +202,7 @@
             this.btnupdateCancel.TabIndex = 57;
             this.btnupdateCancel.Text = "CANCEL";
             this.btnupdateCancel.UseVisualStyleBackColor = false;
+            this.btnupdateCancel.Click += new System.EventHandler(this.btnupdateCancel_Click);
             // 
             // btnUpdate
             // 
@@ -225,12 +217,13 @@
             this.btnUpdate.TabIndex = 62;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label2.Location = new System.Drawing.Point(35, 62);
+            this.label2.Location = new System.Drawing.Point(35, 56);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
@@ -254,9 +247,9 @@
             this.dgv_Req.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_Req.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Req.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
+            this.MID,
             this.Materials,
-            this.Quantity,
+            this.MQuantity,
             this.Update,
             this.Delete});
             this.dgv_Req.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
@@ -269,13 +262,15 @@
             this.dgv_Req.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Req.Size = new System.Drawing.Size(547, 433);
             this.dgv_Req.TabIndex = 128;
+            this.dgv_Req.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Req_CellContentClick);
             // 
-            // ID
+            // MID
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 60;
+            this.MID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MID.DataPropertyName = "MID";
+            this.MID.HeaderText = "ID";
+            this.MID.Name = "MID";
+            this.MID.ReadOnly = true;
             // 
             // Materials
             // 
@@ -288,16 +283,16 @@
             this.Materials.Name = "Materials";
             this.Materials.ReadOnly = true;
             // 
-            // Quantity
+            // MQuantity
             // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
+            this.MQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MQuantity.DataPropertyName = "MQuantity";
+            this.MQuantity.HeaderText = "Quantity";
+            this.MQuantity.Name = "MQuantity";
+            this.MQuantity.ReadOnly = true;
             // 
             // Update
             // 
-            this.Update.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightSeaGreen;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,10 +307,10 @@
             this.Update.Text = "UPDATE";
             this.Update.ToolTipText = "Update";
             this.Update.UseColumnTextForButtonValue = true;
+            this.Update.Width = 120;
             // 
             // Delete
             // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.Crimson;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,17 +323,7 @@
             this.Delete.Text = "DELETE";
             this.Delete.ToolTipText = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
-            // 
-            // cmbMate
-            // 
-            this.cmbMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.cmbMate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbMate.FormattingEnabled = true;
-            this.cmbMate.Location = new System.Drawing.Point(39, 78);
-            this.cmbMate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cmbMate.Name = "cmbMate";
-            this.cmbMate.Size = new System.Drawing.Size(216, 21);
-            this.cmbMate.TabIndex = 131;
+            this.Delete.Width = 120;
             // 
             // btnCreate
             // 
@@ -353,15 +338,16 @@
             this.btnCreate.TabIndex = 130;
             this.btnCreate.Text = "CREATE";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // pnlReqUpdate
             // 
             this.pnlReqUpdate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlReqUpdate.Controls.Add(this.txtAddMate);
             this.pnlReqUpdate.Controls.Add(this.label5);
             this.pnlReqUpdate.Controls.Add(this.txtAddReqQuan);
             this.pnlReqUpdate.Controls.Add(this.label6);
-            this.pnlReqUpdate.Controls.Add(cmbAddReqMate);
-            this.pnlReqUpdate.Controls.Add(this.label8);
+            this.pnlReqUpdate.Controls.Add(this.lbRqSucess);
             this.pnlReqUpdate.Controls.Add(this.label9);
             this.pnlReqUpdate.Controls.Add(this.btnUpdReqCancel);
             this.pnlReqUpdate.Controls.Add(this.btnSend);
@@ -371,6 +357,18 @@
             this.pnlReqUpdate.Size = new System.Drawing.Size(280, 318);
             this.pnlReqUpdate.TabIndex = 136;
             this.pnlReqUpdate.Visible = false;
+            // 
+            // txtAddMate
+            // 
+            this.txtAddMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtAddMate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddMate.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddMate.Location = new System.Drawing.Point(33, 108);
+            this.txtAddMate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtAddMate.Multiline = true;
+            this.txtAddMate.Name = "txtAddMate";
+            this.txtAddMate.Size = new System.Drawing.Size(216, 27);
+            this.txtAddMate.TabIndex = 122;
             // 
             // label5
             // 
@@ -406,16 +404,16 @@
             this.label6.TabIndex = 118;
             this.label6.Text = "Material";
             // 
-            // label8
+            // lbRqSucess
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Blue;
-            this.label8.Location = new System.Drawing.Point(12, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 13);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "Success";
+            this.lbRqSucess.AutoSize = true;
+            this.lbRqSucess.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRqSucess.ForeColor = System.Drawing.Color.Blue;
+            this.lbRqSucess.Location = new System.Drawing.Point(12, 9);
+            this.lbRqSucess.Name = "lbRqSucess";
+            this.lbRqSucess.Size = new System.Drawing.Size(46, 13);
+            this.lbRqSucess.TabIndex = 64;
+            this.lbRqSucess.Text = "Success";
             // 
             // label9
             // 
@@ -440,6 +438,7 @@
             this.btnUpdReqCancel.TabIndex = 57;
             this.btnUpdReqCancel.Text = "CANCEL";
             this.btnUpdReqCancel.UseVisualStyleBackColor = false;
+            this.btnUpdReqCancel.Click += new System.EventHandler(this.btnUpdReqCancel_Click);
             // 
             // btnSend
             // 
@@ -454,13 +453,14 @@
             this.btnSend.TabIndex = 62;
             this.btnSend.Text = "SEND";
             this.btnSend.UseVisualStyleBackColor = false;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
-            // dataGridView1
+            // dgvIntReq
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvIntReq.AllowUserToDeleteRows = false;
+            this.dgvIntReq.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgvIntReq.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.dgvIntReq.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -469,59 +469,24 @@
             dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
+            this.dgvIntReq.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvIntReq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIntReq.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RID,
+            this.Rmaterials,
+            this.RQuantity,
             this.dataGridViewButtonColumn1});
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.dataGridView1.Location = new System.Drawing.Point(618, 143);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.RowTemplate.Height = 35;
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.Size = new System.Drawing.Size(416, 407);
-            this.dataGridView1.TabIndex = 135;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Materials";
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dataGridViewTextBoxColumn2.FillWeight = 12.37114F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Materials";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Quantity";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridViewButtonColumn1.FillWeight = 187.6289F;
-            this.dataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewButtonColumn1.HeaderText = "Add";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.ReadOnly = true;
-            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn1.Text = "ADD";
-            this.dataGridViewButtonColumn1.ToolTipText = "Add";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.dgvIntReq.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.dgvIntReq.Location = new System.Drawing.Point(618, 143);
+            this.dgvIntReq.Name = "dgvIntReq";
+            this.dgvIntReq.ReadOnly = true;
+            this.dgvIntReq.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvIntReq.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgvIntReq.RowTemplate.Height = 35;
+            this.dgvIntReq.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvIntReq.Size = new System.Drawing.Size(416, 407);
+            this.dgvIntReq.TabIndex = 135;
+            this.dgvIntReq.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIntReq_CellContentClick);
             // 
             // label4
             // 
@@ -544,6 +509,7 @@
             this.cmbWorkshop.Name = "cmbWorkshop";
             this.cmbWorkshop.Size = new System.Drawing.Size(216, 21);
             this.cmbWorkshop.TabIndex = 138;
+            this.cmbWorkshop.SelectedIndexChanged += new System.EventHandler(this.cmbWorkshop_SelectedIndexChanged);
             // 
             // lblErrorName
             // 
@@ -552,20 +518,20 @@
             this.lblErrorName.ForeColor = System.Drawing.Color.Red;
             this.lblErrorName.Location = new System.Drawing.Point(37, 102);
             this.lblErrorName.Name = "lblErrorName";
-            this.lblErrorName.Size = new System.Drawing.Size(67, 12);
+            this.lblErrorName.Size = new System.Drawing.Size(51, 12);
             this.lblErrorName.TabIndex = 139;
-            this.lblErrorName.Text = "Error Username";
+            this.lblErrorName.Text = "Error Name";
             // 
-            // label10
+            // lblErrQuan
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Nirmala UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(270, 102);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 12);
-            this.label10.TabIndex = 140;
-            this.label10.Text = "Error Username";
+            this.lblErrQuan.AutoSize = true;
+            this.lblErrQuan.Font = new System.Drawing.Font("Nirmala UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrQuan.ForeColor = System.Drawing.Color.Red;
+            this.lblErrQuan.Location = new System.Drawing.Point(270, 102);
+            this.lblErrQuan.Name = "lblErrQuan";
+            this.lblErrQuan.Size = new System.Drawing.Size(60, 12);
+            this.lblErrQuan.TabIndex = 140;
+            this.lblErrQuan.Text = "Error Quantity";
             // 
             // lblSucces
             // 
@@ -578,25 +544,94 @@
             this.lblSucces.TabIndex = 141;
             this.lblSucces.Text = "Success";
             // 
+            // txtMaterial
+            // 
+            this.txtMaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtMaterial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaterial.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaterial.Location = new System.Drawing.Point(39, 72);
+            this.txtMaterial.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtMaterial.Multiline = true;
+            this.txtMaterial.Name = "txtMaterial";
+            this.txtMaterial.Size = new System.Drawing.Size(198, 27);
+            this.txtMaterial.TabIndex = 133;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.label10.Location = new System.Drawing.Point(718, 119);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 13);
+            this.label10.TabIndex = 142;
+            this.label10.Text = "Sort by Workshop";
+            // 
+            // RID
+            // 
+            this.RID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RID.DataPropertyName = "ID";
+            this.RID.HeaderText = "ID";
+            this.RID.Name = "RID";
+            this.RID.ReadOnly = true;
+            // 
+            // Rmaterials
+            // 
+            this.Rmaterials.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Rmaterials.DataPropertyName = "Materials";
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Rmaterials.DefaultCellStyle = dataGridViewCellStyle13;
+            this.Rmaterials.HeaderText = "Materials";
+            this.Rmaterials.MinimumWidth = 6;
+            this.Rmaterials.Name = "Rmaterials";
+            this.Rmaterials.ReadOnly = true;
+            // 
+            // RQuantity
+            // 
+            this.RQuantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RQuantity.DataPropertyName = "Quantity";
+            this.RQuantity.HeaderText = "Quantity";
+            this.RQuantity.Name = "RQuantity";
+            this.RQuantity.ReadOnly = true;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridViewButtonColumn1.FillWeight = 187.6289F;
+            this.dataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dataGridViewButtonColumn1.HeaderText = "Add";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.ReadOnly = true;
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn1.Text = "ADD";
+            this.dataGridViewButtonColumn1.ToolTipText = "Add";
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            // 
             // frmWarehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 600);
-            this.Controls.Add(this.lblSucces);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblSucces);
+            this.Controls.Add(this.lblErrQuan);
             this.Controls.Add(this.lblErrorName);
             this.Controls.Add(this.cmbWorkshop);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pnlReqUpdate);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvIntReq);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtMaterial);
             this.Controls.Add(this.txtQuant);
             this.Controls.Add(this.updatePanel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgv_Req);
-            this.Controls.Add(this.cmbMate);
             this.Controls.Add(this.btnCreate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmWarehouse";
@@ -607,7 +642,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Req)).EndInit();
             this.pnlReqUpdate.ResumeLayout(false);
             this.pnlReqUpdate.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIntReq)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -621,36 +656,39 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtUpdQuan;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cmbUpdMate;
         private System.Windows.Forms.Label lblUpdsucces;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnupdateCancel;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgv_Req;
-        private System.Windows.Forms.ComboBox cmbMate;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Panel pnlReqUpdate;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAddReqQuan;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbRqSucess;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnUpdReqCancel;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Materials;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewButtonColumn Update;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridView dgvIntReq;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbWorkshop;
         private System.Windows.Forms.Label lblErrorName;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblErrQuan;
         private System.Windows.Forms.Label lblSucces;
+        private System.Windows.Forms.TextBox txtUpdMat;
+        private System.Windows.Forms.TextBox txtMaterial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Materials;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MQuantity;
+        private System.Windows.Forms.DataGridViewButtonColumn Update;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtAddMate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rmaterials;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RQuantity;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
     }
 }

@@ -29,25 +29,18 @@ namespace LockHood.head
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblSucces = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSortWork = new System.Windows.Forms.ComboBox();
             this.dgv_sub = new System.Windows.Forms.DataGridView();
-            this.Task = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtask = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Workshop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lblErrorEmp = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lblErrorDate = new System.Windows.Forms.Label();
@@ -75,16 +68,25 @@ namespace LockHood.head
             this.cmbUpdEmp = new System.Windows.Forms.ComboBox();
             this.cmbUpdTask = new System.Windows.Forms.ComboBox();
             this.dtpUpdDate = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgv_task = new System.Windows.Forms.DataGridView();
+            this.NotYet = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewButtonColumn5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Workshop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Task = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MainTask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtask = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubWorkshop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Employee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sub)).BeginInit();
             this.updatePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_task)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSucces
@@ -119,6 +121,7 @@ namespace LockHood.head
             this.cmbSortWork.Name = "cmbSortWork";
             this.cmbSortWork.Size = new System.Drawing.Size(216, 21);
             this.cmbSortWork.TabIndex = 100;
+            this.cmbSortWork.SelectedIndexChanged += new System.EventHandler(this.cmbSortWork_SelectedIndexChanged);
             // 
             // dgv_sub
             // 
@@ -126,22 +129,23 @@ namespace LockHood.head
             this.dgv_sub.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_sub.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.dgv_sub.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_sub.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_sub.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_sub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_sub.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Task,
+            this.MainTask,
             this.Subtask,
-            this.Date,
-            this.Workshop,
-            this.Status,
+            this.SubDate,
+            this.SubWorkshop,
+            this.Employee,
+            this.SubStatus,
             this.Update,
             this.Delete});
             this.dgv_sub.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
@@ -154,83 +158,6 @@ namespace LockHood.head
             this.dgv_sub.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_sub.Size = new System.Drawing.Size(770, 387);
             this.dgv_sub.TabIndex = 99;
-            // 
-            // Task
-            // 
-            this.Task.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Task.DataPropertyName = "Task";
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.Task.DefaultCellStyle = dataGridViewCellStyle18;
-            this.Task.HeaderText = "Task";
-            this.Task.MinimumWidth = 6;
-            this.Task.Name = "Task";
-            this.Task.ReadOnly = true;
-            // 
-            // Subtask
-            // 
-            this.Subtask.DataPropertyName = "Subtask";
-            this.Subtask.HeaderText = "Subtask";
-            this.Subtask.Name = "Subtask";
-            this.Subtask.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Date.DataPropertyName = "Date";
-            this.Date.HeaderText = "Date";
-            this.Date.MinimumWidth = 6;
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // Workshop
-            // 
-            this.Workshop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Workshop.DataPropertyName = "Workshop";
-            this.Workshop.HeaderText = "Workshop";
-            this.Workshop.MinimumWidth = 6;
-            this.Workshop.Name = "Workshop";
-            this.Workshop.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.DataPropertyName = "Status";
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // Update
-            // 
-            this.Update.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            this.Update.DefaultCellStyle = dataGridViewCellStyle19;
-            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Update.HeaderText = "Update";
-            this.Update.Name = "Update";
-            this.Update.ReadOnly = true;
-            this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Update.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Update.Text = "UPDATE";
-            this.Update.ToolTipText = "Update";
-            this.Update.UseColumnTextForButtonValue = true;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            this.Delete.DefaultCellStyle = dataGridViewCellStyle20;
-            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Text = "DELETE";
-            this.Delete.ToolTipText = "Delete";
-            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // lblErrorEmp
             // 
@@ -341,6 +268,7 @@ namespace LockHood.head
             this.btnCreate.TabIndex = 91;
             this.btnCreate.Text = "CREATE";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // txtSub
             // 
@@ -386,6 +314,7 @@ namespace LockHood.head
             this.cmbTask.Name = "cmbTask";
             this.cmbTask.Size = new System.Drawing.Size(216, 21);
             this.cmbTask.TabIndex = 86;
+            this.cmbTask.SelectedIndexChanged += new System.EventHandler(this.cmbTask_SelectedIndexChanged);
             // 
             // dtpDate
             // 
@@ -461,7 +390,7 @@ namespace LockHood.head
             this.updatePanel.Controls.Add(this.label3);
             this.updatePanel.Controls.Add(this.btnupdateCancel);
             this.updatePanel.Controls.Add(this.btnUpdate);
-            this.updatePanel.Location = new System.Drawing.Point(403, 140);
+            this.updatePanel.Location = new System.Drawing.Point(508, 154);
             this.updatePanel.Margin = new System.Windows.Forms.Padding(2);
             this.updatePanel.Name = "updatePanel";
             this.updatePanel.Size = new System.Drawing.Size(280, 392);
@@ -556,109 +485,203 @@ namespace LockHood.head
             this.dtpUpdDate.Size = new System.Drawing.Size(216, 20);
             this.dtpUpdDate.TabIndex = 115;
             // 
-            // dataGridView1
+            // dgv_task
             // 
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewButtonColumn1,
-            this.dataGridViewButtonColumn2});
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
-            this.dataGridView1.Location = new System.Drawing.Point(272, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.RowTemplate.Height = 35;
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.Size = new System.Drawing.Size(770, 150);
-            this.dataGridView1.TabIndex = 104;
+            this.dgv_task.AllowUserToDeleteRows = false;
+            this.dgv_task.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgv_task.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.dgv_task.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_task.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_task.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_task.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
+            this.Task,
+            this.Status,
+            this.Date,
+            this.Workshop,
+            this.dataGridViewButtonColumn5,
+            this.NotYet});
+            this.dgv_task.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.dgv_task.Location = new System.Drawing.Point(272, 63);
+            this.dgv_task.Name = "dgv_task";
+            this.dgv_task.ReadOnly = true;
+            this.dgv_task.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgv_task.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dgv_task.RowTemplate.Height = 35;
+            this.dgv_task.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_task.Size = new System.Drawing.Size(770, 150);
+            this.dgv_task.TabIndex = 104;
             // 
-            // dataGridViewTextBoxColumn1
+            // NotYet
             // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Task";
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle22;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Task";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.NotYet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            this.NotYet.DefaultCellStyle = dataGridViewCellStyle8;
+            this.NotYet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NotYet.HeaderText = "NotYet";
+            this.NotYet.Name = "NotYet";
+            this.NotYet.ReadOnly = true;
+            this.NotYet.Text = "NOT YET";
+            this.NotYet.ToolTipText = "NotYet";
+            this.NotYet.UseColumnTextForButtonValue = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewButtonColumn5
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Status";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Status";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewButtonColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewButtonColumn5.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewButtonColumn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dataGridViewButtonColumn5.HeaderText = "Complete";
+            this.dataGridViewButtonColumn5.Name = "dataGridViewButtonColumn5";
+            this.dataGridViewButtonColumn5.ReadOnly = true;
+            this.dataGridViewButtonColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn5.Text = "COMPLETE";
+            this.dataGridViewButtonColumn5.ToolTipText = "Complete";
+            this.dataGridViewButtonColumn5.UseColumnTextForButtonValue = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // Workshop
             // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Date";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.Workshop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Workshop.DataPropertyName = "Workshop";
+            this.Workshop.HeaderText = "Workshop";
+            this.Workshop.MinimumWidth = 6;
+            this.Workshop.Name = "Workshop";
+            this.Workshop.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // Date
             // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Workshop";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Workshop";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Date";
+            this.Date.MinimumWidth = 6;
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
             // 
-            // dataGridViewButtonColumn1
+            // Status
             // 
-            this.dataGridViewButtonColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn1.DefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridViewButtonColumn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewButtonColumn1.HeaderText = "Complete";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.ReadOnly = true;
-            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn1.Text = "COMPLETE";
-            this.dataGridViewButtonColumn1.ToolTipText = "Complete";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
+            this.Status.DataPropertyName = "Status";
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             // 
-            // dataGridViewButtonColumn2
+            // Task
             // 
-            this.dataGridViewButtonColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Crimson;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
-            this.dataGridViewButtonColumn2.DefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridViewButtonColumn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dataGridViewButtonColumn2.HeaderText = "NotYet";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.ReadOnly = true;
-            this.dataGridViewButtonColumn2.Text = "NOT YET";
-            this.dataGridViewButtonColumn2.ToolTipText = "NotYet";
-            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
+            this.Task.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Task.DataPropertyName = "Task";
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.Task.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Task.HeaderText = "Task";
+            this.Task.MinimumWidth = 6;
+            this.Task.Name = "Task";
+            this.Task.ReadOnly = true;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            // 
+            // MainTask
+            // 
+            this.MainTask.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MainTask.DataPropertyName = "TaskID";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.MainTask.DefaultCellStyle = dataGridViewCellStyle2;
+            this.MainTask.HeaderText = "TaskID";
+            this.MainTask.MinimumWidth = 6;
+            this.MainTask.Name = "MainTask";
+            this.MainTask.ReadOnly = true;
+            // 
+            // Subtask
+            // 
+            this.Subtask.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Subtask.DataPropertyName = "Subtask";
+            this.Subtask.HeaderText = "Subtask";
+            this.Subtask.Name = "Subtask";
+            this.Subtask.ReadOnly = true;
+            // 
+            // SubDate
+            // 
+            this.SubDate.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SubDate.DataPropertyName = "Date";
+            this.SubDate.HeaderText = "Date";
+            this.SubDate.MinimumWidth = 6;
+            this.SubDate.Name = "SubDate";
+            this.SubDate.ReadOnly = true;
+            // 
+            // SubWorkshop
+            // 
+            this.SubWorkshop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SubWorkshop.DataPropertyName = "Workshop";
+            this.SubWorkshop.HeaderText = "Workshop";
+            this.SubWorkshop.MinimumWidth = 6;
+            this.SubWorkshop.Name = "SubWorkshop";
+            this.SubWorkshop.ReadOnly = true;
+            // 
+            // Employee
+            // 
+            this.Employee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Employee.DataPropertyName = "Employee";
+            this.Employee.HeaderText = "Employee";
+            this.Employee.Name = "Employee";
+            this.Employee.ReadOnly = true;
+            // 
+            // SubStatus
+            // 
+            this.SubStatus.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SubStatus.DataPropertyName = "Status";
+            this.SubStatus.HeaderText = "Status";
+            this.SubStatus.Name = "SubStatus";
+            this.SubStatus.ReadOnly = true;
+            // 
+            // Update
+            // 
+            this.Update.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.Update.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Update.HeaderText = "Update";
+            this.Update.Name = "Update";
+            this.Update.ReadOnly = true;
+            this.Update.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Update.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Update.Text = "UPDATE";
+            this.Update.ToolTipText = "Update";
+            this.Update.UseColumnTextForButtonValue = true;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Crimson;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.Delete.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "DELETE";
+            this.Delete.ToolTipText = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // frmHeadSub
             // 
@@ -667,7 +690,7 @@ namespace LockHood.head
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 625);
             this.Controls.Add(this.updatePanel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_task);
             this.Controls.Add(this.lblSucces);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbSortWork);
@@ -693,7 +716,7 @@ namespace LockHood.head
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sub)).EndInit();
             this.updatePanel.ResumeLayout(false);
             this.updatePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_task)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,13 +741,6 @@ namespace LockHood.head
         private System.Windows.Forms.ComboBox cmbEmp;
         private System.Windows.Forms.ComboBox cmbTask;
         private System.Windows.Forms.DateTimePicker dtpDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Task;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtask;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Workshop;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewButtonColumn Update;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnupdateCancel;
         private System.Windows.Forms.Label label3;
@@ -738,12 +754,21 @@ namespace LockHood.head
         private System.Windows.Forms.ComboBox cmbUpdEmp;
         private System.Windows.Forms.ComboBox cmbUpdTask;
         private System.Windows.Forms.DateTimePicker dtpUpdDate;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private System.Windows.Forms.DataGridView dgv_task;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Task;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Workshop;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn5;
+        private System.Windows.Forms.DataGridViewButtonColumn NotYet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MainTask;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtask;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubWorkshop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Employee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SubStatus;
+        private System.Windows.Forms.DataGridViewButtonColumn Update;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
