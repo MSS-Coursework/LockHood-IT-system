@@ -35,19 +35,19 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblComplete = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblInventory = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblWorkshop = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbl_totalcustomer = new System.Windows.Forms.Label();
+            this.lblPending = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel4.SuspendLayout();
@@ -82,7 +82,7 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
             this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.lblComplete);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(41, 70);
             this.panel4.Name = "panel4";
@@ -99,16 +99,16 @@
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
-            // label6
+            // lblComplete
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label6.Location = new System.Drawing.Point(35, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 65);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "0";
+            this.lblComplete.AutoSize = true;
+            this.lblComplete.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComplete.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lblComplete.Location = new System.Drawing.Point(35, 20);
+            this.lblComplete.Name = "lblComplete";
+            this.lblComplete.Size = new System.Drawing.Size(56, 65);
+            this.lblComplete.TabIndex = 2;
+            this.lblComplete.Text = "0";
             // 
             // label7
             // 
@@ -125,7 +125,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.lblInventory);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(804, 70);
             this.panel3.Name = "panel3";
@@ -142,16 +142,16 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // label4
+            // lblInventory
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label4.Location = new System.Drawing.Point(35, 20);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 65);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "0";
+            this.lblInventory.AutoSize = true;
+            this.lblInventory.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInventory.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lblInventory.Location = new System.Drawing.Point(35, 20);
+            this.lblInventory.Name = "lblInventory";
+            this.lblInventory.Size = new System.Drawing.Size(56, 65);
+            this.lblInventory.TabIndex = 2;
+            this.lblInventory.Text = "0";
             // 
             // label5
             // 
@@ -168,7 +168,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblWorkshop);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(552, 70);
             this.panel2.Name = "panel2";
@@ -185,16 +185,16 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // label1
+            // lblWorkshop
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.label1.Location = new System.Drawing.Point(35, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 65);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "0";
+            this.lblWorkshop.AutoSize = true;
+            this.lblWorkshop.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWorkshop.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lblWorkshop.Location = new System.Drawing.Point(35, 20);
+            this.lblWorkshop.Name = "lblWorkshop";
+            this.lblWorkshop.Size = new System.Drawing.Size(56, 65);
+            this.lblWorkshop.TabIndex = 2;
+            this.lblWorkshop.Text = "0";
             // 
             // label3
             // 
@@ -211,7 +211,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lbl_totalcustomer);
+            this.panel1.Controls.Add(this.lblPending);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(296, 70);
             this.panel1.Name = "panel1";
@@ -228,16 +228,16 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // lbl_totalcustomer
+            // lblPending
             // 
-            this.lbl_totalcustomer.AutoSize = true;
-            this.lbl_totalcustomer.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalcustomer.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.lbl_totalcustomer.Location = new System.Drawing.Point(33, 19);
-            this.lbl_totalcustomer.Name = "lbl_totalcustomer";
-            this.lbl_totalcustomer.Size = new System.Drawing.Size(56, 65);
-            this.lbl_totalcustomer.TabIndex = 2;
-            this.lbl_totalcustomer.Text = "0";
+            this.lblPending.AutoSize = true;
+            this.lblPending.Font = new System.Drawing.Font("Nirmala UI", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPending.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.lblPending.Location = new System.Drawing.Point(33, 19);
+            this.lblPending.Name = "lblPending";
+            this.lblPending.Size = new System.Drawing.Size(56, 65);
+            this.lblPending.TabIndex = 2;
+            this.lblPending.Text = "0";
             // 
             // label2
             // 
@@ -288,19 +288,19 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblComplete;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblInventory;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblWorkshop;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbl_totalcustomer;
+        private System.Windows.Forms.Label lblPending;
         private System.Windows.Forms.Label label2;
     }
 }
