@@ -124,5 +124,10 @@ namespace LockHood.supervisor
             objdb.closeConn();
             return id;
         }
+
+        private void picRefresh_Click(object sender, EventArgs e)
+        {
+            objdb.showData(q, dgv_sub);
+        }
     }
 }

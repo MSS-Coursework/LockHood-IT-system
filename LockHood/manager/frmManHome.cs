@@ -199,7 +199,9 @@ namespace LockHood
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            login log = new login();
+            log.Show();
         }
     }
 }

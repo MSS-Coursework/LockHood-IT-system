@@ -164,7 +164,8 @@ namespace LockHood
             cmd.Parameters.AddWithValue("@updateMat", updateMat);
             cmd.Parameters.AddWithValue("@updateQuan", updateQuan);
 
-            lblUpdsucces.Text = "✓ The Material has been Updated Successfully";
+            updatePanel.Visible = false;
+            lblSucces.Text = "✓ The Material has been Updated Successfully";
 
             objdb.executeQuery(cmd);
             objdb.showData(q, dgv_Req);

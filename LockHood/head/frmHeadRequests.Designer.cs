@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHeadRequests));
             this.label2 = new System.Windows.Forms.Label();
             this.cmbSortWork = new System.Windows.Forms.ComboBox();
             this.dgv_sub = new System.Windows.Forms.DataGridView();
@@ -37,7 +38,9 @@
             this.Material = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Workshop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.picRefresh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -70,15 +73,15 @@
             this.dgv_sub.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_sub.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.dgv_sub.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_sub.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_sub.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_sub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_sub.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -100,8 +103,8 @@
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ID.DataPropertyName = "ID";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ID.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ID.DefaultCellStyle = dataGridViewCellStyle2;
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
@@ -132,12 +135,25 @@
             this.Workshop.Name = "Workshop";
             this.Workshop.ReadOnly = true;
             // 
+            // picRefresh
+            // 
+            this.picRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picRefresh.Image = ((System.Drawing.Image)(resources.GetObject("picRefresh.Image")));
+            this.picRefresh.Location = new System.Drawing.Point(724, 67);
+            this.picRefresh.Name = "picRefresh";
+            this.picRefresh.Size = new System.Drawing.Size(23, 23);
+            this.picRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRefresh.TabIndex = 116;
+            this.picRefresh.TabStop = false;
+            this.picRefresh.Click += new System.EventHandler(this.picRefresh_Click);
+            // 
             // frmHeadRequests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 600);
+            this.Controls.Add(this.picRefresh);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbSortWork);
             this.Controls.Add(this.dgv_sub);
@@ -146,6 +162,7 @@
             this.Text = "frmHeadRequests";
             this.Load += new System.EventHandler(this.frmHeadRequests_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +177,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Material;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Workshop;
+        private System.Windows.Forms.PictureBox picRefresh;
     }
 }

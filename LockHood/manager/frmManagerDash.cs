@@ -35,13 +35,15 @@ namespace LockHood
         public void fill_Count()
         {
             //pull the total Task count
-            string query = "SELECT COUNT(*) FROM task WHERE Status ='completed'";
+            //string query = "SELECT COUNT(*) FROM task WHERE Status ='completed'";
+            string query = "SELECT COUNT(*) FROM task";
             DataTable dt = new DataTable();
             objdb.readDatathroughAdapter(query, dt);
             lblComplet.Text = dt.Rows[0][0].ToString();
 
             //pull the total Pending Task count
-            string query1 = "SELECT COUNT(*) FROM task WHERE Status ='pending'";
+            //string query1 = "SELECT COUNT(*) FROM task WHERE Status ='pending'";
+            string query1 = "SELECT COUNT(*) FROM task";
             DataTable dt2 = new DataTable();
             objdb.readDatathroughAdapter(query1, dt2);
             lblPendingTask.Text = dt2.Rows[0][0].ToString();

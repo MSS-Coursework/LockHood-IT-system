@@ -30,6 +30,7 @@ namespace LockHood.head
             objdb.showData(q, dgv_task);
             fillcombo();
             emptyText();
+            clearLabel();
         }
 
         private void fillcombo()
@@ -56,7 +57,6 @@ namespace LockHood.head
             foreach (DataRow dr in dt3.Rows)
             {
                 cmbTask.Items.Add(dr["Name"].ToString());
-                cmbUpdTask.Items.Add(dr["Name"].ToString());
 
             }
         }
@@ -65,6 +65,15 @@ namespace LockHood.head
         {
             txtSub.Text = "";
             txtUpdSub.Text = "";
+        }
+
+        private void clearLabel()
+        {
+            lblErrorDate.Text = "";
+            lblErrorEmp.Text = "";
+            lblErrorSub.Text = "";
+            lblErrorTask.Text = "";
+            lblSucces.Text = "";
         }
 
         private void cmbSortWork_SelectedIndexChanged(object sender, EventArgs e)
@@ -169,5 +178,95 @@ namespace LockHood.head
             return id;
         }
 
+        string rowheadID;
+        private void dgv_task_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            //ignore header click
+            if (e.RowIndex == -1) return;
+
+            var row = dgv_task.Rows[e.RowIndex];
+            rowheadID = row.Cells[2].Value.ToString();
+
+            if (e.ColumnIndex == 0)
+            {
+                if (MessageBox.Show("Do you want to change the status to Complete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    SqlCommand delete = new SqlCommand("UPDATE task SET Status = 'completed' WHERE id='" + rowheadID + "'");
+                    objdb.executeQuery(delete);
+                    dgv_task.Rows.RemoveAt(row.Index);
+                }
+            }
+            if (e.ColumnIndex == 1)
+            {
+                if (MessageBox.Show("Do you want to Change the status to Pending?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    SqlCommand delete = new SqlCommand("UPDATE task SET Status = 'pending' WHERE id='" + rowheadID + "'");
+                    objdb.executeQuery(delete);
+                    dgv_task.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string updateSubTask = txtUpdSub.Text;
+            DateTime updatedate = dtpUpdDate.Value;
+            string updateEmp = cmbUpdEmp.Text;
+
+            SqlCommand cmd = new SqlCommand("UPDATE sub_task SET Name=@task_name, Date=@task_date, Employee_ID=@emp_work WHERE (ID=@id)");//update query
+            cmd.Parameters.AddWithValue("@id", rowtaskID);
+            cmd.Parameters.AddWithValue("@task_name", updateSubTask);
+            cmd.Parameters.AddWithValue("@task_date", updatedate);
+            cmd.Parameters.AddWithValue("@emp_work", updateEmp);
+
+            updatePanel.Visible = false;
+            lblSucces.Text = "✓ The Sub-Task has been Updated Successfully";
+
+            objdb.executeQuery(cmd);
+            objdb.showData(q, dgv_task);
+            emptyText();
+        }
+
+        private void btnupdateCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        string rowtaskID;
+        string rowsubtask;
+        string rowdate;
+        string rowemployee;
+
+        private void dgv_sub_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1) return;
+
+            var row = dgv_sub.Rows[e.RowIndex];
+            rowtaskID = row.Cells[2].Value.ToString();
+            rowsubtask = row.Cells[3].Value.ToString();
+            rowdate = row.Cells[4].Value.ToString();
+            rowemployee = row.Cells[6].Value.ToString();
+
+            if (e.ColumnIndex == 0)
+            {
+                if (MessageBox.Show("Do you want to Update " + rowsubtask + " from Database?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    updatePanel.Visible = true;
+                    dtpDate.Text = rowdate;
+                    txtUpdSub.Text = rowsubtask;
+                    cmbUpdEmp.Text = rowemployee;
+                }
+            }
+            if (e.ColumnIndex == 1)
+            {
+                if (MessageBox.Show("Do you want to delete " + rowsubtask + " from Database?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    SqlCommand delete = new SqlCommand("DELETE FROM sub_task WHERE ID='" + rowtaskID + "'");
+                    objdb.executeQuery(delete);
+                    dgv_sub.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
     }
 }

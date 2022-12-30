@@ -161,8 +161,8 @@ namespace LockHood
             cmd.Parameters.AddWithValue("@task_work", updateWork);
             cmd.Parameters.AddWithValue("@task_dep", updateDepart);
 
-
-            lblUpdsucces.Text = "✓ The Account has been Updated Successfully";
+            updatePanel.Visible = false;
+            lblSucces.Text = "✓ The Account has been Updated Successfully";
 
             objdb.executeQuery(cmd);
             objdb.showData(q, dgv_task);

@@ -124,7 +124,8 @@ namespace LockHood
             cmd.Parameters.AddWithValue("@emp_role", updateRole);
             cmd.Parameters.AddWithValue("@emp_name", updateName);
 
-            lblUpdsucces.Text = "✓ The Account has been Updated Successfully";
+            updatePanel.Visible = false;
+            lblSucces.Text = "✓ The Account has been Updated Successfully";
 
             objdb.executeQuery(cmd);
             objdb.showData(q, dgv_emp);

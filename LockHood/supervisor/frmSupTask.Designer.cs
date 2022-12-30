@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSupTask));
             this.pnlSubTaskUpdate = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtUpdSub = new System.Windows.Forms.TextBox();
@@ -50,8 +51,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSortWork = new System.Windows.Forms.ComboBox();
             this.lblSucces = new System.Windows.Forms.Label();
+            this.picRefresh = new System.Windows.Forms.PictureBox();
             this.pnlSubTaskUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSubTaskUpdate
@@ -112,8 +115,8 @@
             this.cmbUpdTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbUpdTask.FormattingEnabled = true;
             this.cmbUpdTask.Items.AddRange(new object[] {
-            "Pending",
-            "Completed"});
+            "pending",
+            "completed"});
             this.cmbUpdTask.Location = new System.Drawing.Point(31, 172);
             this.cmbUpdTask.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbUpdTask.Name = "cmbUpdTask";
@@ -177,15 +180,15 @@
             this.dgv_sub.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_sub.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.dgv_sub.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_sub.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_sub.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_sub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_sub.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -210,8 +213,8 @@
             // 
             this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ID.DataPropertyName = "ID";
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ID.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ID.DefaultCellStyle = dataGridViewCellStyle2;
             this.ID.HeaderText = "ID";
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
@@ -254,11 +257,11 @@
             // Update
             // 
             this.Update.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.LightSeaGreen;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            this.Update.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSeaGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.Update.DefaultCellStyle = dataGridViewCellStyle3;
             this.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Update.HeaderText = "Update";
             this.Update.Name = "Update";
@@ -273,7 +276,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label1.Location = new System.Drawing.Point(655, 57);
+            this.label1.Location = new System.Drawing.Point(643, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
@@ -285,7 +288,7 @@
             this.cmbSortWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.cmbSortWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbSortWork.FormattingEnabled = true;
-            this.cmbSortWork.Location = new System.Drawing.Point(752, 54);
+            this.cmbSortWork.Location = new System.Drawing.Point(724, 54);
             this.cmbSortWork.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cmbSortWork.Name = "cmbSortWork";
             this.cmbSortWork.Size = new System.Drawing.Size(216, 21);
@@ -303,12 +306,25 @@
             this.lblSucces.TabIndex = 108;
             this.lblSucces.Text = "Success";
             // 
+            // picRefresh
+            // 
+            this.picRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picRefresh.Image = ((System.Drawing.Image)(resources.GetObject("picRefresh.Image")));
+            this.picRefresh.Location = new System.Drawing.Point(945, 54);
+            this.picRefresh.Name = "picRefresh";
+            this.picRefresh.Size = new System.Drawing.Size(23, 23);
+            this.picRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRefresh.TabIndex = 117;
+            this.picRefresh.TabStop = false;
+            this.picRefresh.Click += new System.EventHandler(this.picRefresh_Click);
+            // 
             // frmSupTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 625);
+            this.Controls.Add(this.picRefresh);
             this.Controls.Add(this.lblSucces);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbSortWork);
@@ -321,6 +337,7 @@
             this.pnlSubTaskUpdate.ResumeLayout(false);
             this.pnlSubTaskUpdate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +364,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbSortWork;
         private System.Windows.Forms.Label lblSucces;
+        private System.Windows.Forms.PictureBox picRefresh;
     }
 }

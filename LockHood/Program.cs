@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LockHood.head;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace LockHood
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSuperDash());
+            Application.Run(new frmHeadInventory());
         }
     }
 }

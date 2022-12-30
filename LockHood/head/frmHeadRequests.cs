@@ -13,7 +13,7 @@ namespace LockHood
     public partial class frmHeadRequests : Form
     {
         databaseClass objdb = new databaseClass();
-        string q = "SELECT requests.ID, requests.Material as Name, requests.Quantity as Quantity, workshop.Name as Workshop FROM requests INNER JOIN workshop ON requests.Workshop_ID = workshop.ID";
+        string q = "SELECT requests.ID as ID, requests.Material as Material, requests.Quantity as Quantity, workshop.Name as Workshop FROM requests INNER JOIN workshop ON requests.Workshop_ID = workshop.ID";
 
         public frmHeadRequests()
         {
@@ -47,6 +47,11 @@ namespace LockHood
 
             string q = "SELECT requests.ID, requests.Material as Name, requests.Quantity as Quantity, workshop.Name as Workshop FROM requests INNER JOIN workshop ON requests.Workshop_ID = workshop.ID where workshop.Name='" + workShop + "'";
             objdb.createConn();
+            objdb.showData(q, dgv_sub);
+        }
+
+        private void picRefresh_Click(object sender, EventArgs e)
+        {
             objdb.showData(q, dgv_sub);
         }
     }

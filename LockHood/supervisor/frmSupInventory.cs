@@ -154,7 +154,8 @@ namespace LockHood
                 cmd.Parameters.AddWithValue("@id", rowReqID);
                 cmd.Parameters.AddWithValue("@quant", quant);
 
-                lblUpdsucces.Text = "✓ The Request has been Updated Successfully";
+                updatePanel.Visible = false;
+                lblSucces.Text = "✓ The Request has been Updated Successfully";
 
                 objdb.executeQuery(cmd);
 

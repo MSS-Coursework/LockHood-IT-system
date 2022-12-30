@@ -74,24 +74,28 @@ namespace LockHood
                         {
                             email = txtEmail.Text;
                             frmHeadHome headHome = new frmHeadHome();
-                            headHome.Show();
+                            reader.Close();
 
+                            headHome.Show();                          
                             this.Hide();
+
                         }
                         else if (usertype == "supervisor")
                         {
                             email = txtEmail.Text;
                             frmSupHome superHome = new frmSupHome();
-                            superHome.Show();
+                            reader.Close();
 
+                            superHome.Show();
                             this.Hide();
                         }
                         else
                         {
                             email = txtEmail.Text;
                             frmManHome manHome = new frmManHome();
-                            manHome.Show();
+                            reader.Close();
 
+                            manHome.Show();
                             this.Hide();
                         }
                     }

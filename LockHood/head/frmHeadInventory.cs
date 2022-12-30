@@ -14,7 +14,7 @@ namespace LockHood
     public partial class frmHeadInventory : Form
     {
         databaseClass objdb = new databaseClass();
-        string q = "SELECT materials.ID, materials.Name as Name, materials.Quantity as Quantity, workshop.Name as Workshop FROM materials INNER JOIN workshop ON materials.Workshop_ID = workshop.ID";
+        string q = "SELECT materials.ID as ID, materials.Name as Material, materials.Quantity as Quantity, workshop.Name as Workshop FROM materials INNER JOIN workshop ON materials.Workshop_ID = workshop.ID";
 
         public frmHeadInventory()
         {
@@ -72,6 +72,11 @@ namespace LockHood
 
             string q = "SELECT materials.ID, materials.Name as Name, materials.Quantity as Quantity, workshop.Name as Workshop FROM materials INNER JOIN workshop ON materials.Workshop_ID = workshop.ID where workshop.Name='"+workShop+"'";
             objdb.createConn();
+            objdb.showData(q, dgv_sub);
+        }
+
+        private void picRefresh_Click(object sender, EventArgs e)
+        {
             objdb.showData(q, dgv_sub);
         }
     }
