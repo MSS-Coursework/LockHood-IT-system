@@ -24,6 +24,9 @@ namespace LockHood
         private void frmHeadHome_Load(object sender, EventArgs e)
         {
             loadadhomeform(new frmHeadDash());
+            //Current color
+            btnDash.BackColor = Color.White;
+            btnDash.ForeColor = Color.CornflowerBlue;
 
             // Check the connection status & close/Open
             objdb.createConn();
@@ -192,6 +195,7 @@ namespace LockHood
             btnReports.BackColor = Color.White;
             btnReports.ForeColor = Color.CornflowerBlue;
 
+            loadadhomeform(new frmHeadReport());
             lblHeading.Text = "Generate Reports";
         }
 

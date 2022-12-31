@@ -57,11 +57,13 @@ namespace LockHood
             btnTasks.ForeColor = Color.White;
             btnRequest.ForeColor = Color.White;                 
             btnEmployee.ForeColor = Color.White;
+            btnReport.ForeColor = Color.White;
 
             //btn Back Color
             btnTasks.BackColor = Color.CornflowerBlue;
             btnRequest.BackColor = Color.CornflowerBlue;
             btnEmployee.BackColor = Color.CornflowerBlue;
+            btnReport.BackColor = Color.CornflowerBlue;
 
             //Current color
             btnDash.BackColor = Color.White;
@@ -77,11 +79,13 @@ namespace LockHood
             btnDash.ForeColor = Color.White;
             btnRequest.ForeColor = Color.White;                   
             btnEmployee.ForeColor = Color.White;
+            btnReport.ForeColor = Color.White;
 
             //btn Back Color
             btnDash.BackColor = Color.CornflowerBlue;
             btnRequest.BackColor = Color.CornflowerBlue;
             btnEmployee.BackColor = Color.CornflowerBlue;
+            btnReport.BackColor = Color.CornflowerBlue;
 
             //Current color
             btnTasks.BackColor = Color.White;
@@ -97,11 +101,13 @@ namespace LockHood
             btnDash.ForeColor = Color.White;
             btnTasks.ForeColor = Color.White;               
             btnEmployee.ForeColor = Color.White;
+            btnReport.ForeColor = Color.White;
 
             //btn Back Color
             btnDash.BackColor = Color.CornflowerBlue;
             btnTasks.BackColor = Color.CornflowerBlue;
             btnEmployee.BackColor = Color.CornflowerBlue;
+            btnReport.BackColor = Color.CornflowerBlue;
 
             //Current color
             btnRequest.BackColor = Color.White;
@@ -131,17 +137,19 @@ namespace LockHood
             btnDash.ForeColor = Color.White;
             btnTasks.ForeColor = Color.White;
             btnRequest.ForeColor = Color.White;
+            btnEmployee.ForeColor = Color.White;
 
             //btn Back Color
             btnDash.BackColor = Color.CornflowerBlue;
             btnTasks.BackColor = Color.CornflowerBlue;
             btnRequest.BackColor = Color.CornflowerBlue;
+            btnEmployee.BackColor = Color.CornflowerBlue;
 
             //Current color
             btnReport.BackColor = Color.White;
             btnReport.ForeColor = Color.CornflowerBlue;
 
-            //loadadhomeform(new frmSuperDash());
+            loadadhomeform(new frmSupReport());
             lblHeading.Text = "Report Generation";
         }
 
@@ -151,18 +159,20 @@ namespace LockHood
             btnDash.ForeColor = Color.White;
             btnTasks.ForeColor = Color.White;
             btnRequest.ForeColor = Color.White;
+            btnReport.ForeColor = Color.White;
 
             //btn Back Color
             btnDash.BackColor = Color.CornflowerBlue;
             btnTasks.BackColor = Color.CornflowerBlue;
             btnRequest.BackColor = Color.CornflowerBlue;
+            btnReport.BackColor = Color.CornflowerBlue;
 
             //Current color
             btnEmployee.BackColor = Color.White;
             btnEmployee.ForeColor = Color.CornflowerBlue;
 
             //loadadhomeform(new frmSuperDash());
-            lblHeading.Text = "Report Generation";
+            lblHeading.Text = "Employee";
         }
     }
 }

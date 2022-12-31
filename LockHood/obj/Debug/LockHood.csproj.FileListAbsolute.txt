@@ -249,3 +249,5 @@ C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.c
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.csproj.CopyComplete
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.exe
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.pdb
+E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSupReport.resources
+E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadReport.resources

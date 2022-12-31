@@ -66,6 +66,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="databaseClass.cs" />
+    <Compile Include="supervisor\frmSupReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="supervisor\frmSupReport.Designer.cs">
+      <DependentUpon>frmSupReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="head\frmHeadReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="head\frmHeadReport.Designer.cs">
+      <DependentUpon>frmHeadReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="head\frmHeadDash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="supervisor\frmSupReport.resx">
+      <DependentUpon>frmSupReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="head\frmHeadReport.resx">
+      <DependentUpon>frmHeadReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="head\frmHeadDash.resx">
       <DependentUpon>frmHeadDash.cs</DependentUpon>
     </EmbeddedResource>
