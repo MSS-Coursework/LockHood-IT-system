@@ -31,6 +31,8 @@ namespace LockHood
 
             lblUpdsucces.Text = "";
             lblSucces.Text = "";
+            lblErrPass.Text = "";
+
         }
 
         private void frmManAccHead_Load(object sender, EventArgs e)
@@ -40,6 +42,8 @@ namespace LockHood
             lblErrorMail.Text = "";
             lblErrorName.Text = "";
             lblErrorDepart.Text = "";
+            lblErrPass.Text = "";
+
 
             lblUpdsucces.Text = "";
             lblSucces.Text = "";
@@ -85,6 +89,10 @@ namespace LockHood
                 {
                     SqlCommand delete = new SqlCommand("DELETE FROM head WHERE id='" + rowheadID + "'");
                     objdb.executeQuery(delete);
+
+                    SqlCommand delete2 = new SqlCommand("DELETE FROM login WHERE Email='" + rowheademail + "'");
+                    objdb.executeQuery(delete2);
+
                     dgv_head.Rows.RemoveAt(row.Index);
                 }
             }
@@ -111,6 +119,8 @@ namespace LockHood
             lblErrorMail.Text = "";
             lblErrorName.Text = "";
             lblErrorDepart.Text = "";
+            lblErrPass.Text = "";
+
 
             string updateName = updateName_txtbox.Text;
             string updateEmail = updateEmail_txtbox.Text;
@@ -156,6 +166,8 @@ namespace LockHood
             String name = txtName.Text;
             String mail = txtMail.Text;
             String Depart = cmbDepartment.Text;
+            string password = txtPass.Text;
+
 
             int dep_id = FindId( Depart, "department");
 
@@ -173,6 +185,20 @@ namespace LockHood
                 MessageBox.Show(ex.Message);
             }
             objdb.closeConn();
+
+            objdb.createConn();
+            try
+            {
+                string query2 = "insert into login (Email, Password, UserType) values ('" + mail + "',  '" + password + "', 'head')";
+                SqlCommand dbCommand2 = new SqlCommand(query2);
+
+                objdb.executeQuery(dbCommand2);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -185,12 +211,16 @@ namespace LockHood
             String name = txtName.Text;
             String mail = txtMail.Text;
             String depart = cmbDepartment.Text;
+            string password = txtPass.Text;
+
 
 
             // Empty Error Labels
             lblErrorMail.Text = "";
             lblErrorName.Text = "";
             lblErrorDepart.Text = "";
+            lblErrPass.Text = "";
+
 
 
             // Validations

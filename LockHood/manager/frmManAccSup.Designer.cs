@@ -34,7 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.lblErrorWork = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,22 +63,12 @@
             this.delete_btn = new System.Windows.Forms.DataGridViewButtonColumn();
             this.cmbWork = new System.Windows.Forms.ComboBox();
             this.lblSucces = new System.Windows.Forms.Label();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblErrPass = new System.Windows.Forms.Label();
             this.updatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sup)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.White;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnCancel.Location = new System.Drawing.Point(919, 59);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(76, 35);
-            this.btnCancel.TabIndex = 66;
-            this.btnCancel.Text = "CANCEL";
-            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnCreate
             // 
@@ -88,7 +77,7 @@
             this.btnCreate.FlatAppearance.BorderSize = 0;
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(828, 59);
+            this.btnCreate.Location = new System.Drawing.Point(919, 55);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(76, 35);
             this.btnCreate.TabIndex = 67;
@@ -101,7 +90,7 @@
             this.lblErrorWork.AutoSize = true;
             this.lblErrorWork.Font = new System.Drawing.Font("Nirmala UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorWork.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorWork.Location = new System.Drawing.Point(593, 94);
+            this.lblErrorWork.Location = new System.Drawing.Point(724, 90);
             this.lblErrorWork.Name = "lblErrorWork";
             this.lblErrorWork.Size = new System.Drawing.Size(67, 12);
             this.lblErrorWork.TabIndex = 65;
@@ -111,7 +100,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label4.Location = new System.Drawing.Point(591, 43);
+            this.label4.Location = new System.Drawing.Point(723, 43);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 63;
@@ -122,7 +111,7 @@
             this.lblErrorMail.AutoSize = true;
             this.lblErrorMail.Font = new System.Drawing.Font("Nirmala UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMail.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorMail.Location = new System.Drawing.Point(322, 94);
+            this.lblErrorMail.Location = new System.Drawing.Point(275, 94);
             this.lblErrorMail.Name = "lblErrorMail";
             this.lblErrorMail.Size = new System.Drawing.Size(67, 12);
             this.lblErrorMail.TabIndex = 62;
@@ -133,17 +122,17 @@
             this.txtMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMail.Location = new System.Drawing.Point(323, 63);
+            this.txtMail.Location = new System.Drawing.Point(276, 63);
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(216, 27);
+            this.txtMail.Size = new System.Drawing.Size(186, 27);
             this.txtMail.TabIndex = 61;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label2.Location = new System.Drawing.Point(320, 43);
+            this.label2.Location = new System.Drawing.Point(273, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 60;
@@ -168,7 +157,7 @@
             this.txtName.Location = new System.Drawing.Point(53, 63);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(216, 27);
+            this.txtName.Size = new System.Drawing.Size(183, 27);
             this.txtName.TabIndex = 58;
             // 
             // lblEmail
@@ -445,10 +434,11 @@
             this.cmbWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.cmbWork.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbWork.FormattingEnabled = true;
-            this.cmbWork.Location = new System.Drawing.Point(594, 66);
+            this.cmbWork.Location = new System.Drawing.Point(726, 66);
             this.cmbWork.Name = "cmbWork";
-            this.cmbWork.Size = new System.Drawing.Size(217, 21);
+            this.cmbWork.Size = new System.Drawing.Size(176, 21);
             this.cmbWork.TabIndex = 65;
+            this.cmbWork.SelectedIndexChanged += new System.EventHandler(this.cmbWork_SelectedIndexChanged);
             // 
             // lblSucces
             // 
@@ -461,20 +451,54 @@
             this.lblSucces.TabIndex = 66;
             this.lblSucces.Text = "Success";
             // 
+            // txtPass
+            // 
+            this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Location = new System.Drawing.Point(490, 63);
+            this.txtPass.Multiline = true;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(216, 27);
+            this.txtPass.TabIndex = 70;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.label1.Location = new System.Drawing.Point(487, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "Password";
+            // 
+            // lblErrPass
+            // 
+            this.lblErrPass.AutoSize = true;
+            this.lblErrPass.Font = new System.Drawing.Font("Nirmala UI", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrPass.ForeColor = System.Drawing.Color.Red;
+            this.lblErrPass.Location = new System.Drawing.Point(488, 93);
+            this.lblErrPass.Name = "lblErrPass";
+            this.lblErrPass.Size = new System.Drawing.Size(67, 12);
+            this.lblErrPass.TabIndex = 62;
+            this.lblErrPass.Text = "Error Username";
+            // 
             // frmManAccSup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 625);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.lblSucces);
             this.Controls.Add(this.cmbWork);
             this.Controls.Add(this.updatePanel);
             this.Controls.Add(this.dgv_sup);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.lblErrorWork);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblErrPass);
             this.Controls.Add(this.lblErrorMail);
             this.Controls.Add(this.txtMail);
             this.Controls.Add(this.label2);
@@ -494,8 +518,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Label lblErrorWork;
         private System.Windows.Forms.Label label4;
@@ -525,5 +547,8 @@
         private System.Windows.Forms.DataGridViewButtonColumn delete_btn;
         private System.Windows.Forms.ComboBox cmbWork;
         private System.Windows.Forms.Label lblSucces;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblErrPass;
     }
 }

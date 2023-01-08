@@ -50,6 +50,7 @@ namespace LockHood
 
         }
 
+        
         public int FindId(String name, String table)
         {
             objdb.createConn();
@@ -154,12 +155,15 @@ namespace LockHood
             string updateDepart = cmbUpdDepart.Text;
             string updateWork = cmbupdateWork.Text;
 
+            int dep_id = FindId(updateDepart, "department");
+            int workShop_id = FindId(updateWork, "workshop");
+
             SqlCommand cmd = new SqlCommand("UPDATE task SET Name=@task_name, Date=@task_date, Workshop_ID=@task_work, Department_ID=@task_dep WHERE (ID=@id)");//update query
             cmd.Parameters.AddWithValue("@id", rowtaskID);
             cmd.Parameters.AddWithValue("@task_name", updateName);
             cmd.Parameters.AddWithValue("@task_date", updatedate);
-            cmd.Parameters.AddWithValue("@task_work", updateWork);
-            cmd.Parameters.AddWithValue("@task_dep", updateDepart);
+            cmd.Parameters.AddWithValue("@task_work", workShop_id);
+            cmd.Parameters.AddWithValue("@task_dep", dep_id);
 
             updatePanel.Visible = false;
             lblSucces.Text = "✓ The Account has been Updated Successfully";
@@ -247,7 +251,7 @@ namespace LockHood
 
             if (e.ColumnIndex == 0)
             {
-                if (MessageBox.Show("Do you want to Update " + rowtaskID + " from Database?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                if (MessageBox.Show("Do you want to Update " + rowtaskname + " from Database?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
                     updatePanel.Visible = true;
                     updateTask_txtbox.Text = rowtaskname;
@@ -308,6 +312,14 @@ namespace LockHood
                 emptyText();
                 objdb.showData(q, dgv_task);
             }
+        }
+
+        private void cmbDepart_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string department = cmbDepart.Text;
+            string q = "select task.ID, task.Name as task, task.Status as status, task.Date as date, workshop.Name as workshop, department.Name as department from((task INNER JOIN department ON task.Department_ID = department.ID) INNER JOIN workshop ON task.Workshop_ID = workshop.ID) where department.Name= '" + department + "'";
+            objdb.createConn();
+            objdb.showData(q, dgv_task);
         }
     }
 } 
