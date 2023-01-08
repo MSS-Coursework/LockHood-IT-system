@@ -29,26 +29,29 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpStart = new System.Windows.Forms.DateTimePicker();
+            this.btnIncoAll = new System.Windows.Forms.Button();
+            this.btnIncome = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnAllinven = new System.Windows.Forms.Button();
+            this.btnInvent = new System.Windows.Forms.Button();
+            this.cmbInventory = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnAllTask = new System.Windows.Forms.Button();
+            this.btnTask = new System.Windows.Forms.Button();
+            this.cmbTask = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rptviewerMan = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -58,49 +61,82 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.btnCancel);
-            this.panel4.Controls.Add(this.btnLogin);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.dtpEnd);
+            this.panel4.Controls.Add(this.dtpStart);
+            this.panel4.Controls.Add(this.btnIncoAll);
+            this.panel4.Controls.Add(this.btnIncome);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(59, 60);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(337, 96);
+            this.panel4.Size = new System.Drawing.Size(337, 136);
             this.panel4.TabIndex = 41;
             // 
-            // btnCancel
+            // label5
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.White;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnCancel.Location = new System.Drawing.Point(275, 30);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(42, 35);
-            this.btnCancel.TabIndex = 68;
-            this.btnCancel.Text = "ALL";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.label5.Location = new System.Drawing.Point(15, 100);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 17);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "End Date";
             // 
-            // btnLogin
+            // label4
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(193, 30);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(76, 35);
-            this.btnLogin.TabIndex = 69;
-            this.btnLogin.Text = "GENERATE";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
+            this.label4.Location = new System.Drawing.Point(15, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 17);
+            this.label4.TabIndex = 72;
+            this.label4.Text = "Start Date";
             // 
-            // comboBox1
+            // dtpEnd
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(24, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
-            this.comboBox1.TabIndex = 3;
+            this.dtpEnd.Location = new System.Drawing.Point(91, 100);
+            this.dtpEnd.Name = "dtpEnd";
+            this.dtpEnd.Size = new System.Drawing.Size(200, 20);
+            this.dtpEnd.TabIndex = 71;
+            // 
+            // dtpStart
+            // 
+            this.dtpStart.Location = new System.Drawing.Point(91, 74);
+            this.dtpStart.Name = "dtpStart";
+            this.dtpStart.Size = new System.Drawing.Size(200, 20);
+            this.dtpStart.TabIndex = 70;
+            // 
+            // btnIncoAll
+            // 
+            this.btnIncoAll.BackColor = System.Drawing.Color.White;
+            this.btnIncoAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncoAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncoAll.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnIncoAll.Location = new System.Drawing.Point(275, 30);
+            this.btnIncoAll.Name = "btnIncoAll";
+            this.btnIncoAll.Size = new System.Drawing.Size(42, 35);
+            this.btnIncoAll.TabIndex = 68;
+            this.btnIncoAll.Text = "ALL";
+            this.btnIncoAll.UseVisualStyleBackColor = false;
+            this.btnIncoAll.Click += new System.EventHandler(this.btnIncoAll_Click);
+            // 
+            // btnIncome
+            // 
+            this.btnIncome.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnIncome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnIncome.FlatAppearance.BorderSize = 0;
+            this.btnIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIncome.ForeColor = System.Drawing.Color.White;
+            this.btnIncome.Location = new System.Drawing.Point(193, 30);
+            this.btnIncome.Name = "btnIncome";
+            this.btnIncome.Size = new System.Drawing.Size(76, 35);
+            this.btnIncome.TabIndex = 69;
+            this.btnIncome.Text = "GENERATE";
+            this.btnIncome.UseVisualStyleBackColor = false;
+            this.btnIncome.Click += new System.EventHandler(this.btnIncome_Click);
             // 
             // label7
             // 
@@ -116,49 +152,51 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.btnAllinven);
+            this.panel1.Controls.Add(this.btnInvent);
+            this.panel1.Controls.Add(this.cmbInventory);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(59, 181);
+            this.panel1.Location = new System.Drawing.Point(59, 228);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(337, 96);
             this.panel1.TabIndex = 70;
             // 
-            // button1
+            // btnAllinven
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.Location = new System.Drawing.Point(275, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 35);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "ALL";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAllinven.BackColor = System.Drawing.Color.White;
+            this.btnAllinven.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAllinven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllinven.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAllinven.Location = new System.Drawing.Point(275, 30);
+            this.btnAllinven.Name = "btnAllinven";
+            this.btnAllinven.Size = new System.Drawing.Size(42, 35);
+            this.btnAllinven.TabIndex = 68;
+            this.btnAllinven.Text = "ALL";
+            this.btnAllinven.UseVisualStyleBackColor = false;
+            this.btnAllinven.Click += new System.EventHandler(this.btnAllinven_Click);
             // 
-            // button2
+            // btnInvent
             // 
-            this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(193, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 35);
-            this.button2.TabIndex = 69;
-            this.button2.Text = "GENERATE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnInvent.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnInvent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInvent.FlatAppearance.BorderSize = 0;
+            this.btnInvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvent.ForeColor = System.Drawing.Color.White;
+            this.btnInvent.Location = new System.Drawing.Point(193, 30);
+            this.btnInvent.Name = "btnInvent";
+            this.btnInvent.Size = new System.Drawing.Size(76, 35);
+            this.btnInvent.TabIndex = 69;
+            this.btnInvent.Text = "GENERATE";
+            this.btnInvent.UseVisualStyleBackColor = false;
+            this.btnInvent.Click += new System.EventHandler(this.btnInvent_Click);
             // 
-            // comboBox2
+            // cmbInventory
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(24, 55);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(140, 21);
-            this.comboBox2.TabIndex = 3;
+            this.cmbInventory.FormattingEnabled = true;
+            this.cmbInventory.Location = new System.Drawing.Point(24, 55);
+            this.cmbInventory.Name = "cmbInventory";
+            this.cmbInventory.Size = new System.Drawing.Size(140, 21);
+            this.cmbInventory.TabIndex = 3;
             // 
             // label1
             // 
@@ -174,49 +212,49 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.comboBox3);
+            this.panel2.Controls.Add(this.btnAllTask);
+            this.panel2.Controls.Add(this.btnTask);
+            this.panel2.Controls.Add(this.cmbTask);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(59, 303);
+            this.panel2.Location = new System.Drawing.Point(59, 350);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(337, 96);
             this.panel2.TabIndex = 70;
             // 
-            // button3
+            // btnAllTask
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button3.Location = new System.Drawing.Point(275, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 35);
-            this.button3.TabIndex = 68;
-            this.button3.Text = "ALL";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAllTask.BackColor = System.Drawing.Color.White;
+            this.btnAllTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAllTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAllTask.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAllTask.Location = new System.Drawing.Point(275, 30);
+            this.btnAllTask.Name = "btnAllTask";
+            this.btnAllTask.Size = new System.Drawing.Size(42, 35);
+            this.btnAllTask.TabIndex = 68;
+            this.btnAllTask.Text = "ALL";
+            this.btnAllTask.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnTask
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(193, 30);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(76, 35);
-            this.button4.TabIndex = 69;
-            this.button4.Text = "GENERATE";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnTask.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTask.FlatAppearance.BorderSize = 0;
+            this.btnTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTask.ForeColor = System.Drawing.Color.White;
+            this.btnTask.Location = new System.Drawing.Point(193, 30);
+            this.btnTask.Name = "btnTask";
+            this.btnTask.Size = new System.Drawing.Size(76, 35);
+            this.btnTask.TabIndex = 69;
+            this.btnTask.Text = "GENERATE";
+            this.btnTask.UseVisualStyleBackColor = false;
             // 
-            // comboBox3
+            // cmbTask
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(24, 55);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(140, 21);
-            this.comboBox3.TabIndex = 3;
+            this.cmbTask.FormattingEnabled = true;
+            this.cmbTask.Location = new System.Drawing.Point(24, 55);
+            this.cmbTask.Name = "cmbTask";
+            this.cmbTask.Size = new System.Drawing.Size(140, 21);
+            this.cmbTask.TabIndex = 3;
             // 
             // label2
             // 
@@ -236,7 +274,7 @@
             this.panel3.Controls.Add(this.button6);
             this.panel3.Controls.Add(this.comboBox4);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(59, 422);
+            this.panel3.Location = new System.Drawing.Point(59, 469);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(337, 96);
             this.panel3.TabIndex = 71;
@@ -287,13 +325,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "KPI Report";
             // 
-            // reportViewer1
+            // rptviewerMan
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(478, 60);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(509, 458);
-            this.reportViewer1.TabIndex = 72;
+            this.rptviewerMan.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rptviewerMan.Location = new System.Drawing.Point(428, 60);
+            this.rptviewerMan.Name = "rptviewerMan";
+            this.rptviewerMan.ServerReport.BearerToken = null;
+            this.rptviewerMan.Size = new System.Drawing.Size(593, 511);
+            this.rptviewerMan.TabIndex = 72;
+            this.rptviewerMan.ZoomPercent = 75;
             // 
             // frmManReports
             // 
@@ -301,7 +341,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 625);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.rptviewerMan);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -325,25 +365,28 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnIncoAll;
+        private System.Windows.Forms.Button btnIncome;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnAllinven;
+        private System.Windows.Forms.Button btnInvent;
+        private System.Windows.Forms.ComboBox cmbInventory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button btnAllTask;
+        private System.Windows.Forms.Button btnTask;
+        private System.Windows.Forms.ComboBox cmbTask;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label3;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rptviewerMan;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dtpEnd;
+        private System.Windows.Forms.DateTimePicker dtpStart;
     }
 }

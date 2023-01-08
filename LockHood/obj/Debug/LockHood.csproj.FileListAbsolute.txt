@@ -74,10 +74,6 @@ D:\LockHood\LockHood\obj\Debug\LockHood.frmManReports.resources
 D:\LockHood\LockHood\obj\Debug\LockHood.frmSplash.resources
 D:\LockHood\LockHood\obj\Debug\LockHood.frmSuperDash.resources
 D:\LockHood\LockHood\obj\Debug\LockHood.csproj.CopyComplete
-E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\LockHood.exe.config
 E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\LockHood.exe
 E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\LockHood.pdb
@@ -251,3 +247,15 @@ C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.e
 C:\Users\STAR TECH\source\repos\LockHood-IT-system\LockHood\obj\Debug\LockHood.pdb
 E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmSupReport.resources
 E:\Lock-Hood\LockHood-IT-system\LockHood\obj\Debug\LockHood.frmHeadReport.resources
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\x86\SqlServerSpatial160.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\x64\SqlServerSpatial160.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+E:\Lock-Hood\LockHood-IT-system\LockHood\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
