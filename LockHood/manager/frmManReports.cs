@@ -51,7 +51,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\Reports\rptManInventory.rdlc";
+            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManInventory.rdlc";
             rptviewerMan.LocalReport.DataSources.Clear();
             rptviewerMan.LocalReport.DataSources.Add(rds);
             rptviewerMan.RefreshReport();
@@ -65,7 +65,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\Reports\rptManInventory.rdlc";
+            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManInventory.rdlc";
             rptviewerMan.LocalReport.DataSources.Clear();
             rptviewerMan.LocalReport.DataSources.Add(rds);
             rptviewerMan.RefreshReport();
@@ -82,7 +82,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\Reports\ReportManIncome.rdlc";
+            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\ReportManIncome.rdlc";
             rptviewerMan.LocalReport.DataSources.Clear();
             rptviewerMan.LocalReport.DataSources.Add(rds);
             rptviewerMan.RefreshReport();
@@ -96,7 +96,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\Reports\ReportManIncome.rdlc";
+            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\ReportManIncome.rdlc";
             rptviewerMan.LocalReport.DataSources.Clear();
             rptviewerMan.LocalReport.DataSources.Add(rds);
             rptviewerMan.RefreshReport();

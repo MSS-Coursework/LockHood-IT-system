@@ -69,15 +69,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="databaseClass.cs" />
-    <Compile Include="Reports\DataSet1.Designer.cs">
+    <Compile Include="DataSets\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Reports\DataSet2.Designer.cs">
+    <Compile Include="DataSets\DataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
     </Compile>
     <Compile Include="supervisor\frmSupReport.cs">
       <SubType>Form</SubType>
@@ -207,9 +215,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Reports\ReportManIncome.rdlc" />
-    <EmbeddedResource Include="Reports\ReportSupEmp.rdlc" />
-    <EmbeddedResource Include="Reports\rptManInventory.rdlc" />
+    <EmbeddedResource Include="head\Reports\rptEmployee.rdlc" />
+    <EmbeddedResource Include="head\Reports\rptInventory.rdlc" />
+    <EmbeddedResource Include="head\Reports\rptSubTask.rdlc" />
+    <EmbeddedResource Include="head\Reports\rptTask.rdlc" />
+    <EmbeddedResource Include="manager\Reports\ReportManIncome.rdlc" />
+    <EmbeddedResource Include="supervisor\Reports\ReportSupEmp.rdlc" />
+    <EmbeddedResource Include="manager\Reports\rptManInventory.rdlc" />
+    <EmbeddedResource Include="manager\Reports\rptManSupervisors.rdlc" />
+    <EmbeddedResource Include="manager\Reports\rptManTask.rdlc" />
     <EmbeddedResource Include="supervisor\frmSupReport.resx">
       <DependentUpon>frmSupReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +296,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="supervisor\Reports\rptMaterials.rdlc" />
+    <EmbeddedResource Include="supervisor\Reports\rptRequest.rdlc" />
+    <EmbeddedResource Include="supervisor\Reports\rptSubTask.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -292,27 +309,38 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Reports\DataSet1.xsc">
+    <None Include="DataSets\DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSet1.xsd">
+    <None Include="DataSets\DataSet1.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reports\DataSet1.xss">
+    <None Include="DataSets\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSet2.xsc">
+    <None Include="DataSets\DataSet2.xsc">
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
-    <None Include="Reports\DataSet2.xsd">
+    <None Include="DataSets\DataSet2.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Reports\DataSet2.xss">
+    <None Include="DataSets\DataSet2.xss">
       <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

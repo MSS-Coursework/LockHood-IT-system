@@ -28,7 +28,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet2", dt);
-            ReportViewerSup.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\Reports\ReportSupEmp.rdlc";
+            ReportViewerSup.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\ReportSupEmp.rdlc";
             ReportViewerSup.LocalReport.DataSources.Clear();
             ReportViewerSup.LocalReport.DataSources.Add(rds);
             ReportViewerSup.RefreshReport();
