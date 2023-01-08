@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ReportViewerSup = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.btnEmpAll = new System.Windows.Forms.Button();
+            this.btnEmp = new System.Windows.Forms.Button();
+            this.cmbEmpl = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -55,60 +55,61 @@
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // ReportViewerSup
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(478, 60);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(509, 458);
-            this.reportViewer1.TabIndex = 77;
+            this.ReportViewerSup.Location = new System.Drawing.Point(478, 60);
+            this.ReportViewerSup.Name = "ReportViewerSup";
+            this.ReportViewerSup.ServerReport.BearerToken = null;
+            this.ReportViewerSup.Size = new System.Drawing.Size(509, 458);
+            this.ReportViewerSup.TabIndex = 77;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.comboBox4);
+            this.panel3.Controls.Add(this.btnEmpAll);
+            this.panel3.Controls.Add(this.btnEmp);
+            this.panel3.Controls.Add(this.cmbEmpl);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(59, 422);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(337, 96);
             this.panel3.TabIndex = 76;
             // 
-            // button5
+            // btnEmpAll
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button5.Location = new System.Drawing.Point(275, 30);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 35);
-            this.button5.TabIndex = 68;
-            this.button5.Text = "ALL";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnEmpAll.BackColor = System.Drawing.Color.White;
+            this.btnEmpAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpAll.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEmpAll.Location = new System.Drawing.Point(275, 30);
+            this.btnEmpAll.Name = "btnEmpAll";
+            this.btnEmpAll.Size = new System.Drawing.Size(42, 35);
+            this.btnEmpAll.TabIndex = 68;
+            this.btnEmpAll.Text = "ALL";
+            this.btnEmpAll.UseVisualStyleBackColor = false;
+            this.btnEmpAll.Click += new System.EventHandler(this.btnEmpAll_Click);
             // 
-            // button6
+            // btnEmp
             // 
-            this.button6.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(193, 30);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(76, 35);
-            this.button6.TabIndex = 69;
-            this.button6.Text = "GENERATE";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnEmp.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEmp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmp.FlatAppearance.BorderSize = 0;
+            this.btnEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmp.ForeColor = System.Drawing.Color.White;
+            this.btnEmp.Location = new System.Drawing.Point(193, 30);
+            this.btnEmp.Name = "btnEmp";
+            this.btnEmp.Size = new System.Drawing.Size(76, 35);
+            this.btnEmp.TabIndex = 69;
+            this.btnEmp.Text = "GENERATE";
+            this.btnEmp.UseVisualStyleBackColor = false;
             // 
-            // comboBox4
+            // cmbEmpl
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(24, 55);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(140, 21);
-            this.comboBox4.TabIndex = 3;
+            this.cmbEmpl.FormattingEnabled = true;
+            this.cmbEmpl.Location = new System.Drawing.Point(24, 55);
+            this.cmbEmpl.Name = "cmbEmpl";
+            this.cmbEmpl.Size = new System.Drawing.Size(140, 21);
+            this.cmbEmpl.TabIndex = 3;
             // 
             // label3
             // 
@@ -117,9 +118,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.label3.Location = new System.Drawing.Point(20, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 25);
+            this.label3.Size = new System.Drawing.Size(164, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "KPI Report";
+            this.label3.Text = "Employee Report";
             // 
             // panel2
             // 
@@ -301,7 +302,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 625);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.ReportViewerSup);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -309,6 +310,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSupReport";
             this.Text = "frmSupReport";
+            this.Load += new System.EventHandler(this.frmSupReport_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -323,11 +325,11 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer ReportViewerSup;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button btnEmpAll;
+        private System.Windows.Forms.Button btnEmp;
+        private System.Windows.Forms.ComboBox cmbEmpl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button3;

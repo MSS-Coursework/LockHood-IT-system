@@ -74,6 +74,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="supervisor\frmSupReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +208,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Reports\ReportManIncome.rdlc" />
+    <EmbeddedResource Include="Reports\ReportSupEmp.rdlc" />
     <EmbeddedResource Include="Reports\rptManInventory.rdlc" />
     <EmbeddedResource Include="supervisor\frmSupReport.resx">
       <DependentUpon>frmSupReport.cs</DependentUpon>
@@ -296,6 +302,17 @@
     </None>
     <None Include="Reports\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
