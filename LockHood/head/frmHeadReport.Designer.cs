@@ -55,10 +55,10 @@
             // 
             // rptViewerHead
             // 
-            this.rptViewerHead.Location = new System.Drawing.Point(423, 60);
+            this.rptViewerHead.Location = new System.Drawing.Point(435, 60);
             this.rptViewerHead.Name = "rptViewerHead";
             this.rptViewerHead.ServerReport.BearerToken = null;
-            this.rptViewerHead.Size = new System.Drawing.Size(612, 518);
+            this.rptViewerHead.Size = new System.Drawing.Size(600, 518);
             this.rptViewerHead.TabIndex = 77;
             this.rptViewerHead.ZoomPercent = 75;
             // 

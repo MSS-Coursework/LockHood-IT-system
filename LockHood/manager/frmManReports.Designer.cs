@@ -47,8 +47,8 @@
             this.cmbTask = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnSuperAll = new System.Windows.Forms.Button();
+            this.btnSuper = new System.Windows.Forms.Button();
             this.cmbSupervisor = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.rptviewerMan = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -272,8 +272,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.btnSuperAll);
+            this.panel3.Controls.Add(this.btnSuper);
             this.panel3.Controls.Add(this.cmbSupervisor);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(59, 469);
@@ -281,33 +281,34 @@
             this.panel3.Size = new System.Drawing.Size(337, 96);
             this.panel3.TabIndex = 71;
             // 
-            // button5
+            // btnSuperAll
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button5.Location = new System.Drawing.Point(275, 30);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 35);
-            this.button5.TabIndex = 68;
-            this.button5.Text = "ALL";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSuperAll.BackColor = System.Drawing.Color.White;
+            this.btnSuperAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuperAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuperAll.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSuperAll.Location = new System.Drawing.Point(275, 30);
+            this.btnSuperAll.Name = "btnSuperAll";
+            this.btnSuperAll.Size = new System.Drawing.Size(42, 35);
+            this.btnSuperAll.TabIndex = 68;
+            this.btnSuperAll.Text = "ALL";
+            this.btnSuperAll.UseVisualStyleBackColor = false;
+            this.btnSuperAll.Click += new System.EventHandler(this.btnSuperAll_Click);
             // 
-            // button6
+            // btnSuper
             // 
-            this.button6.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(193, 30);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(76, 35);
-            this.button6.TabIndex = 69;
-            this.button6.Text = "GENERATE";
-            this.button6.UseVisualStyleBackColor = false;
-            
+            this.btnSuper.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSuper.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSuper.FlatAppearance.BorderSize = 0;
+            this.btnSuper.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuper.ForeColor = System.Drawing.Color.White;
+            this.btnSuper.Location = new System.Drawing.Point(193, 30);
+            this.btnSuper.Name = "btnSuper";
+            this.btnSuper.Size = new System.Drawing.Size(76, 35);
+            this.btnSuper.TabIndex = 69;
+            this.btnSuper.Text = "GENERATE";
+            this.btnSuper.UseVisualStyleBackColor = false;
+            this.btnSuper.Click += new System.EventHandler(this.btnSuper_Click);
             // 
             // cmbSupervisor
             // 
@@ -382,8 +383,8 @@
         private System.Windows.Forms.ComboBox cmbTask;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnSuperAll;
+        private System.Windows.Forms.Button btnSuper;
         private System.Windows.Forms.ComboBox cmbSupervisor;
         private System.Windows.Forms.Label label3;
         private Microsoft.Reporting.WinForms.ReportViewer rptviewerMan;

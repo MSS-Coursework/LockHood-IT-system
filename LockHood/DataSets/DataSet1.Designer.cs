@@ -1058,6 +1058,8 @@ namespace LockHood.DataSets {
             
             private global::System.Data.DataColumn columnWorkshop;
             
+            private global::System.Data.DataColumn columnDepartment;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public supervisorDataTable() {
@@ -1125,6 +1127,14 @@ namespace LockHood.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DepartmentColumn {
+                get {
+                    return this.columnDepartment;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1160,13 +1170,14 @@ namespace LockHood.DataSets {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public supervisorRow AddsupervisorRow(string Name, string Email, string Workshop) {
+            public supervisorRow AddsupervisorRow(string Name, string Email, string Workshop, string Department) {
                 supervisorRow rowsupervisorRow = ((supervisorRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Name,
                         Email,
-                        Workshop};
+                        Workshop,
+                        Department};
                 rowsupervisorRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowsupervisorRow);
                 return rowsupervisorRow;
@@ -1200,6 +1211,7 @@ namespace LockHood.DataSets {
                 this.columnName = base.Columns["Name"];
                 this.columnEmail = base.Columns["Email"];
                 this.columnWorkshop = base.Columns["Workshop"];
+                this.columnDepartment = base.Columns["Department"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1213,6 +1225,8 @@ namespace LockHood.DataSets {
                 base.Columns.Add(this.columnEmail);
                 this.columnWorkshop = new global::System.Data.DataColumn("Workshop", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnWorkshop);
+                this.columnDepartment = new global::System.Data.DataColumn("Department", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDepartment);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -1226,6 +1240,8 @@ namespace LockHood.DataSets {
                 this.columnEmail.MaxLength = 50;
                 this.columnWorkshop.AllowDBNull = false;
                 this.columnWorkshop.MaxLength = 50;
+                this.columnDepartment.AllowDBNull = false;
+                this.columnDepartment.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1882,6 +1898,17 @@ namespace LockHood.DataSets {
                 }
                 set {
                     this[this.tablesupervisor.WorkshopColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Department {
+                get {
+                    return ((string)(this[this.tablesupervisor.DepartmentColumn]));
+                }
+                set {
+                    this[this.tablesupervisor.DepartmentColumn] = value;
                 }
             }
             
@@ -2650,6 +2677,7 @@ FROM            task INNER JOIN
             tableMapping.ColumnMappings.Add("Name", "Name");
             tableMapping.ColumnMappings.Add("Email", "Email");
             tableMapping.ColumnMappings.Add("Workshop", "Workshop");
+            tableMapping.ColumnMappings.Add("Department", "Department");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -2666,9 +2694,10 @@ FROM            task INNER JOIN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        supervisor.ID, supervisor.Name, supervisor.Email, workshop.Name AS " +
-                "Workshop\r\nFROM            supervisor INNER JOIN\r\n                         worksh" +
-                "op ON supervisor.Workshop_ID = workshop.ID";
+            this._commandCollection[0].CommandText = @"SELECT        supervisor.ID, supervisor.Name, supervisor.Email, workshop.Name AS Workshop, department.Name AS Department
+FROM            supervisor INNER JOIN
+                         workshop ON supervisor.Workshop_ID = workshop.ID INNER JOIN
+                         department ON workshop.Department_ID = department.ID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

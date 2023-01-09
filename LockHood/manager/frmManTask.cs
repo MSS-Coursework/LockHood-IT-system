@@ -92,7 +92,7 @@ namespace LockHood
             {
                 objdb.closeConn();
 
-                string query1 = "insert into task (Name, Status, Date, Workshop_ID, Department_ID) values ('" + name + "', 'Pending', '" + date + "', '" + workshop_id + "', '" + dep_id + "')";//insert query
+                string query1 = "insert into task (Name, Status, Date, Workshop_ID, Department_ID) values ('" + name + "', 'pending', '" + date + "', '" + workshop_id + "', '" + dep_id + "')";//insert query
                 SqlCommand dbCommand1 = new SqlCommand(query1);
 
                 objdb.executeQuery(dbCommand1);

@@ -30,7 +30,9 @@
         {
             this.ReportViewerSup = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnEmpAll = new System.Windows.Forms.Button();
             this.btnEmp = new System.Windows.Forms.Button();
+            this.cmbEmpl = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTaskAll = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnRequest = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnEmpAll = new System.Windows.Forms.Button();
-            this.cmbEmpl = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -53,10 +53,10 @@
             // 
             // ReportViewerSup
             // 
-            this.ReportViewerSup.Location = new System.Drawing.Point(425, 60);
+            this.ReportViewerSup.Location = new System.Drawing.Point(437, 60);
             this.ReportViewerSup.Name = "ReportViewerSup";
             this.ReportViewerSup.ServerReport.BearerToken = null;
-            this.ReportViewerSup.Size = new System.Drawing.Size(600, 533);
+            this.ReportViewerSup.Size = new System.Drawing.Size(588, 533);
             this.ReportViewerSup.TabIndex = 77;
             this.ReportViewerSup.ZoomPercent = 75;
             // 
@@ -72,6 +72,20 @@
             this.panel3.Size = new System.Drawing.Size(337, 96);
             this.panel3.TabIndex = 76;
             // 
+            // btnEmpAll
+            // 
+            this.btnEmpAll.BackColor = System.Drawing.Color.White;
+            this.btnEmpAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmpAll.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEmpAll.Location = new System.Drawing.Point(275, 30);
+            this.btnEmpAll.Name = "btnEmpAll";
+            this.btnEmpAll.Size = new System.Drawing.Size(42, 35);
+            this.btnEmpAll.TabIndex = 68;
+            this.btnEmpAll.Text = "ALL";
+            this.btnEmpAll.UseVisualStyleBackColor = false;
+            this.btnEmpAll.Click += new System.EventHandler(this.btnEmpAll_Click);
+            // 
             // btnEmp
             // 
             this.btnEmp.BackColor = System.Drawing.Color.LightSeaGreen;
@@ -86,6 +100,14 @@
             this.btnEmp.Text = "GENERATE";
             this.btnEmp.UseVisualStyleBackColor = false;
             this.btnEmp.Click += new System.EventHandler(this.btnEmp_Click_1);
+            // 
+            // cmbEmpl
+            // 
+            this.cmbEmpl.FormattingEnabled = true;
+            this.cmbEmpl.Location = new System.Drawing.Point(24, 55);
+            this.cmbEmpl.Name = "cmbEmpl";
+            this.cmbEmpl.Size = new System.Drawing.Size(140, 21);
+            this.cmbEmpl.TabIndex = 3;
             // 
             // label3
             // 
@@ -232,28 +254,6 @@
             this.label7.Size = new System.Drawing.Size(148, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Request Report";
-            // 
-            // btnEmpAll
-            // 
-            this.btnEmpAll.BackColor = System.Drawing.Color.White;
-            this.btnEmpAll.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmpAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmpAll.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnEmpAll.Location = new System.Drawing.Point(275, 30);
-            this.btnEmpAll.Name = "btnEmpAll";
-            this.btnEmpAll.Size = new System.Drawing.Size(42, 35);
-            this.btnEmpAll.TabIndex = 68;
-            this.btnEmpAll.Text = "ALL";
-            this.btnEmpAll.UseVisualStyleBackColor = false;
-            this.btnEmpAll.Click += new System.EventHandler(this.btnEmpAll_Click);
-            // 
-            // cmbEmpl
-            // 
-            this.cmbEmpl.FormattingEnabled = true;
-            this.cmbEmpl.Location = new System.Drawing.Point(24, 55);
-            this.cmbEmpl.Name = "cmbEmpl";
-            this.cmbEmpl.Size = new System.Drawing.Size(140, 21);
-            this.cmbEmpl.TabIndex = 3;
             // 
             // frmSupReport
             // 

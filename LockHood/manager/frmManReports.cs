@@ -31,6 +31,11 @@ namespace LockHood
 
         private void fillcombo()
         {
+            // Clear combo
+            cmbTask.Items.Clear();
+            cmbSupervisor.Items.Clear();
+            cmbInventory.Items.Clear();
+
             // Fill Items to workshop combobox
             string query = "SELECT Name FROM department";
             DataTable dt = new DataTable();
@@ -40,6 +45,8 @@ namespace LockHood
             foreach (DataRow dr in dt.Rows)
             {
                 cmbInventory.Items.Add(dr["Name"].ToString());
+                cmbSupervisor.Items.Add(dr["Name"].ToString());
+
             }
 
             string query1 = "SELECT Name FROM workshop";
@@ -56,7 +63,7 @@ namespace LockHood
         private void btnInvent_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            string query = "SELECT materials.ID, materials.Name, materials.Quantity, workshop.Name, department.Name FROM((workshop INNER JOIN department ON workshop.Department_ID = department.ID) INNER JOIN materials ON materials.Workshop_ID = workshop.ID) WHERE department.Name = '" + cmbInventory + "'";
+            string query = "SELECT materials.ID, materials.Name, materials.Quantity, workshop.Name AS Workshop, department.Name AS Department FROM((workshop INNER JOIN department ON workshop.Department_ID = department.ID) INNER JOIN materials ON materials.Workshop_ID = workshop.ID) WHERE department.Name = '" + cmbInventory.Text + "'";
             
             objdb.readDatathroughAdapter(query, dt);
 
@@ -87,7 +94,7 @@ namespace LockHood
             DateTime end = dtpEnd.Value;
 
             DataTable dt = new DataTable();
-            string query = "SELECT Product, COUNT (Product) AS Count, SUM(Sales), SUM(Cost) FROM income WHERE Date BETWEEN '"+start+"' AND '"+end+"'  group by Product";
+            string query = "SELECT Product, SUM(Sales) AS Sales, SUM(Cost) AS Cost FROM income WHERE Date BETWEEN '" + start+"' AND '"+end+ "'  GROUP BY Product";
 
             objdb.readDatathroughAdapter(query, dt);
 
@@ -120,7 +127,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-            rptviewerMan.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManTask.rdlc";
+            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManTask.rdlc";
             rptviewerMan.LocalReport.DataSources.Clear();
             rptviewerMan.LocalReport.DataSources.Add(rds);
             rptviewerMan.RefreshReport();
@@ -134,12 +141,40 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet1", dt);
-            rptviewerMan.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManTask.rdlc";
+            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManTask.rdlc";
             rptviewerMan.LocalReport.DataSources.Clear();
             rptviewerMan.LocalReport.DataSources.Add(rds);
             rptviewerMan.RefreshReport();
         }
 
-        
+        private void btnSuper_Click(object sender, EventArgs e)
+        {
+
+            DataTable dt = new DataTable();
+            string query = "SELECT supervisor.ID, supervisor.Name, supervisor.Email, workshop.Name AS Workshop, department.Name AS Department FROM((workshop INNER JOIN department ON workshop.Department_ID = department.ID) INNER JOIN supervisor ON supervisor.Workshop_ID = workshop.ID) WHERE department.Name = '" + cmbSupervisor.Text + "'";
+
+            objdb.readDatathroughAdapter(query, dt);
+
+            ReportDataSource rds = new ReportDataSource("DataSet1", dt);
+            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManSupervisors.rdlc";
+            rptviewerMan.LocalReport.DataSources.Clear();
+            rptviewerMan.LocalReport.DataSources.Add(rds);
+            rptviewerMan.RefreshReport();
+            
+        }
+
+        private void btnSuperAll_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT supervisor.ID, supervisor.Name, supervisor.Email, workshop.Name AS Workshop, department.Name AS Department FROM((workshop INNER JOIN department ON workshop.Department_ID = department.ID) INNER JOIN supervisor ON supervisor.Workshop_ID = workshop.ID)";
+
+            objdb.readDatathroughAdapter(query, dt);
+
+            ReportDataSource rds = new ReportDataSource("DataSet1", dt);
+            rptviewerMan.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManSupervisors.rdlc";
+            rptviewerMan.LocalReport.DataSources.Clear();
+            rptviewerMan.LocalReport.DataSources.Add(rds);
+            rptviewerMan.RefreshReport();
+        }
     }
 }

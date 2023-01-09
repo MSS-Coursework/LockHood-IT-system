@@ -28,7 +28,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet2", dt);
-            ReportViewerSup.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\ReportSupEmp.rdlc";
+            ReportViewerSup.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\ReportSupEmp.rdlc";
             ReportViewerSup.LocalReport.DataSources.Clear();
             ReportViewerSup.LocalReport.DataSources.Add(rds);
             ReportViewerSup.RefreshReport();
@@ -50,7 +50,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet2", dt);
-            ReportViewerSup.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\rptRequest.rdlc";
+            ReportViewerSup.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\rptRequest.rdlc";
             ReportViewerSup.LocalReport.DataSources.Clear();
             ReportViewerSup.LocalReport.DataSources.Add(rds);
             ReportViewerSup.RefreshReport();
@@ -64,7 +64,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet2", dt);
-            ReportViewerSup.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\rptMaterials.rdlc";
+            ReportViewerSup.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\rptMaterials.rdlc";
             ReportViewerSup.LocalReport.DataSources.Clear();
             ReportViewerSup.LocalReport.DataSources.Add(rds);
             ReportViewerSup.RefreshReport();
@@ -78,7 +78,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet2", dt);
-            ReportViewerSup.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\rptSubTask.rdlc";
+            ReportViewerSup.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\rptSubTask.rdlc";
             ReportViewerSup.LocalReport.DataSources.Clear();
             ReportViewerSup.LocalReport.DataSources.Add(rds);
             ReportViewerSup.RefreshReport();
@@ -93,13 +93,15 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet2", dt);
-            ReportViewerSup.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\rptSubTask.rdlc";
+            ReportViewerSup.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\rptSubTask.rdlc";
             ReportViewerSup.LocalReport.DataSources.Clear();
             ReportViewerSup.LocalReport.DataSources.Add(rds);
             ReportViewerSup.RefreshReport();
         }
         private void fillcombo()
         {
+            cmbEmpl.Items.Clear();
+   
             // Fill Items to workshop combobox
             string query = "SELECT Name FROM workshop";
             DataTable dt = new DataTable();
@@ -121,7 +123,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet2", dt);
-            ReportViewerSup.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\ReportSupEmp.rdlc";
+            ReportViewerSup.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\ReportSupEmp.rdlc";
             ReportViewerSup.LocalReport.DataSources.Clear();
             ReportViewerSup.LocalReport.DataSources.Add(rds);
             ReportViewerSup.RefreshReport();
@@ -135,7 +137,7 @@ namespace LockHood
             objdb.readDatathroughAdapter(query, dt);
 
             ReportDataSource rds = new ReportDataSource("DataSet2", dt);
-            ReportViewerSup.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\ReportSupEmp.rdlc";
+            ReportViewerSup.LocalReport.ReportPath = @"E:\Lock-Hood\LockHood-IT-system\LockHood\supervisor\Reports\ReportSupEmp.rdlc";
             ReportViewerSup.LocalReport.DataSources.Clear();
             ReportViewerSup.LocalReport.DataSources.Add(rds);
             ReportViewerSup.RefreshReport();

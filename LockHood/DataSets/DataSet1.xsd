@@ -59,9 +59,10 @@ FROM            task INNER JOIN
               <DbSource ConnectionRef="LockHoodConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        supervisor.ID, supervisor.Name, supervisor.Email, workshop.Name AS Workshop
+                    <CommandText>SELECT        supervisor.ID, supervisor.Name, supervisor.Email, workshop.Name AS Workshop, department.Name AS Department
 FROM            supervisor INNER JOIN
-                         workshop ON supervisor.Workshop_ID = workshop.ID</CommandText>
+                         workshop ON supervisor.Workshop_ID = workshop.ID INNER JOIN
+                         department ON workshop.Department_ID = department.ID</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -72,6 +73,7 @@ FROM            supervisor INNER JOIN
               <Mapping SourceColumn="Name" DataSetColumn="Name" />
               <Mapping SourceColumn="Email" DataSetColumn="Email" />
               <Mapping SourceColumn="Workshop" DataSetColumn="Workshop" />
+              <Mapping SourceColumn="Department" DataSetColumn="Department" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -165,25 +167,32 @@ FROM            supervisor INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="supervisor" msprop:Generator_RowClassName="supervisorRow" msprop:Generator_RowEvHandlerName="supervisorRowChangeEventHandler" msprop:Generator_RowDeletedName="supervisorRowDeleted" msprop:Generator_RowDeletingName="supervisorRowDeleting" msprop:Generator_RowEvArgName="supervisorRowChangeEvent" msprop:Generator_TablePropName="supervisor" msprop:Generator_RowChangedName="supervisorRowChanged" msprop:Generator_UserTableName="supervisor" msprop:Generator_RowChangingName="supervisorRowChanging" msprop:Generator_TableClassName="supervisorDataTable" msprop:Generator_TableVarName="tablesupervisor">
+        <xs:element name="supervisor" msprop:Generator_RowEvHandlerName="supervisorRowChangeEventHandler" msprop:Generator_RowDeletedName="supervisorRowDeleted" msprop:Generator_RowDeletingName="supervisorRowDeleting" msprop:Generator_RowEvArgName="supervisorRowChangeEvent" msprop:Generator_TablePropName="supervisor" msprop:Generator_RowChangedName="supervisorRowChanged" msprop:Generator_RowChangingName="supervisorRowChanging" msprop:Generator_TableClassName="supervisorDataTable" msprop:Generator_RowClassName="supervisorRow" msprop:Generator_TableVarName="tablesupervisor" msprop:Generator_UserTableName="supervisor">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" type="xs:int" />
-              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName">
+              <xs:element name="ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Email" msprop:Generator_UserColumnName="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" minOccurs="0">
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_UserColumnName="Email" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Workshop" msprop:Generator_UserColumnName="Workshop" msprop:Generator_ColumnPropNameInTable="WorkshopColumn" msprop:Generator_ColumnPropNameInRow="Workshop" msprop:Generator_ColumnVarNameInTable="columnWorkshop">
+              <xs:element name="Workshop" msprop:Generator_ColumnPropNameInRow="Workshop" msprop:Generator_ColumnPropNameInTable="WorkshopColumn" msprop:Generator_ColumnVarNameInTable="columnWorkshop" msprop:Generator_UserColumnName="Workshop">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Department" msprop:Generator_ColumnPropNameInRow="Department" msprop:Generator_ColumnPropNameInTable="DepartmentColumn" msprop:Generator_ColumnVarNameInTable="columnDepartment" msprop:Generator_UserColumnName="Department">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
