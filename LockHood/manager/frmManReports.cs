@@ -41,6 +41,16 @@ namespace LockHood
             {
                 cmbInventory.Items.Add(dr["Name"].ToString());
             }
+
+            string query1 = "SELECT Name FROM workshop";
+            DataTable dt1 = new DataTable();
+
+            objdb.readDatathroughAdapter(query1, dt1);
+
+            foreach (DataRow dr in dt1.Rows)
+            {
+                cmbTask.Items.Add(dr["Name"].ToString());
+            }
         }
 
         private void btnInvent_Click(object sender, EventArgs e)
@@ -101,5 +111,35 @@ namespace LockHood
             rptviewerMan.LocalReport.DataSources.Add(rds);
             rptviewerMan.RefreshReport();
         }
+
+        private void btnTask_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT task.ID, task.Name, task.Status,  task.Date, department.Name AS Department, workshop.Name AS Workshop FROM((workshop INNER JOIN task ON task.Workshop_ID = workshop.ID) INNER JOIN department ON task.Department_ID = department.ID) WHERE workshop.Name = '" + cmbTask.Text + "'";
+
+            objdb.readDatathroughAdapter(query, dt);
+
+            ReportDataSource rds = new ReportDataSource("DataSet1", dt);
+            rptviewerMan.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManTask.rdlc";
+            rptviewerMan.LocalReport.DataSources.Clear();
+            rptviewerMan.LocalReport.DataSources.Add(rds);
+            rptviewerMan.RefreshReport();
+        }
+
+        private void btnAllTask_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            string query = "SELECT task.ID, task.Name, task.Status,  task.Date, department.Name AS Department, workshop.Name AS Workshop FROM((task INNER JOIN department ON task.Department_ID = department.ID) INNER JOIN workshop ON task.Workshop_ID = workshop.ID)";
+
+            objdb.readDatathroughAdapter(query, dt);
+
+            ReportDataSource rds = new ReportDataSource("DataSet1", dt);
+            rptviewerMan.LocalReport.ReportPath = @"D:\Lock-Hood\LockHood-IT-system\LockHood\manager\Reports\rptManTask.rdlc";
+            rptviewerMan.LocalReport.DataSources.Clear();
+            rptviewerMan.LocalReport.DataSources.Add(rds);
+            rptviewerMan.RefreshReport();
+        }
+
+        
     }
 }
