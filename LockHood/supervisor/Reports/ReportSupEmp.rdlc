@@ -2,18 +2,6 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Line Name="Line3">
-        <Top>2.125in</Top>
-        <Left>0.30438in</Left>
-        <Height>0in</Height>
-        <Width>7.54042in</Width>
-        <Style>
-          <Border>
-            <Color>DimGray</Color>
-            <Style>Solid</Style>
-          </Border>
-        </Style>
-      </Line>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
@@ -306,7 +294,6 @@
         <Left>1.63417in</Left>
         <Height>0.5in</Height>
         <Width>4in</Width>
-        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -332,7 +319,7 @@
         <Left>2.68972in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
-        <ZIndex>2</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -363,7 +350,7 @@
         <Left>1.63417in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
-        <ZIndex>3</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -464,7 +451,7 @@
           </Style>
         </Textbox>
         <Line Name="Line1">
-          <Top>1.2118in</Top>
+          <Top>1.28124in</Top>
           <Left>0.15219in</Left>
           <Height>0in</Height>
           <Width>7.54042in</Width>
@@ -648,6 +635,19 @@
             <PaddingBottom>2pt</PaddingBottom>
           </Style>
         </Textbox>
+        <Line Name="Line3">
+          <Top>0.04167in</Top>
+          <Left>0.15219in</Left>
+          <Height>0in</Height>
+          <Width>7.54042in</Width>
+          <ZIndex>3</ZIndex>
+          <Style>
+            <Border>
+              <Color>DimGray</Color>
+              <Style>Solid</Style>
+            </Border>
+          </Style>
+        </Line>
       </ReportItems>
       <Style>
         <Border>

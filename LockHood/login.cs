@@ -8,13 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace LockHood
 {
     public partial class login : Form
     {
         databaseClass objdb = new databaseClass();
-        
+
+        public string emailPattern = @"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
+
         public static String email = "";
 
         public login()
@@ -32,6 +35,7 @@ namespace LockHood
 
         }
 
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
@@ -39,6 +43,7 @@ namespace LockHood
             String mail = txtEmail.Text;
             String pass = txtPass.Text;
             String usertype = "";
+           
 
             // Empty Error Labels
             lblError.Text = "";
@@ -56,7 +61,7 @@ namespace LockHood
             {
                 lblPassError.Text = "This field is required !";
             }
-
+         
             else
             {
                 //sql query saved in a string
@@ -124,6 +129,18 @@ namespace LockHood
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPassword.Checked)
+            {
+                txtPass.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPass.PasswordChar = '•';
+            }
         }
     }
 }

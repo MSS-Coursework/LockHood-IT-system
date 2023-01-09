@@ -89,13 +89,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>1.10764in</Width>
+                  <Width>1.16667in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.10764in</Width>
+                  <Width>1.16667in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.10764in</Width>
+                  <Width>1.16667in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -309,10 +309,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>0.9241in</Top>
-            <Left>0.64688in</Left>
+            <Top>1.2991in</Top>
+            <Left>0.39688in</Left>
             <Height>0.5in</Height>
-            <Width>3.32292in</Width>
+            <Width>3.5in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -707,8 +707,8 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>5.82577in</Top>
-            <Left>0.47792in</Left>
+            <Top>2.89869in</Top>
+            <Left>0.53229in</Left>
             <Height>2.52715in</Height>
             <Width>7.36688in</Width>
             <ZIndex>2</ZIndex>
@@ -988,9 +988,9 @@
             </TopImage>
             <DataSetName>DataSet1</DataSetName>
             <Top>1.2991in</Top>
-            <Left>4.42583in</Left>
-            <Height>1.83333in</Height>
-            <Width>3.41897in</Width>
+            <Left>4.06125in</Left>
+            <Height>1.13541in</Height>
+            <Width>2.01168in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -1008,7 +1008,6 @@
                   <TextRun>
                     <Value>Net Profit Margin</Value>
                     <Style>
-                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>CornflowerBlue</Color>
                     </Style>
@@ -1018,10 +1017,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>0.9623in</Top>
-            <Left>5.405in</Left>
-            <Height>0.30902in</Height>
-            <Width>1.39709in</Width>
+            <Top>2.50396in</Top>
+            <Left>4.42583in</Left>
+            <Height>0.26736in</Height>
+            <Width>1.30334in</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -1042,7 +1041,6 @@
                   <TextRun>
                     <Value>Gross Profit</Value>
                     <Style>
-                      <FontSize>12pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>CornflowerBlue</Color>
                     </Style>
@@ -1052,10 +1050,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox22</rd:DefaultName>
-            <Top>3.35007in</Top>
-            <Left>5.51958in</Left>
-            <Height>0.30902in</Height>
-            <Width>1.06376in</Width>
+            <Top>2.50396in</Top>
+            <Left>6.79146in</Left>
+            <Height>0.21527in</Height>
+            <Width>0.91793in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -1334,10 +1332,10 @@
               <Value />
             </TopImage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>3.68687in</Top>
-            <Left>4.42583in</Left>
-            <Height>1.86458in</Height>
-            <Width>3.41897in</Width>
+            <Top>1.2991in</Top>
+            <Left>6.22791in</Left>
+            <Height>1.13541in</Height>
+            <Width>2.01168in</Width>
             <ZIndex>6</ZIndex>
             <Style>
               <Border>
@@ -1377,7 +1375,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox2</rd:DefaultName>
               <Top>0.17188in</Top>
-              <Left>2.8448in</Left>
+              <Left>2.9698in</Left>
               <Height>0.37153in</Height>
               <Width>2.61458in</Width>
               <Style>
@@ -1395,7 +1393,7 @@
               <Value>MicrosoftTeamsimage221</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.17188in</Top>
-              <Left>1.98021in</Left>
+              <Left>2.10521in</Left>
               <Height>0.72917in</Height>
               <Width>0.66667in</Width>
               <ZIndex>1</ZIndex>
@@ -1421,7 +1419,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
               <Top>0.58506in</Top>
-              <Left>2.8448in</Left>
+              <Left>2.9698in</Left>
               <Height>0.25in</Height>
               <Width>2.94792in</Width>
               <ZIndex>2</ZIndex>
@@ -1618,9 +1616,9 @@
               </Paragraphs>
               <rd:DefaultName>Textbox9</rd:DefaultName>
               <Top>0.93104in</Top>
-              <Left>3.14917in</Left>
+              <Left>3.65959in</Left>
               <Height>0.39362in</Height>
-              <Width>1.97in</Width>
+              <Width>1.23042in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>

@@ -127,6 +127,7 @@
             this.chkShowPassword.TabIndex = 38;
             this.chkShowPassword.Text = "Show Password";
             this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // txtEmail
             // 
