@@ -49,7 +49,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbSupervisor = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.rptviewerMan = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel4.SuspendLayout();
@@ -233,6 +233,7 @@
             this.btnAllTask.TabIndex = 68;
             this.btnAllTask.Text = "ALL";
             this.btnAllTask.UseVisualStyleBackColor = false;
+            this.btnAllTask.Click += new System.EventHandler(this.btnAllTask_Click);
             // 
             // btnTask
             // 
@@ -247,6 +248,7 @@
             this.btnTask.TabIndex = 69;
             this.btnTask.Text = "GENERATE";
             this.btnTask.UseVisualStyleBackColor = false;
+            this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
             // 
             // cmbTask
             // 
@@ -272,7 +274,7 @@
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.comboBox4);
+            this.panel3.Controls.Add(this.cmbSupervisor);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(59, 469);
             this.panel3.Name = "panel3";
@@ -305,14 +307,15 @@
             this.button6.TabIndex = 69;
             this.button6.Text = "GENERATE";
             this.button6.UseVisualStyleBackColor = false;
+            
             // 
-            // comboBox4
+            // cmbSupervisor
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(24, 55);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(140, 21);
-            this.comboBox4.TabIndex = 3;
+            this.cmbSupervisor.FormattingEnabled = true;
+            this.cmbSupervisor.Location = new System.Drawing.Point(24, 55);
+            this.cmbSupervisor.Name = "cmbSupervisor";
+            this.cmbSupervisor.Size = new System.Drawing.Size(140, 21);
+            this.cmbSupervisor.TabIndex = 3;
             // 
             // label3
             // 
@@ -321,9 +324,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.label3.Location = new System.Drawing.Point(20, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 25);
+            this.label3.Size = new System.Drawing.Size(175, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "KPI Report";
+            this.label3.Text = "Supervisor Report";
             // 
             // rptviewerMan
             // 
@@ -381,7 +384,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbSupervisor;
         private System.Windows.Forms.Label label3;
         private Microsoft.Reporting.WinForms.ReportViewer rptviewerMan;
         private System.Windows.Forms.Label label5;
