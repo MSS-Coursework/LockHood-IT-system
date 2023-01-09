@@ -28,26 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rptViewerHead = new Microsoft.Reporting.WinForms.ReportViewer();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.btnSubAll = new System.Windows.Forms.Button();
+            this.btnSub = new System.Windows.Forms.Button();
+            this.cmbSubTask = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.btnTaskAll = new System.Windows.Forms.Button();
+            this.btnTask = new System.Windows.Forms.Button();
+            this.cmbTask = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnInventory = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnEmployeeAll = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
+            this.cmbEmployee = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -55,60 +53,63 @@
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // reportViewer1
+            // rptViewerHead
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(478, 60);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(509, 458);
-            this.reportViewer1.TabIndex = 77;
+            this.rptViewerHead.Location = new System.Drawing.Point(423, 60);
+            this.rptViewerHead.Name = "rptViewerHead";
+            this.rptViewerHead.ServerReport.BearerToken = null;
+            this.rptViewerHead.Size = new System.Drawing.Size(612, 518);
+            this.rptViewerHead.TabIndex = 77;
+            this.rptViewerHead.ZoomPercent = 75;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button6);
-            this.panel3.Controls.Add(this.comboBox4);
+            this.panel3.Controls.Add(this.btnSubAll);
+            this.panel3.Controls.Add(this.btnSub);
+            this.panel3.Controls.Add(this.cmbSubTask);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(59, 422);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(337, 96);
             this.panel3.TabIndex = 76;
             // 
-            // button5
+            // btnSubAll
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button5.Location = new System.Drawing.Point(275, 30);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(42, 35);
-            this.button5.TabIndex = 68;
-            this.button5.Text = "ALL";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSubAll.BackColor = System.Drawing.Color.White;
+            this.btnSubAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSubAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubAll.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSubAll.Location = new System.Drawing.Point(275, 30);
+            this.btnSubAll.Name = "btnSubAll";
+            this.btnSubAll.Size = new System.Drawing.Size(42, 35);
+            this.btnSubAll.TabIndex = 68;
+            this.btnSubAll.Text = "ALL";
+            this.btnSubAll.UseVisualStyleBackColor = false;
+            this.btnSubAll.Click += new System.EventHandler(this.btnSubAll_Click);
             // 
-            // button6
+            // btnSub
             // 
-            this.button6.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(193, 30);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(76, 35);
-            this.button6.TabIndex = 69;
-            this.button6.Text = "GENERATE";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnSub.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSub.FlatAppearance.BorderSize = 0;
+            this.btnSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSub.ForeColor = System.Drawing.Color.White;
+            this.btnSub.Location = new System.Drawing.Point(193, 30);
+            this.btnSub.Name = "btnSub";
+            this.btnSub.Size = new System.Drawing.Size(76, 35);
+            this.btnSub.TabIndex = 69;
+            this.btnSub.Text = "GENERATE";
+            this.btnSub.UseVisualStyleBackColor = false;
+            this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
             // 
-            // comboBox4
+            // cmbSubTask
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(24, 55);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(140, 21);
-            this.comboBox4.TabIndex = 3;
+            this.cmbSubTask.FormattingEnabled = true;
+            this.cmbSubTask.Location = new System.Drawing.Point(24, 55);
+            this.cmbSubTask.Name = "cmbSubTask";
+            this.cmbSubTask.Size = new System.Drawing.Size(140, 21);
+            this.cmbSubTask.TabIndex = 3;
             // 
             // label3
             // 
@@ -117,56 +118,58 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.label3.Location = new System.Drawing.Point(20, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 25);
+            this.label3.Size = new System.Drawing.Size(159, 25);
             this.label3.TabIndex = 0;
-            this.label3.Text = "KPI Report";
+            this.label3.Text = "Sub-Task Report";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.comboBox3);
+            this.panel2.Controls.Add(this.btnTaskAll);
+            this.panel2.Controls.Add(this.btnTask);
+            this.panel2.Controls.Add(this.cmbTask);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(59, 303);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(337, 96);
             this.panel2.TabIndex = 74;
             // 
-            // button3
+            // btnTaskAll
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button3.Location = new System.Drawing.Point(275, 30);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(42, 35);
-            this.button3.TabIndex = 68;
-            this.button3.Text = "ALL";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnTaskAll.BackColor = System.Drawing.Color.White;
+            this.btnTaskAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTaskAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaskAll.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnTaskAll.Location = new System.Drawing.Point(275, 30);
+            this.btnTaskAll.Name = "btnTaskAll";
+            this.btnTaskAll.Size = new System.Drawing.Size(42, 35);
+            this.btnTaskAll.TabIndex = 68;
+            this.btnTaskAll.Text = "ALL";
+            this.btnTaskAll.UseVisualStyleBackColor = false;
+            this.btnTaskAll.Click += new System.EventHandler(this.btnTaskAll_Click);
             // 
-            // button4
+            // btnTask
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(193, 30);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(76, 35);
-            this.button4.TabIndex = 69;
-            this.button4.Text = "GENERATE";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnTask.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTask.FlatAppearance.BorderSize = 0;
+            this.btnTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTask.ForeColor = System.Drawing.Color.White;
+            this.btnTask.Location = new System.Drawing.Point(193, 30);
+            this.btnTask.Name = "btnTask";
+            this.btnTask.Size = new System.Drawing.Size(76, 35);
+            this.btnTask.TabIndex = 69;
+            this.btnTask.Text = "GENERATE";
+            this.btnTask.UseVisualStyleBackColor = false;
+            this.btnTask.Click += new System.EventHandler(this.btnTask_Click);
             // 
-            // comboBox3
+            // cmbTask
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(24, 55);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(140, 21);
-            this.comboBox3.TabIndex = 3;
+            this.cmbTask.FormattingEnabled = true;
+            this.cmbTask.Location = new System.Drawing.Point(24, 55);
+            this.cmbTask.Name = "cmbTask";
+            this.cmbTask.Size = new System.Drawing.Size(140, 21);
+            this.cmbTask.TabIndex = 3;
             // 
             // label2
             // 
@@ -182,56 +185,34 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.btnInventory);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(59, 181);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(337, 96);
             this.panel1.TabIndex = 75;
             // 
-            // button1
+            // btnInventory
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.Location = new System.Drawing.Point(275, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(42, 35);
-            this.button1.TabIndex = 68;
-            this.button1.Text = "ALL";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(193, 30);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 35);
-            this.button2.TabIndex = 69;
-            this.button2.Text = "GENERATE";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(24, 55);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(140, 21);
-            this.comboBox2.TabIndex = 3;
+            this.btnInventory.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnInventory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInventory.FlatAppearance.BorderSize = 0;
+            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventory.ForeColor = System.Drawing.Color.White;
+            this.btnInventory.Location = new System.Drawing.Point(219, 32);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(76, 35);
+            this.btnInventory.TabIndex = 69;
+            this.btnInventory.Text = "GENERATE";
+            this.btnInventory.UseVisualStyleBackColor = false;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
-            this.label1.Location = new System.Drawing.Point(20, 22);
+            this.label1.Location = new System.Drawing.Point(18, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 25);
             this.label1.TabIndex = 0;
@@ -240,49 +221,51 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
-            this.panel4.Controls.Add(this.btnCancel);
-            this.panel4.Controls.Add(this.btnLogin);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.btnEmployeeAll);
+            this.panel4.Controls.Add(this.btnEmployee);
+            this.panel4.Controls.Add(this.cmbEmployee);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Location = new System.Drawing.Point(59, 60);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(337, 96);
             this.panel4.TabIndex = 73;
             // 
-            // btnCancel
+            // btnEmployeeAll
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.White;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.ForeColor = System.Drawing.Color.LightSeaGreen;
-            this.btnCancel.Location = new System.Drawing.Point(275, 30);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(42, 35);
-            this.btnCancel.TabIndex = 68;
-            this.btnCancel.Text = "ALL";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnEmployeeAll.BackColor = System.Drawing.Color.White;
+            this.btnEmployeeAll.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployeeAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployeeAll.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEmployeeAll.Location = new System.Drawing.Point(275, 30);
+            this.btnEmployeeAll.Name = "btnEmployeeAll";
+            this.btnEmployeeAll.Size = new System.Drawing.Size(42, 35);
+            this.btnEmployeeAll.TabIndex = 68;
+            this.btnEmployeeAll.Text = "ALL";
+            this.btnEmployeeAll.UseVisualStyleBackColor = false;
+            this.btnEmployeeAll.Click += new System.EventHandler(this.btnEmployeeAll_Click);
             // 
-            // btnLogin
+            // btnEmployee
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(193, 30);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(76, 35);
-            this.btnLogin.TabIndex = 69;
-            this.btnLogin.Text = "GENERATE";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnEmployee.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.Location = new System.Drawing.Point(193, 30);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(76, 35);
+            this.btnEmployee.TabIndex = 69;
+            this.btnEmployee.Text = "GENERATE";
+            this.btnEmployee.UseVisualStyleBackColor = false;
+            this.btnEmployee.Click += new System.EventHandler(this.btnEmployee_Click);
             // 
-            // comboBox1
+            // cmbEmployee
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(24, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cmbEmployee.FormattingEnabled = true;
+            this.cmbEmployee.Location = new System.Drawing.Point(24, 55);
+            this.cmbEmployee.Name = "cmbEmployee";
+            this.cmbEmployee.Size = new System.Drawing.Size(140, 21);
+            this.cmbEmployee.TabIndex = 3;
             // 
             // label7
             // 
@@ -291,9 +274,9 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(165)))), ((int)(((byte)(169)))));
             this.label7.Location = new System.Drawing.Point(20, 22);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(144, 25);
+            this.label7.Size = new System.Drawing.Size(164, 25);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Income Report";
+            this.label7.Text = "Employee Report";
             // 
             // frmHeadReport
             // 
@@ -301,7 +284,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 625);
-            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.rptViewerHead);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -309,6 +292,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmHeadReport";
             this.Text = "frmHeadReport";
+            this.Load += new System.EventHandler(this.frmHeadReport_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -323,26 +307,24 @@
 
         #endregion
 
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer rptViewerHead;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button btnSubAll;
+        private System.Windows.Forms.Button btnSub;
+        private System.Windows.Forms.ComboBox cmbSubTask;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button btnTaskAll;
+        private System.Windows.Forms.Button btnTask;
+        private System.Windows.Forms.ComboBox cmbTask;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button btnInventory;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnEmployeeAll;
+        private System.Windows.Forms.Button btnEmployee;
+        private System.Windows.Forms.ComboBox cmbEmployee;
         private System.Windows.Forms.Label label7;
     }
 }

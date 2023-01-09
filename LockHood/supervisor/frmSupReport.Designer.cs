@@ -57,11 +57,12 @@
             // 
             // ReportViewerSup
             // 
-            this.ReportViewerSup.Location = new System.Drawing.Point(478, 60);
+            this.ReportViewerSup.Location = new System.Drawing.Point(425, 60);
             this.ReportViewerSup.Name = "ReportViewerSup";
             this.ReportViewerSup.ServerReport.BearerToken = null;
-            this.ReportViewerSup.Size = new System.Drawing.Size(509, 458);
+            this.ReportViewerSup.Size = new System.Drawing.Size(600, 533);
             this.ReportViewerSup.TabIndex = 77;
+            this.ReportViewerSup.ZoomPercent = 75;
             // 
             // panel3
             // 
