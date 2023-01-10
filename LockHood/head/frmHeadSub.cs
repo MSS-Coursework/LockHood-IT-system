@@ -80,8 +80,8 @@ namespace LockHood.head
         {
             string workShop = cmbSortWork.SelectedItem.ToString();
 
-            string q = "SELECT task.ID, task.Name as Name, task.Status, task.Date, workshop.Name FROM task INNER JOIN workshop ON task.Workshop_ID = workshop.ID where workshop.Name='" + workShop + "'";
-            string q2 = "SELECT sub_task.ID, sub_task.Name, sub_task.Date, workshop.Name, employee.Name, sub_task.Status FROM ((sub_task INNER JOIN workshop ON sub_task.workshop_ID = workshop.Name))  INNER JOIN employee ON employee.ID = sub_task.Employee_ID where workshop.Name='" + workShop + "'";
+            string q = "SELECT task.ID, task.Name as Task, task.Status as Status, task.Date, workshop.Name as Workshop FROM task INNER JOIN workshop ON task.Workshop_ID = workshop.ID where workshop.Name='" + workShop + "'";
+            string q2 = "SELECT sub_task.Task_ID as TaskID, sub_task.Name as SubTask, sub_task.Date, workshop.Name as Workshop, employee.Name as Employee, sub_task.Status as Status FROM ((sub_task INNER JOIN workshop ON sub_task.Workshop_ID = workshop.ID))  INNER JOIN employee ON employee.ID = sub_task.Employee_ID where workshop.Name='" + workShop + "'";
 
 
             objdb.createConn();
@@ -195,6 +195,8 @@ namespace LockHood.head
                     SqlCommand delete = new SqlCommand("UPDATE task SET Status = 'completed' WHERE id='" + rowheadID + "'");
                     objdb.executeQuery(delete);
                     dgv_task.Rows.RemoveAt(row.Index);
+                    objdb.showData(q, dgv_task);
+
                 }
             }
             if (e.ColumnIndex == 1)
@@ -204,6 +206,8 @@ namespace LockHood.head
                     SqlCommand delete = new SqlCommand("UPDATE task SET Status = 'pending' WHERE id='" + rowheadID + "'");
                     objdb.executeQuery(delete);
                     dgv_task.Rows.RemoveAt(row.Index);
+                    objdb.showData(q, dgv_task);
+
                 }
             }
         }
@@ -213,23 +217,28 @@ namespace LockHood.head
             string updateSubTask = txtUpdSub.Text;
             DateTime updatedate = dtpUpdDate.Value;
             string updateEmp = cmbUpdEmp.Text;
+            int emp_id = FindId(updateEmp, "ID", "employee");
+            int sub_id = FindId(rowsubtask, "ID", "sub_task");
 
-            SqlCommand cmd = new SqlCommand("UPDATE sub_task SET Name=@task_name, Date=@task_date, Employee_ID=@emp_work WHERE (ID=@id)");//update query
-            cmd.Parameters.AddWithValue("@id", rowtaskID);
+
+
+            SqlCommand cmd = new SqlCommand("UPDATE sub_task SET Name=@task_name, Date=@task_date, Employee_ID=@emp_work WHERE ID=@id");
+            cmd.Parameters.AddWithValue("@id", sub_id);
             cmd.Parameters.AddWithValue("@task_name", updateSubTask);
             cmd.Parameters.AddWithValue("@task_date", updatedate);
-            cmd.Parameters.AddWithValue("@emp_work", updateEmp);
+            cmd.Parameters.AddWithValue("@emp_work", emp_id);
 
             updatePanel.Visible = false;
             lblSucces.Text = "✓ The Sub-Task has been Updated Successfully";
 
             objdb.executeQuery(cmd);
-            objdb.showData(q, dgv_task);
+            objdb.showData(q2, dgv_sub);
             emptyText();
         }
 
         private void btnupdateCancel_Click(object sender, EventArgs e)
         {
+            updatePanel.Visible = false;
 
         }
 
@@ -237,6 +246,7 @@ namespace LockHood.head
         string rowsubtask;
         string rowdate;
         string rowemployee;
+        string rowWorkshop;
 
         private void dgv_sub_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -246,7 +256,11 @@ namespace LockHood.head
             rowtaskID = row.Cells[2].Value.ToString();
             rowsubtask = row.Cells[3].Value.ToString();
             rowdate = row.Cells[4].Value.ToString();
+            rowWorkshop = row.Cells[5].Value.ToString();
             rowemployee = row.Cells[6].Value.ToString();
+
+            int sub_id = FindId(rowsubtask, "ID", "sub_task");
+
 
             if (e.ColumnIndex == 0)
             {
@@ -256,16 +270,42 @@ namespace LockHood.head
                     dtpDate.Text = rowdate;
                     txtUpdSub.Text = rowsubtask;
                     cmbUpdEmp.Text = rowemployee;
+                    fillUpdateEmpCombo();
                 }
             }
             if (e.ColumnIndex == 1)
             {
                 if (MessageBox.Show("Do you want to delete " + rowsubtask + " from Database?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    SqlCommand delete = new SqlCommand("DELETE FROM sub_task WHERE ID='" + rowtaskID + "'");
+                    SqlCommand delete = new SqlCommand("DELETE FROM sub_task WHERE ID='" + sub_id + "'");
                     objdb.executeQuery(delete);
                     dgv_sub.Rows.RemoveAt(row.Index);
                 }
+            }
+        }
+
+        private void picRefresh_Click(object sender, EventArgs e)
+        {
+            objdb.showData(q2, dgv_sub);
+            objdb.showData(q, dgv_task);
+        }
+
+        private void fillUpdateEmpCombo()
+        {
+            cmbUpdEmp.Items.Clear();
+            string taskName = cmbTask.Text;
+
+            int work_id = FindId(rowWorkshop, "ID", "workshop");
+
+            // Fill Items to workshop combobox
+            string query = "SELECT Name FROM employee where Workshop_ID = '" + work_id + "'";
+            DataTable dt = new DataTable();
+
+            objdb.readDatathroughAdapter(query, dt);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                cmbUpdEmp.Items.Add(dr["Name"].ToString());
             }
         }
     }
