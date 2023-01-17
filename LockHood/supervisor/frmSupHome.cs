@@ -23,7 +23,7 @@ namespace LockHood
 
         private void frmSupHome_Load(object sender, EventArgs e)
         {
-            loadadhomeform(new frmHeadDash());
+            loadadhomeform(new frmSuperDash());
 
             //Current color
             btnDash.BackColor = Color.White;

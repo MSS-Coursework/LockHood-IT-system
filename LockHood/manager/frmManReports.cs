@@ -48,7 +48,7 @@ namespace LockHood
                 cmbSupervisor.Items.Add(dr["Name"].ToString());
 
             }
-
+            // Fill Items to workshop combobox
             string query1 = "SELECT Name FROM workshop";
             DataTable dt1 = new DataTable();
 
@@ -108,7 +108,7 @@ namespace LockHood
         private void btnIncoAll_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            string query = "SELECT Product, SUM(Sales) AS Sales, SUM(Cost) AS Cost FROM income GROUP BY Product;";
+            string query = "SELECT Product, SUM(Sales) AS Sales, SUM(Cost) AS Cost FROM income GROUP BY Product";
 
             objdb.readDatathroughAdapter(query, dt);
 

@@ -236,6 +236,7 @@ namespace LockHood
             {
                 lblErrorDepart.Text = "This field is required !";
             }
+
             else
             {
                 createHead();

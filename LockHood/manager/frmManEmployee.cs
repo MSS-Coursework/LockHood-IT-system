@@ -15,7 +15,7 @@ namespace LockHood
     {
         databaseClass objdb = new databaseClass();
         string q = "select employee.ID, employee.Name as Name, employee.Email as Email, employee.Role as Role, workshop.Name as Workshop FROM employee INNER JOIN workshop ON employee.Workshop_ID = workshop.ID";
-
+        
         public frmManEmployee()
         {
             InitializeComponent();
@@ -54,6 +54,8 @@ namespace LockHood
 
         private void dgv_emp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+            
             //clear and reload combobox
             cmbWork.Items.Clear();
             cmbupdateWork.Items.Clear();

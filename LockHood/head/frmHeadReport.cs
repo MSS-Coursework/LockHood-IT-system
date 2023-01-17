@@ -89,7 +89,7 @@ namespace LockHood
         private void btnInventory_Click(object sender, EventArgs e)
         {
             DataTable dt = new DataTable();
-            string query = "SELECT * FROM inventory";
+            string query = "SELECT * FROM inventory ORDER BY Quantity DESC";
 
             objdb.readDatathroughAdapter(query, dt);
 

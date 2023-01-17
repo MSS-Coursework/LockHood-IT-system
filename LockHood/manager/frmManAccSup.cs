@@ -5,6 +5,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -172,6 +174,28 @@ namespace LockHood
                 SqlCommand dbCommand = new SqlCommand(query);
 
                 objdb.executeQuery(dbCommand);
+
+
+                //mail send
+                string username = "danonymous4436@gmail.com";
+                string pass = "crppbsoqznyntqza";
+                ICredentialsByHost credentials = new NetworkCredential(username, password);
+
+                SmtpClient smtpClient = new SmtpClient()
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    Credentials = credentials
+                };
+
+                MailMessage Email = new MailMessage();
+                Email.From = new MailAddress(username);
+                Email.To.Add(mail);
+                Email.Subject = "LockHood Account Creation Mail";
+                Email.Body = "Mr/Ms, " + name + " " + "\n\nYour LockHood Account has been Created successfully..!\nYou can login to the system using provided Email and Password below.\n\nEmail- " + Email + "\nPassword-" + pass + " \n\nThank you \n\nRifnaz Hanifa \nHead of IT faculty \nLockHood (Pvt) Ltd. \nhanifarifnazz@gmail.com.";
+
+                smtpClient.Send(Email);
 
             }
             catch (Exception ex)

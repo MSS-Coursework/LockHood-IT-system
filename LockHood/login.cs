@@ -16,7 +16,8 @@ namespace LockHood
     {
         databaseClass objdb = new databaseClass();
 
-        public string emailPattern = @"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$";
+        public static Regex regexEmail = new Regex("^\\S+@\\S+\\.\\S+$");
+        public static Regex regexPass = new Regex("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$");
 
         public static String email = "";
 
@@ -43,12 +44,12 @@ namespace LockHood
             String mail = txtEmail.Text;
             String pass = txtPass.Text;
             String usertype = "";
-           
 
             // Empty Error Labels
             lblError.Text = "";
             lblEmailError.Text = "";
             lblPassError.Text = "";
+
 
             // Validations
             if (mail == "")
@@ -60,8 +61,9 @@ namespace LockHood
             if (pass == "")
             {
                 lblPassError.Text = "This field is required !";
+
             }
-         
+
             else
             {
                 //sql query saved in a string
@@ -81,7 +83,7 @@ namespace LockHood
                             frmHeadHome headHome = new frmHeadHome();
                             reader.Close();
 
-                            headHome.Show();                          
+                            headHome.Show();
                             this.Hide();
 
                         }
@@ -107,7 +109,7 @@ namespace LockHood
                     //MessageBox.Show("Admin Loggin Successfull");
                     reader.Close();
                     objdb.closeConn();
-                
+
 
 
                 }
@@ -120,7 +122,7 @@ namespace LockHood
                     txtEmail.Text = "";
                 }
 
-               
+
             }
 
 

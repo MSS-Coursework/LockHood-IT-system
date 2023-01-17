@@ -37,6 +37,7 @@ namespace LockHood.head
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHeadSub));
             this.lblSucces = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSortWork = new System.Windows.Forms.ComboBox();
@@ -81,9 +82,11 @@ namespace LockHood.head
             this.Workshop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.NotYet = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.picRefresh = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_sub)).BeginInit();
             this.updatePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_task)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSucces
@@ -648,12 +651,25 @@ namespace LockHood.head
             this.NotYet.ToolTipText = "NotYet";
             this.NotYet.UseColumnTextForButtonValue = true;
             // 
+            // picRefresh
+            // 
+            this.picRefresh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picRefresh.Image = ((System.Drawing.Image)(resources.GetObject("picRefresh.Image")));
+            this.picRefresh.Location = new System.Drawing.Point(669, 36);
+            this.picRefresh.Name = "picRefresh";
+            this.picRefresh.Size = new System.Drawing.Size(23, 23);
+            this.picRefresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picRefresh.TabIndex = 118;
+            this.picRefresh.TabStop = false;
+            this.picRefresh.Click += new System.EventHandler(this.picRefresh_Click);
+            // 
             // frmHeadSub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1075, 625);
+            this.Controls.Add(this.picRefresh);
             this.Controls.Add(this.updatePanel);
             this.Controls.Add(this.dgv_task);
             this.Controls.Add(this.lblSucces);
@@ -682,6 +698,7 @@ namespace LockHood.head
             this.updatePanel.ResumeLayout(false);
             this.updatePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_task)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRefresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -732,5 +749,6 @@ namespace LockHood.head
         private System.Windows.Forms.DataGridViewTextBoxColumn SubStatus;
         private System.Windows.Forms.DataGridViewButtonColumn Update;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.PictureBox picRefresh;
     }
 }

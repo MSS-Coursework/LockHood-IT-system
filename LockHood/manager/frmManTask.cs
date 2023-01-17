@@ -141,7 +141,6 @@ namespace LockHood
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             //clear and reload combobox
-            clearcombo();
             fillcombo();
 
             // Empty Error Labels
@@ -173,18 +172,15 @@ namespace LockHood
             emptyText();
         }
 
-        private void clearcombo()
+      
+        private void fillcombo()
         {
-            //clear and reload combobox
             cmbDepart.Items.Clear();
             cmbupdateWork.Items.Clear();
             cmbUpdDepart.Items.Clear();
             cmb_DepName.Items.Clear();
             cmb_Workshop.Items.Clear();
 
-        }
-        private void fillcombo()
-        {
             objdb.createConn();
             // Fill Items to Department combobox
             string query = "SELECT Name FROM department";
@@ -235,7 +231,6 @@ namespace LockHood
         private void dgv_task_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //clear and reload combobox
-            clearcombo();
             fillcombo();
 
             //ignore header click
