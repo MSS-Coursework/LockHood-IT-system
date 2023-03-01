@@ -176,5 +176,30 @@ namespace LockHood
             rptviewerMan.LocalReport.DataSources.Add(rds);
             rptviewerMan.RefreshReport();
         }
+
+        private void Switch(int switchStatement)
+        {
+            //switch (switchStatement)
+            //{
+            //    case 1:
+            //        Console.WriteLine("1");
+
+            //        break;
+
+            //    case 2:
+            //        Console.WriteLine("2");
+            //        break;
+
+            //    case 3:
+                    
+            //        continue;
+
+            //    default:
+            //        Console.WriteLine(switchStatement);
+            //        break;
+
+            //}
+            
+        }
     }
 }
